@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:ignore="ExtraText">
 
     <View
         android:id="@+id/tela_de_fundo_agardecimento"
@@ -27,21 +28,55 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.262" />
+        app:layout_constraintVertical_bias="0.217" />
 
     <TextView
         android:id="@+id/obrigado"
         style="@style/mensagem_de_agradecimento"
         android:layout_width="252dp"
         android:layout_height="220dp"
+
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:contentDescription="@string/descricao_texto"
-        android:gravity="center_horizontal|top"
+        android:gravity="center_horizontal|center_vertical"
         android:text="@string/mensagem_de_agradecimento"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="414dp" />
+        tools:layout_editor_absoluteY="349dp" />
+
+    <TextView
+        style="@style/idonor_agradecimento"
+        android:layout_width="203dp"
+        android:layout_height="82dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="@string/app_name"
+        tools:ignore="MissingClass,MissingConstraints"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="59dp" />
+
+    <Button
+        android:id="@+id/doarmais"
+        android:layout_width="278dp"
+        android:layout_height="48dp"
+        style="@style/BotaoDoarMais"
+        android:text="@string/doarmais"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="639dp" />
+
+    <Button
+        android:id="@+id/doarmais2"
+        style="@style/BotaoDoarMais"
+        android:layout_width="278dp"
+        android:layout_height="48dp"
+        android:text="@string/voltar_tela_inicial"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="709dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
