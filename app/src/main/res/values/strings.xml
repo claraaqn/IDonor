@@ -8,9 +8,29 @@
         tools:ignore="ExtraText,MissingConstraints">
          Obrigado&#10;Pela&#10;Doação!
     </string>
+
     <string name="descricao_texto">Mensagem agradecendo pela doação</string>
 
     <string name="doarmais">DOAR +</string>
 
-        <string name="voltar_tela_inicial">VOLTAR À TELA INICIAL</string>
+    <string name="voltar_tela_inicial">VOLTAR À TELA INICIAL</string>
+
+    <string name="nome_mostra">Nome</string>
+
+    <string name="contato_mostra">Telefone de contato</string>
+
+    <string name="email_mostra">E-mail</string>
+
+    <string name="nome_pessoa">Igor Santos</string>
+
+    <string name="telefone">+55 (81) 96666-6666</string>
+
+    <string name="email">igor.silva.22@gmail.com</string>
+    <string name="meus_enderecos">Meus Endereços</string>
+    <string name="dados_cadrastais">Dados Cadrastais</string>
+    <string name="impacto">Impacto</string>
+    <string name="sair">Sair</string>
+    <string name="meu_perfil">Meu Perfil</string>
+    <string name="descricao_edicao_perfil">Editar perfil</string>
+    <string name="voltar">Voltar a tela anterior</string>
 </resources>
