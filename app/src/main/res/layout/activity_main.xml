@@ -7,36 +7,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <View
-        android:id="@+id/imagem"
-        android:layout_width="413dp"
-        android:layout_height="189dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/imagem1" />
 
-    <!-- drawable/imagem.xml -->
-    <vector
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:aapt="http://schemas.android.com/aapt"
-        android:width="390dp"
-        android:height="247dp"
-        android:viewportWidth="390"
-        android:viewportHeight="247"
-        >
-        <group>
-            <clip-path
-                android:pathData="M0 0H390V247H0V0Z"
-                />
-        </group>
-    </vector>
     <TextView
         android:id="@+id/textorededeapoio"
         android:layout_width="247dp"
         android:layout_height="92dp"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
-        android:fontFamily="@font/saira_thin"
+        android:fontFamily="sans-serif-light"
         android:text="Junte-se a uma rede de apoio
         e amor ao próximo"
         android:textAlignment="center"
@@ -95,12 +73,13 @@
         android:layout_marginStart="56dp"
         android:layout_marginEnd="56dp"
         android:style="43px"
-        app:layout_constraintBottom_color=""
+        app:layout_color="#023679"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textorededeapoio"
         app:layout_constraintVertical_bias="0.060000002" />
+
 
     <TextView
         android:id="@+id/textoLogin"
@@ -123,7 +102,8 @@
         android:layout_alignParentTop="true"
         android:background="@android:drawable/ic_dialog_email"
         tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="439dp" />
+        tools:layout_editor_absoluteY="439dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button2"
@@ -132,6 +112,7 @@
         android:layout_marginStart="56dp"
         android:layout_marginEnd="56dp"
         android:style="43px"
+        app:layout_constraintBottom_color="#023679"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -159,16 +140,17 @@
         android:layout_alignParentTop="true"
         android:background="@android:drawable/ic_dialog_email"
         tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="524dp" />
+        tools:layout_editor_absoluteY="524dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button3"
         android:layout_width="227dp"
         android:layout_height="43dp"
         android:layout_marginStart="56dp"
         android:layout_marginEnd="56dp"
         android:style="43px"
-        app:layout_constraintBottom_color=""
+        app:layout_constraintBottom_color="#023679"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -206,6 +188,14 @@
         tools:layout_editor_absoluteX="125dp"
         tools:layout_editor_absoluteY="686dp" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="500dp"
+        android:layout_height="263dp"
+        app:srcCompat="@drawable/androidparty_png"
+        tools:layout_editor_absoluteX="-46dp"
+        tools:layout_editor_absoluteY="-25dp" />
+
     <!-- Auto layout, variables, and unit scale are not yet supported -->
     <!--
       Font family: Patua One
@@ -213,6 +203,24 @@
       -->
 
     <!-- styles.xml -->
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+
+    <!-- drawable/imagem.xml -->
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+
+
+    <View
+        android:id="@+id/ellipse_1"
+        android:layout_width="413dp"
+        android:layout_height="102dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#F4F6FE"
+        tools:layout_constraintCircleRadius="10dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="174dp" />
 
     <TextView
         android:id="@+id/i"
@@ -357,8 +365,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="@android:drawable/dark_header"
-        tools:layout_editor_absoluteX="225dp"
         app:layout_constraintHorizontal_bias="0.132"
+        tools:layout_editor_absoluteX="225dp"
         tools:layout_editor_absoluteY="490dp" />
 
     <View
@@ -371,10 +379,7 @@
         app:layout_constraintHorizontal_bias="0.132"
         tools:layout_editor_absoluteX="225dp"
         tools:layout_editor_absoluteY="630dp" />
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <!-- drawable/imagem.xml -->
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
+    />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
