@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:background="#F4F0FE">
 
-
     <!-- View do Retângulo Branco -->
     <View
         android:id="@+id/fundo_das_informacoes"
@@ -37,10 +36,11 @@
 
     <Button
         android:id="@+id/edicao_perfil"
-        android:layout_width="37dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="20dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/voltar_codigo"
         android:contentDescription="@string/descricao_edicao_perfil"
         android:drawableTop="@drawable/icon_edicao_perfil"
         android:elevation="10dp"
@@ -48,14 +48,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/voltar"
-        android:layout_width="37dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="336dp"
+        android:id="@+id/voltar_impacto"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="344dp"
+        android:background="@drawable/voltar_codigo"
         android:contentDescription="@string/voltar"
         android:drawableTop="@drawable/voltar"
         android:elevation="10dp"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -156,7 +158,7 @@
         android:layout_width="278dp"
         android:layout_height="48dp"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="648dp"
+        android:layout_marginTop="552dp"
         android:background="@drawable/dados_cadrastais"
         android:text="@string/impacto"
         android:textColor="#023679"
@@ -192,7 +194,7 @@
         android:layout_width="278dp"
         android:layout_height="48dp"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="564dp"
+        android:layout_marginTop="624dp"
         android:background="@drawable/dados_cadrastais"
         android:text="@string/sair"
         android:textColor="#023679"
