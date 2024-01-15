@@ -5,12 +5,13 @@
     android:id="@+id/textologin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4F6FE"
     tools:context=".MainActivity">
 
 
     <TextView
         android:id="@+id/textorededeapoio"
-        android:layout_width="247dp"
+        android:layout_width="297dp"
         android:layout_height="92dp"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
@@ -19,7 +20,7 @@
         e amor ao próximo"
         android:textAlignment="center"
         android:textColor="#023679"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="400"
@@ -73,7 +74,8 @@
         android:layout_marginStart="56dp"
         android:layout_marginEnd="56dp"
         android:style="43px"
-        app:layout_color="#023679"
+        android:textColorHighlight="#023679"
+        android:textColorLink="#023679"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,10 +102,10 @@
         android:layout_height="20dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:background="@android:drawable/ic_dialog_email"
+        android:background="@drawable/email"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="439dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="439dp" />
 
     <Button
         android:id="@+id/button2"
@@ -128,7 +130,7 @@
         android:fontFamily="@font/patua_one"
         android:gravity="center_horizontal|top"
         android:text="Cadastrar com email"
-        android:textColor="#FFF"
+        android:textColor="#000000"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="526dp" />
 
@@ -138,10 +140,10 @@
         android:layout_height="20dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:background="@android:drawable/ic_dialog_email"
+        android:background="@drawable/email"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="524dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="524dp" />
 
     <Button
         android:id="@+id/button3"
@@ -166,7 +168,7 @@
         android:fontFamily="@font/patua_one"
         android:gravity="center_horizontal|top"
         android:text="Entrar com o Google"
-        android:textColor="#FFF"
+        android:textColor="#000000"
         android:textColorHighlight="#D1EDF3"
         android:textColorLink="#D1EDF3"
         tools:layout_editor_absoluteX="125dp"
@@ -184,8 +186,8 @@
         android:textColor="#023679"
         android:textColorHighlight="#023679"
         android:textColorLink="#023679"
-        android:textSize="10sp"
-        tools:layout_editor_absoluteX="125dp"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="116dp"
         tools:layout_editor_absoluteY="686dp" />
 
     <ImageView
@@ -213,99 +215,15 @@
 
     <View
         android:id="@+id/ellipse_1"
-        android:layout_width="413dp"
-        android:layout_height="102dp"
+        android:layout_width="417dp"
+        android:layout_height="152dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="#F4F6FE"
+        tools:background="@drawable/ellipse_2"
         tools:layout_constraintCircleRadius="10dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="174dp" />
-
-    <TextView
-        android:id="@+id/i"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="228dp"
-        android:fontFamily="@font/patua_one"
-        android:gravity="top"
-        android:rotation="-13"
-        android:text="i"
-        android:textAppearance="i"
-        android:textColor="#023679"
-        android:textSize="40sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="80dp" />
-
-    <TextView
-        android:id="@+id/d"
-        android:layout_width="27dp"
-        android:layout_height="71dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="212dp"
-        android:fontFamily="@font/patua_one"
-        android:gravity="top"
-        android:rotation="-8"
-        android:text="D"
-        android:textAppearance="D"
-        android:textColor="#023679"
-        android:textSize="40sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="105dp" />
-
-    <TextView
-        android:id="@+id/o"
-        android:layout_width="44dp"
-        android:layout_height="120dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="200dp"
-        android:fontFamily="@font/patua_one"
-        android:gravity="top"
-        android:rotation="-4"
-        android:text="O"
-        android:textAppearance="O"
-        android:textColor="#023679"
-        android:textSize="40sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="157dp" />
-
-    <TextView
-        android:id="@+id/n"
-        android:layout_width="44dp"
-        android:layout_height="120dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="204dp"
-        android:fontFamily="@font/patua_one"
-        android:gravity="top"
-        android:rotation="4"
-        android:text="N"
-        android:textAppearance="N"
-        android:textColor="#023679"
-        android:textSize="40sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="201dp" />
-
-    <TextView
-        android:id="@+id/o2"
-        android:layout_width="40dp"
-        android:layout_height="117dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="212dp"
-        android:fontFamily="@font/patua_one"
-        android:gravity="top"
-        android:rotation="8"
-        android:text="O"
-        android:textAppearance="O"
-        android:textColor="#023679"
-        android:textSize="40sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="245dp" />
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="168dp" />
 
     <TextView
         android:id="@+id/r"
@@ -313,7 +231,7 @@
         android:layout_height="120dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="228dp"
+        android:layout_marginTop="256dp"
         android:fontFamily="@font/patua_one"
         android:gravity="top"
         android:rotation="13"
@@ -322,7 +240,92 @@
         android:textColor="#023679"
         android:textSize="40sp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="285dp" />
+        tools:layout_editor_absoluteX="294dp" />
+
+    <TextView
+        android:id="@+id/d"
+        android:layout_width="27dp"
+        android:layout_height="71dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="240dp"
+        android:fontFamily="@font/patua_one"
+        android:gravity="top"
+        android:rotation="-8"
+        android:text="D"
+        android:textAppearance="D"
+        android:textColor="#023679"
+        android:textSize="40sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="114dp" />
+
+    <TextView
+        android:id="@+id/o"
+        android:layout_width="44dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="228dp"
+        android:fontFamily="@font/patua_one"
+        android:gravity="top"
+        android:rotation="-4"
+        android:text="O"
+        android:textAppearance="O"
+        android:textColor="#023679"
+        android:textSize="40sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="166dp" />
+
+    <TextView
+        android:id="@+id/n"
+        android:layout_width="44dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="232dp"
+        android:fontFamily="@font/patua_one"
+        android:gravity="top"
+        android:rotation="4"
+        android:text="N"
+        android:textAppearance="N"
+        android:textColor="#023679"
+        android:textSize="40sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="210dp" />
+
+    <TextView
+        android:id="@+id/o2"
+        android:layout_width="40dp"
+        android:layout_height="117dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="240dp"
+        android:fontFamily="@font/patua_one"
+        android:gravity="top"
+        android:rotation="8"
+        android:text="O"
+        android:textAppearance="O"
+        android:textColor="#023679"
+        android:textSize="40sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="254dp" />
+
+    <TextView
+        android:id="@+id/i"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="256dp"
+        android:fontFamily="@font/patua_one"
+        android:gravity="top"
+        android:rotation="-13"
+        android:text="i"
+        android:textAppearance="i"
+        android:textColor="#023679"
+        android:textSize="40sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="89dp" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group2"
@@ -379,7 +382,30 @@
         app:layout_constraintHorizontal_bias="0.132"
         tools:layout_editor_absoluteX="225dp"
         tools:layout_editor_absoluteY="630dp" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="i,d,o,n,o2,r" />
     />
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+    <RelativeLayout
+        android:id="@+id/google_icon"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/google_icon"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="581dp" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="i,d,o,n,o2,r" />
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
