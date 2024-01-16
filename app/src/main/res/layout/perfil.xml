@@ -12,11 +12,11 @@
         android:id="@+id/fundo_das_informacoes"
         android:layout_width="392dp"
         android:layout_height="315dp"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/perfil"
-        android:elevation="2dp"
+        android:background="@drawable/fundo_branco_perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"  />
 
     <!-- TextView do Título -->
     <TextView
@@ -39,7 +39,7 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/voltar_codigo"
         android:contentDescription="@string/descricao_edicao_perfil"
         android:drawableTop="@drawable/icon_edicao_perfil"
@@ -52,7 +52,7 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="344dp"
+        android:layout_marginEnd="336dp"
         android:background="@drawable/voltar_codigo"
         android:contentDescription="@string/voltar"
         android:drawableTop="@drawable/voltar"
@@ -60,6 +60,18 @@
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- imagem perfil -->
+    <View
+        android:id="@+id/fundo_perfil"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="88dp"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/fundo_cinza_perfil"/>
 
     <ImageView
         android:id="@+id/foto_de_perfil"
@@ -97,7 +109,7 @@
         android:textAppearance="@style/contato"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="201dp" />
+        tools:layout_editor_absoluteY="197dp" />
 
     <TextView
         android:id="@+id/nome3"
@@ -153,51 +165,100 @@
 
     <!-- os botões -->
 
-    <Button
-        android:id="@+id/impacto_botao"
+    <!-- dados cadrastais -->
+    <View
+        android:id="@+id/fundo_botao_cadrasto"
         android:layout_width="278dp"
         android:layout_height="48dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="552dp"
-        android:background="@drawable/dados_cadrastais"
-        android:text="@string/impacto"
-        android:textColor="#023679"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/fundo_botao_azul_claro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/dados_cadratais"
+        style="@style/botoes_perfil"
         android:layout_width="278dp"
         android:layout_height="48dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="400dp"
-        android:background="@drawable/dados_cadrastais"
+        android:background="@drawable/botao_transparente"
         android:text="@string/dados_cadrastais"
-        android:textColor="#023679"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- meus endereços -->
+    <View
+        android:id="@+id/fundo_botao_endereco"
+        android:layout_width="278dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="480dp"
+        android:background="@drawable/fundo_botao_azul_claro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/meus_enderecos"
+        style="@style/botoes_perfil"
         android:layout_width="278dp"
         android:layout_height="48dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="480dp"
-        android:background="@drawable/dados_cadrastais"
+        android:background="@drawable/botao_transparente"
         android:text="@string/meus_enderecos"
-        android:textColor="#023679"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- meu impacto -->
+    <View
+        android:id="@+id/fundo_botao_impacto"
+        android:layout_width="278dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="552dp"
+        android:background="@drawable/fundo_botao_azul_claro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/impacto_botao"
+        style="@style/botoes_perfil"
+        android:layout_width="278dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="552dp"
+        android:background="@drawable/botao_transparente"
+        android:text="@string/impacto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- meu impacto -->
+
+    <View
+        android:id="@+id/fundo_botao_sair"
+        android:layout_width="278dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="624dp"
+        android:background="@drawable/fundo_botao_azul_claro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/sair_botao"
+        style="@style/botoes_perfil"
         android:layout_width="278dp"
         android:layout_height="48dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="624dp"
-        android:background="@drawable/dados_cadrastais"
+        android:background="@drawable/botao_transparente"
         android:text="@string/sair"
-        android:textColor="#023679"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />

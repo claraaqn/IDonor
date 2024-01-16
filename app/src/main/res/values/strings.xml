@@ -15,17 +15,13 @@
 
     <string name="voltar_tela_inicial">VOLTAR À TELA INICIAL</string>
 
+    <!-- tela perfil -->
     <string name="nome_mostra">Nome</string>
-
     <string name="contato_mostra">Telefone de contato</string>
-
     <string name="email_mostra">E-mail</string>
-
-    <string name="nome_pessoa">Igor Santos</string>
-
-    <string name="telefone">+55 (81) 96666-6666</string>
-
-    <string name="email">igor.silva.22@gmail.com</string>
+    <string name="nome_pessoa">XXXXXXXXXXXX</string>
+    <string name="telefone">(x) 9xxxx-xxxx</string>
+    <string name="email">xxxxxx@xxxxx.com</string>
     <string name="meus_enderecos">Meus Endereços</string>
     <string name="dados_cadrastais">Dados Cadrastais</string>
     <string name="impacto">Impacto</string>

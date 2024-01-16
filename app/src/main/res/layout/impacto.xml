@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="#F4F0FE">
 
+    <!-- parte de cima -->
     <TextView
         android:id="@+id/idonor_volta_impacto"
         android:layout_width="76dp"
@@ -67,6 +68,8 @@
         tools:layout_editor_absoluteY="244dp"
         tools:ignore="MissingConstraints" />
 
+    <!-- botões de dados  -->
+
     <ImageView
         android:id="@+id/fundo_quantidade_itens"
         android:layout_width="170dp"
@@ -103,6 +106,5 @@
         tools:layout_editor_absoluteX="21dp"
         tools:layout_editor_absoluteY="589dp"
         tools:ignore="MissingConstraints" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
