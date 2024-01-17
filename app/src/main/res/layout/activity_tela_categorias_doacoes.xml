@@ -11,7 +11,7 @@
         android:id="@+id/tela_de_inf"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F4F6FE"
+        android:background="@color/BackTela"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -20,71 +20,135 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:layout_width="44dp"
-        android:layout_height="44dp"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
         android:contentDescription="TODO"
         android:src="@drawable/IconVoltar"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteX="13dp"
         tools:layout_editor_absoluteY="16dp" />
 
-    <ImageView
-        android:layout_width="104dp"
-        android:layout_height="61dp"
-        android:contentDescription="TODO"
-        android:src="@drawable/IconiDonor"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="79dp"
-        tools:layout_editor_absoluteY="7dp" />
-
-    <ImageView
-        android:layout_width="210dp"
-        android:layout_height="167dp"
-        android:contentDescription="TODO"
-        android:src="@drawable/Comida"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-7dp"
-        tools:layout_editor_absoluteY="219dp" />
 
 
     <ImageView
-        android:layout_width="210dp"
-        android:layout_height="167dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:contentDescription="TODO"
-        android:src="@drawable/Dinheiro"
+        android:src="@drawable/comida"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="183dp"
-        tools:layout_editor_absoluteY="219dp" />
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="156dp" />
 
     <ImageView
-        android:layout_width="210dp"
-        android:layout_height="167dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:contentDescription="TODO"
-        android:src="@drawable/Voluntário"
+        android:src="@drawable/comida"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="183dp"
-        tools:layout_editor_absoluteY="401dp" />
+        tools:layout_editor_absoluteX="218dp"
+        tools:layout_editor_absoluteY="384dp" />
 
     <ImageView
-        android:layout_width="210dp"
-        android:layout_height="167dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:contentDescription="TODO"
-        android:src="@drawable/Roupa"
+        android:src="@drawable/comida"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="401dp" />
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="384dp" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/comida"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="218dp"
+        tools:layout_editor_absoluteY="156dp" />
 
     <TextView
-        android:layout_width="406dp"
-        android:layout_height="108dp"
+    android:layout_width="160dp"
+    android:layout_height="43dp"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:fontFamily="@font/patua_one"
+    android:gravity="center_horizontal|center_vertical"
+    android:textColor="@color/AzulTitulo"
+    android:text="iDonor"
+    android:textSize="28sp"
+    tools:ignore="MissingConstraints"
+    tools:layout_editor_absoluteX="13dp"
+    tools:layout_editor_absoluteY="7dp" />
+
+    <TextView
+        android:layout_width="306dp"
+        android:layout_height="72dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:fontFamily="@font/patua_one"
         android:gravity="center_horizontal|center_vertical"
         android:text="Escolha o tipo de doação"
+        android:textColor="@color/AzulTitulo"
         android:textSize="28sp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-7dp"
-        tools:layout_editor_absoluteY="111dp" />
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="58dp" />
+
+    <TextView
+        android:layout_width="148dp"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/saira_extra_condensed_medium"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Alimentos"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="306dp" />
+
+    <TextView
+        android:layout_width="148dp"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/saira_extra_condensed_medium"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Dinheiro"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="218dp"
+        tools:layout_editor_absoluteY="306dp" />
+
+    <TextView
+        android:layout_width="148dp"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/saira_extra_condensed_medium"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Vestimenta"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="534dp" />
+
+    <TextView
+        android:layout_width="148dp"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/saira_extra_condensed_medium"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Voluntário"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="218dp"
+        tools:layout_editor_absoluteY="534dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
