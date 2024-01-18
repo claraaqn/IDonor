@@ -29,4 +29,11 @@
     <string name="meu_perfil">Meu Perfil</string>
     <string name="descricao_edicao_perfil">Editar perfil</string>
     <string name="voltar">Voltar a tela anterior</string>
+    <string name="semana">Semana</string>
+    <string name="m_s">Mês</string>
+    <string name="ano">Ano</string>
+    <string name="total_de_itens_doados">Total de itens doados</string>
+    <string name="maior_dia_de_doa_o">Maior dia de doação</string>
+    <string name="xx">XX</string>
+    <string name="titulo_comentarios">Comentários sobre você</string>
 </resources>
