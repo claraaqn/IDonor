@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TelaInstituicao"
+    tools:ignore="ExtraText">
+
+    <View
+        android:id="@+id/tela_de_inf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/BackTela"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+    />
+    <ImageView
+        android:layout_width="396dp"
+        android:layout_height="337dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/Imglardosidosos"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="52dp" />
+
+
+    <ImageView
+        android:layout_width="406dp"
+        android:layout_height="316dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/ellipse_2"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-9dp"
+        tools:layout_editor_absoluteY="226dp" />
+
+
+    <ImageView
+        android:layout_width="360dp"
+        android:layout_height="310dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/Informações"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="434dp" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/iconinformacao"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="389dp" />
+
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/list"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="179dp"
+        tools:layout_editor_absoluteY="389dp" />
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/iconcontato"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="306dp"
+        tools:layout_editor_absoluteY="389dp" />
+
+    <ImageView
+        android:layout_width="290dp"
+        android:layout_height="75dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/IconRealizarDoação"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="744dp" />
+
+    <ImageView
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/IconVoltar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="43dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/patua_one"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="@color/AzulTitulo"
+        android:text="iDonor"
+        android:textSize="28sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <TextView
+        android:layout_width="251dp"
+        android:layout_height="103dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/patua_one"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Lar dos Idosos"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="34sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="307dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

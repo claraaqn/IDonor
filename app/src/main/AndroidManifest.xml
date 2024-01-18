@@ -13,6 +13,18 @@
         android:theme="@style/Theme.IDonor"
         tools:targetApi="31">
         <activity
+            android:name=".TelaConfirmacao"
+            android:exported="false" />
+        <activity
+            android:name=".TelaEspecificacao"
+            android:exported="false" />
+        <activity
+            android:name=".TelaCategoriasDoacoes"
+            android:exported="false" />
+        <activity
+            android:name=".TelaInstituicao"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
