@@ -5,17 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#023679"
     tools:ignore="ExtraText">
-
-    <View
-        android:id="@+id/tela_de_fundo_agardecimento"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#023679"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
         android:layout_width="181dp"
@@ -35,7 +26,6 @@
         style="@style/mensagem_de_agradecimento"
         android:layout_width="252dp"
         android:layout_height="220dp"
-
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:contentDescription="@string/descricao_texto"
@@ -57,26 +47,55 @@
         tools:layout_editor_absoluteX="95dp"
         tools:layout_editor_absoluteY="59dp" />
 
+    <!-- botões-->
+
+    <!-- doar +-->
+    <View
+        android:id="@+id/doarmaisfundo"
+        android:layout_width="278dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="632dp"
+        android:background="@drawable/fundo_botao_branco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/doarmais"
+        style="@style/tela_agradecimento"
+        android:layout_width="277dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="632dp"
+        android:background="@android:color/transparent"
+        android:text="@string/doarmais"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- volar à tela inicial-->
+    <View
+        android:id="@+id/voltar_fundo"
         android:layout_width="278dp"
         android:layout_height="48dp"
-        style="@style/BotaoDoarMais"
-        android:text="@string/doarmais"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="639dp" />
+        android:layout_marginTop="708dp"
+        android:background="@drawable/fundo_botao_branco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/doarmais2"
-        style="@style/BotaoDoarMais"
+        android:id="@+id/voltar_a_tela_inical"
+        style="@style/tela_agradecimento"
         android:layout_width="278dp"
         android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="708dp"
+        android:background="@android:color/transparent"
         android:text="@string/voltar_tela_inicial"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="709dp" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

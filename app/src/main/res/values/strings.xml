@@ -8,9 +8,32 @@
         tools:ignore="ExtraText,MissingConstraints">
          Obrigado&#10;Pela&#10;Doação!
     </string>
+
     <string name="descricao_texto">Mensagem agradecendo pela doação</string>
 
     <string name="doarmais">DOAR +</string>
 
-        <string name="voltar_tela_inicial">VOLTAR À TELA INICIAL</string>
+    <string name="voltar_tela_inicial">VOLTAR À TELA INICIAL</string>
+
+    <!-- tela perfil -->
+    <string name="nome_mostra">Nome</string>
+    <string name="contato_mostra">Telefone de contato</string>
+    <string name="email_mostra">E-mail</string>
+    <string name="nome_pessoa">XXXXXXXXXXXX</string>
+    <string name="telefone">(x) 9xxxx-xxxx</string>
+    <string name="email">xxxxxx@xxxxx.com</string>
+    <string name="meus_enderecos">Meus Endereços</string>
+    <string name="dados_cadrastais">Dados Cadrastais</string>
+    <string name="impacto">Impacto</string>
+    <string name="sair">Sair</string>
+    <string name="meu_perfil">Meu Perfil</string>
+    <string name="descricao_edicao_perfil">Editar perfil</string>
+    <string name="voltar">Voltar a tela anterior</string>
+    <string name="semana">Semana</string>
+    <string name="m_s">Mês</string>
+    <string name="ano">Ano</string>
+    <string name="total_de_itens_doados">Total de itens doados</string>
+    <string name="maior_dia_de_doa_o">Maior dia de doação</string>
+    <string name="xx">XX</string>
+    <string name="titulo_comentarios">Comentários sobre você</string>
 </resources>
