@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.projeto1.idonor"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.projeto1.idonor"

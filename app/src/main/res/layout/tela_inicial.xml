@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/idonor"
+        android:layout_width="105dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="16dp"
+        android:gravity="top"
+        android:text="@string/app_name"
+        android:textAppearance="@style/idonor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/fundo_barra_pesquisa"
+        android:layout_width="351dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/pesquisa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idonor" />
+
+    <View
+        android:id="@+id/fundo_companhas"
+        android:layout_width="356dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ret_campanha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fundo_barra_pesquisa" />
+
+    <View
+        android:id="@+id/barra_de_baixo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="393dp"
+        android:layout_height="56dp"
+        android:background="#FFFFFF"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="773dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
