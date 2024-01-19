@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,22 +7,27 @@
     android:background="#F4F0FE">
 
     <!-- View do Retângulo Branco -->
-    <View
-        android:id="@+id/fundo_das_informacoes"
-        android:layout_width="392dp"
-        android:layout_height="315dp"
-        android:background="@drawable/fundo_branco_perfil"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"  />
 
     <!-- TextView do Título -->
+
+    <View
+        android:id="@+id/fundo_das_informacoes"
+        android:layout_width="408dp"
+        android:layout_height="329dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/fundo_branco_perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Botão de Edição -->
+
     <TextView
         android:id="@+id/meu_perfil"
         android:layout_width="97dp"
         android:layout_height="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
         android:elevation="8dp"
         android:gravity="top"
         android:text="@string/meu_perfil"
@@ -31,8 +35,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Botão de Edição -->
 
     <Button
         android:id="@+id/edicao_perfil"
@@ -47,12 +49,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- imagem perfil -->
+
     <Button
         android:id="@+id/voltar_impacto"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="336dp"
+        android:layout_marginEnd="356dp"
         android:background="@drawable/voltar_codigo"
         android:contentDescription="@string/voltar"
         android:drawableTop="@drawable/voltar"
@@ -61,80 +65,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- imagem perfil -->
+    <!-- text view das informações-->
     <View
         android:id="@+id/fundo_perfil"
         android:layout_width="128dp"
         android:layout_height="128dp"
         android:layout_alignParentTop="true"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="88dp"
+        android:background="@drawable/fundo_cinza_perfil"
         tools:ignore="MissingConstraints"
-        android:background="@drawable/fundo_cinza_perfil"/>
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="116dp" />
 
     <ImageView
         android:id="@+id/foto_de_perfil"
         android:layout_width="128dp"
         android:layout_height="128dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="116dp"
         android:elevation="8dp"
         android:src="@drawable/foto_perfil"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- text view das informações-->
-    <TextView
-        android:id="@+id/nome"
-        android:layout_width="25dp"
-        android:layout_height="18dp"
-        android:layout_alignParentTop="true"
-        android:elevation="8dp"
-        android:gravity="top"
-        android:text="@string/nome_mostra"
-        android:textAppearance="@style/informacoes"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="88dp" />
-
-    <TextView
-        android:id="@+id/igor_silva_"
-        android:layout_width="132dp"
-        android:layout_height="15dp"
-        android:layout_alignParentTop="true"
-        android:elevation="8dp"
-        android:gravity="top"
-        android:text="@string/email"
-        android:textAppearance="@style/contato"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="197dp" />
-
-    <TextView
-        android:id="@+id/nome3"
-        android:layout_width="27dp"
-        android:layout_height="16dp"
-        android:layout_alignParentTop="true"
-        android:elevation="8dp"
-        android:gravity="top"
-        android:text="@string/email_mostra"
-        android:textAppearance="@style/informacoes"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="181dp" />
-
-    <TextView
-        android:id="@+id/nome2"
-        android:layout_width="76dp"
-        android:layout_height="17dp"
-        android:layout_alignParentTop="true"
-        android:elevation="8dp"
-        android:gravity="top"
-        android:text="@string/contato_mostra"
-        android:textAppearance="@style/informacoes"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="141dp" />
 
     <TextView
         android:id="@+id/igor_santos"
@@ -147,7 +98,59 @@
         android:textAppearance="@style/nome_pessoa"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="106dp" />
+        tools:layout_editor_absoluteY="133dp" />
+
+    <TextView
+        android:id="@+id/nome"
+        android:layout_width="25dp"
+        android:layout_height="18dp"
+        android:layout_alignParentTop="true"
+        android:elevation="8dp"
+        android:gravity="top"
+        android:text="@string/nome_mostra"
+        android:textAppearance="@style/informacoes"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="115dp" />
+
+    <TextView
+        android:id="@+id/nome2"
+        android:layout_width="76dp"
+        android:layout_height="17dp"
+        android:layout_alignParentTop="true"
+        android:elevation="8dp"
+        android:gravity="top"
+        android:text="@string/contato_mostra"
+        android:textAppearance="@style/informacoes"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="168dp" />
+
+    <TextView
+        android:id="@+id/nome3"
+        android:layout_width="27dp"
+        android:layout_height="16dp"
+        android:layout_alignParentTop="true"
+        android:elevation="8dp"
+        android:gravity="top"
+        android:text="@string/email_mostra"
+        android:textAppearance="@style/informacoes"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="208dp" />
+
+    <TextView
+        android:id="@+id/igor_silva_"
+        android:layout_width="132dp"
+        android:layout_height="15dp"
+        android:layout_alignParentTop="true"
+        android:elevation="8dp"
+        android:gravity="top"
+        android:text="@string/email"
+        android:textAppearance="@style/contato"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="224dp" />
 
     <TextView
         android:id="@+id/telefone"
@@ -160,19 +163,22 @@
         android:textAppearance="@style/contato"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="158dp" />
+        tools:layout_editor_absoluteY="185dp" />
 
     <!-- os botões -->
 
     <!-- dados cadrastais -->
+
+    <!-- meus endereços -->
+
     <View
         android:id="@+id/fundo_botao_cadrasto"
         android:layout_width="278dp"
         android:layout_height="48dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="404dp"
         android:background="@drawable/fundo_botao_azul_claro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -181,14 +187,15 @@
         style="@style/botoes_perfil"
         android:layout_width="278dp"
         android:layout_height="48dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="404dp"
         android:background="@drawable/botao_transparente"
         android:text="@string/dados_cadrastais"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- meus endereços -->
+    <!-- meu impacto -->
+
     <View
         android:id="@+id/fundo_botao_endereco"
         android:layout_width="278dp"
@@ -196,7 +203,7 @@
         android:layout_marginTop="480dp"
         android:background="@drawable/fundo_botao_azul_claro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -205,7 +212,7 @@
         style="@style/botoes_perfil"
         android:layout_width="278dp"
         android:layout_height="48dp"
-        android:layout_marginStart="56dp"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="480dp"
         android:background="@drawable/botao_transparente"
         android:text="@string/meus_enderecos"
@@ -213,14 +220,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- meu impacto -->
+
     <View
         android:id="@+id/fundo_botao_impacto"
         android:layout_width="278dp"
         android:layout_height="48dp"
-        android:layout_marginTop="552dp"
+        android:layout_marginTop="556dp"
         android:background="@drawable/fundo_botao_azul_claro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -229,23 +237,21 @@
         style="@style/botoes_perfil"
         android:layout_width="278dp"
         android:layout_height="48dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="552dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="556dp"
         android:background="@drawable/botao_transparente"
         android:text="@string/impacto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- meu impacto -->
-
     <View
         android:id="@+id/fundo_botao_sair"
         android:layout_width="278dp"
         android:layout_height="48dp"
-        android:layout_marginTop="624dp"
+        android:layout_marginTop="636dp"
         android:background="@drawable/fundo_botao_azul_claro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -254,8 +260,8 @@
         style="@style/botoes_perfil"
         android:layout_width="278dp"
         android:layout_height="48dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="624dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="636dp"
         android:background="@drawable/botao_transparente"
         android:text="@string/sair"
         app:layout_constraintStart_toStartOf="parent"

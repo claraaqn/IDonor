@@ -19,8 +19,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.217" />
+        app:layout_constraintVertical_bias="0.216" />
 
+    <!-- botões-->
+
+    <!-- doar +-->
     <TextView
         android:id="@+id/obrigado"
         style="@style/mensagem_de_agradecimento"
@@ -32,8 +35,8 @@
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/mensagem_de_agradecimento"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="349dp" />
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="350dp" />
 
     <TextView
         style="@style/idonor_agradecimento"
@@ -44,12 +47,9 @@
         android:gravity="center"
         android:text="@string/app_name"
         tools:ignore="MissingClass,MissingConstraints"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="59dp" />
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="62dp" />
 
-    <!-- botões-->
-
-    <!-- doar +-->
     <View
         android:id="@+id/doarmaisfundo"
         android:layout_width="278dp"
@@ -61,19 +61,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- volar à tela inicial-->
     <Button
         android:id="@+id/doarmais"
         style="@style/tela_agradecimento"
         android:layout_width="277dp"
         android:layout_height="48dp"
-        android:layout_marginStart="56dp"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="632dp"
         android:background="@android:color/transparent"
         android:text="@string/doarmais"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- volar à tela inicial-->
     <View
         android:id="@+id/voltar_fundo"
         android:layout_width="278dp"
@@ -90,7 +90,7 @@
         style="@style/tela_agradecimento"
         android:layout_width="278dp"
         android:layout_height="48dp"
-        android:layout_marginStart="56dp"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="708dp"
         android:background="@android:color/transparent"
         android:text="@string/voltar_tela_inicial"

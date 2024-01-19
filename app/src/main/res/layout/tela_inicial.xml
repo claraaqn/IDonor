@@ -25,7 +25,6 @@
         android:layout_marginTop="36dp"
         android:background="@drawable/pesquisa"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/idonor" />
 
@@ -33,22 +32,21 @@
         android:id="@+id/fundo_companhas"
         android:layout_width="356dp"
         android:layout_height="175dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/ret_campanha"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/fundo_barra_pesquisa" />
 
     <View
         android:id="@+id/barra_de_baixo"
+        android:layout_width="410dp"
+        android:layout_height="62dp"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_width="393dp"
-        android:layout_height="56dp"
-        android:background="#FFFFFF"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="773dp" />
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
