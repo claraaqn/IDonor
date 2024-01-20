@@ -42,7 +42,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/voltar_codigo"
+        android:background="@drawable/fundo_transparente_botao"
         android:contentDescription="@string/descricao_edicao_perfil"
         android:drawableTop="@drawable/icon_edicao_perfil"
         android:elevation="10dp"
@@ -57,9 +57,9 @@
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="356dp"
-        android:background="@drawable/voltar_codigo"
+        android:background="@drawable/fundo_transparente_botao"
         android:contentDescription="@string/voltar"
-        android:drawableTop="@drawable/voltar"
+        android:drawableTop="@drawable/icon_voltar"
         android:elevation="10dp"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -169,8 +169,6 @@
 
     <!-- dados cadrastais -->
 
-    <!-- meus endereços -->
-
     <View
         android:id="@+id/fundo_botao_cadrasto"
         android:layout_width="278dp"
@@ -189,12 +187,12 @@
         android:layout_height="48dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="404dp"
-        android:background="@drawable/botao_transparente"
+        android:background="@drawable/fundo_transparente_botao"
         android:text="@string/dados_cadrastais"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- meu impacto -->
+    <!-- meus endereços -->
 
     <View
         android:id="@+id/fundo_botao_endereco"
@@ -214,7 +212,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="480dp"
-        android:background="@drawable/botao_transparente"
+        android:background="@drawable/fundo_transparente_botao"
         android:text="@string/meus_enderecos"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -239,10 +237,12 @@
         android:layout_height="48dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="556dp"
-        android:background="@drawable/botao_transparente"
+        android:background="@drawable/fundo_transparente_botao"
         android:text="@string/impacto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- sair -->
 
     <View
         android:id="@+id/fundo_botao_sair"
@@ -262,7 +262,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="636dp"
-        android:background="@drawable/botao_transparente"
+        android:background="@drawable/fundo_transparente_botao"
         android:text="@string/sair"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

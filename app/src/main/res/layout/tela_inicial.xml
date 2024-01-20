@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- nome do aplicativo + botão ajudar-->
+
     <TextView
         android:id="@+id/idonor"
         android:layout_width="105dp"
@@ -18,26 +20,373 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/ajuda"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="@string/descricao_edicao_perfil"
+        android:drawableTop="@drawable/icon_ajuda"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- pesquisar instituições -->
+
     <View
         android:id="@+id/fundo_barra_pesquisa"
         android:layout_width="351dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/pesquisa"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/fundo_pesquisa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/idonor" />
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/lupa_de_pesquisa"
+        android:src="@drawable/icon_lupa"
+        app:layout_constraintEnd_toEndOf="@+id/fundo_barra_pesquisa"
+        app:layout_constraintTop_toTopOf="@+id/fundo_barra_pesquisa" />
+
+    <!-- anúcio de campanhas -->
+
+    <EditText
+        android:id="@+id/barra_de_pesquisa"
+        style="@style/pesquisar"
+        android:layout_width="351dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/botao_transparente"
+        android:hint="@string/pesquisar"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        app:layout_constraintStart_toStartOf="@+id/fundo_barra_pesquisa"
+        app:layout_constraintTop_toBottomOf="@+id/idonor"
+        tools:ignore="RtlSymmetry" />
 
     <View
         android:id="@+id/fundo_companhas"
         android:layout_width="356dp"
         android:layout_height="175dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/ret_campanha"
+        android:background="@drawable/fundo_campanha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/fundo_barra_pesquisa" />
+
+    <TextView
+        android:id="@+id/camapanhas_"
+        android:layout_width="165dp"
+        android:layout_height="39dp"
+        android:layout_alignParentTop="true"
+        android:gravity="top"
+        android:text="@string/camapanhas"
+        android:textAppearance="@style/camapanhas"
+        app:layout_constraintTop_toTopOf="@+id/fundo_companhas"
+        tools:layout_editor_absoluteX="38dp"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/fundo_perfil"
+        android:layout_width="23.33dp"
+        android:layout_height="23.33dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/fundo_botao_fechar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="348dp"
+        tools:layout_editor_absoluteY="159dp" />
+
+    <Button
+        android:id="@+id/fechar_campanha"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="@string/botao_fechar"
+        android:drawableTop="@drawable/icon_fechar"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fundo_companhas" />
+
+    <TextView
+        android:id="@+id/titulo_campanha"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="48dp"
+        android:gravity="top"
+        android:text="@string/titulo_campanha"
+        android:textAppearance="@style/titulo_campanha"
+        app:layout_constraintTop_toTopOf="@+id/fundo_companhas"
+        tools:layout_editor_absoluteX="162dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/texto_campanha"
+        android:layout_width="344dp"
+        android:layout_height="95dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|top"
+        android:text="@string/texto_campanha"
+        android:textAppearance="@style/texto_campanha"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_campanha"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="33dp" />
+
+    <!-- instituições -->
+
+    <!-- lar dos idosos -->
+
+    <ImageView
+        android:id="@+id/foto_lar_idosos"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:contentDescription="@string/lupa_de_pesquisa"
+        android:src="@drawable/institu_lar_dos_idosos"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="370dp" />
+
+    <View
+        android:id="@+id/fundo_lar_idosos"
+        android:layout_width="165dp"
+        android:layout_height="39dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/fundo_nome_instuicoes"
+        app:layout_constraintTop_toBottomOf="@+id/foto_lar_idosos"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="27dp" />
+
+    <ImageView
+        android:id="@+id/loc_idosos"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:contentDescription="@string/localizacao"
+        android:src="@drawable/icon_localizacao"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="561dp" />
+
+    <TextView
+        android:id="@+id/distancia_idosos"
+        android:layout_width="42dp"
+        android:layout_height="14dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/distancia_idosos"
+        android:textAppearance="@style/distancias"
+        app:layout_constraintStart_toEndOf="@+id/loc_idosos"
+        tools:layout_editor_absoluteY="559dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/lados_idosos"
+        style="@style/idosos_igreja"
+        android:layout_width="164dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="368dp"
+        android:background="@drawable/botao_transparente"
+        android:gravity="bottom|start"
+        android:paddingStart="10dp"
+        android:paddingBottom="13dp"
+        android:text="@string/lar_dos_idosos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <!-- lar de acolhimento intatil -->
+
+    <ImageView
+        android:id="@+id/foto_lar_acolhimento_infatil"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:contentDescription="@string/lupa_de_pesquisa"
+        android:src="@drawable/institu_infantil"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="216dp"
+        tools:layout_editor_absoluteY="370dp" />
+
+    <View
+        android:id="@+id/fundo_infatil"
+        android:layout_width="165dp"
+        android:layout_height="39dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/fundo_nome_instuicoes"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="216dp"
+        tools:layout_editor_absoluteY="539dp" />
+
+    <ImageView
+        android:id="@+id/loc_infatil"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:contentDescription="@string/localizacao"
+        android:src="@drawable/icon_localizacao"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="559dp" />
+
+    <TextView
+        android:id="@+id/distancia_infatil"
+        android:layout_width="35dp"
+        android:layout_height="15dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/distancia_ifantil"
+        android:textAppearance="@style/distancias"
+        app:layout_constraintStart_toEndOf="@+id/loc_infatil"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="556dp" />
+
+    <Button
+        android:id="@+id/infantil"
+        style="@style/infatil"
+        android:layout_width="164dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="368dp"
+        android:background="@drawable/botao_transparente"
+        android:gravity="bottom|start"
+        android:paddingStart="10dp"
+        android:paddingBottom="19dp"
+        android:text="@string/infantil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <!-- igreja -->
+
+    <ImageView
+        android:id="@+id/foto_igreja"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:contentDescription="@string/descricao_igreja"
+        android:src="@drawable/institu_igreja"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="601dp" />
+
+    <View
+        android:id="@+id/fundo_igreja"
+        android:layout_width="165dp"
+        android:layout_height="39dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/fundo_nome_instuicoes"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="773dp" />
+
+    <ImageView
+        android:id="@+id/loc_igreja"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:contentDescription="@string/localizacao"
+        android:src="@drawable/icon_localizacao"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="793dp" />
+
+    <TextView
+        android:id="@+id/distancia_igreja"
+        android:layout_width="35dp"
+        android:layout_height="15dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/distancia_ifantil"
+        android:textAppearance="@style/distancias"
+        app:layout_constraintStart_toEndOf="@+id/loc_igreja"
+        tools:layout_editor_absoluteY="790dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/igreja"
+        style="@style/idosos_igreja"
+        android:layout_width="164dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="600dp"
+        android:background="@drawable/botao_transparente"
+        android:gravity="bottom|start"
+        android:paddingStart="10dp"
+        android:paddingBottom="13dp"
+        android:text="@string/igreja"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <!-- Associação de bairro -->
+
+    <ImageView
+        android:id="@+id/foto_bairro"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:contentDescription="@string/descricao_igreja"
+        android:src="@drawable/institu_bairro"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="601dp" />
+
+    <View
+        android:id="@+id/fundo_bairro"
+        android:layout_width="165dp"
+        android:layout_height="39dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/fundo_nome_instuicoes"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="773dp" />
+
+    <ImageView
+        android:id="@+id/loc_bairro"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:contentDescription="@string/localizacao"
+        android:src="@drawable/icon_localizacao"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="226dp"
+        tools:layout_editor_absoluteY="793dp" />
+
+    <TextView
+        android:id="@+id/distancia_bairro"
+        android:layout_width="35dp"
+        android:layout_height="15dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/distancia_bairro"
+        android:textAppearance="@style/distancias"
+        app:layout_constraintStart_toEndOf="@+id/loc_bairro"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="790dp" />
+
+    <Button
+        android:id="@+id/bairro"
+        style="@style/bairro"
+        android:layout_width="164dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="600dp"
+        android:background="@drawable/botao_transparente"
+        android:gravity="bottom|start"
+        android:paddingStart="10dp"
+        android:paddingBottom="18dp"
+        android:text="@string/bairro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <!-- barra de baixo -->
 
     <View
         android:id="@+id/barra_de_baixo"
@@ -48,5 +397,72 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/home_page"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="836dp"
+        android:layout_marginEnd="344dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="@string/descricao_icon_home"
+        android:drawableTop="@drawable/icon_home"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/comunidade"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="836dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="@string/descricao_comunidade"
+        android:drawableTop="@drawable/icon_comunidade"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/geolocalizacao"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toEndOf="@+id/home_page"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/geolocalizacao"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="836dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="@string/descricao_geoloc"
+        android:drawableTop="@drawable/icon_geoloc"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/barra_de_baixo"
+        app:layout_constraintStart_toStartOf="@+id/barra_de_baixo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/favoritos"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="836dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="@string/descricao_fav"
+        android:drawableTop="@drawable/icon_fav"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/user"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/geolocalizacao"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/user"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="836dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="@string/descricao_user"
+        android:drawableTop="@drawable/icon_user"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
