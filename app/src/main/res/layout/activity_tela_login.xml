@@ -4,17 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F6FE"
-    android:minHeight="@android:dimen/system_app_widget_background_radius"
-    android:scrollbarSize="4dp"
-    app:constraint_referenced_tags="@string/app_name">
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-    <!--
-      Font family: Patua One
-      Line height: 49sp
-      -->
-
-    <!-- styles.xml -->
+    tools:context=".TelaLogin">
 
     <TextView
         android:id="@+id/senha"
@@ -57,13 +47,13 @@
 
     <ImageView
         android:id="@+id/imagem"
-        android:layout_width="621dp"
-        android:layout_height="295dp"
+        android:layout_width="431dp"
+        android:layout_height="297dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.419"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/oip_2"
-        tools:layout_editor_absoluteY="-6dp" />
+        tools:layout_editor_absoluteY="-7dp" />
 
     <View
         android:id="@+id/ellipse_1"
@@ -76,16 +66,6 @@
         tools:layout_editor_absoluteX="-1dp"
         tools:layout_editor_absoluteY="201dp" />
 
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-    <!--
-      Font family: Saira
-      Line height: 22sp
-      (identical to box height)
-      -->
-
-    <!-- styles.xml -->
 
     <View
         android:id="@+id/ellipse_2"
@@ -153,105 +133,6 @@
         tools:layout_editor_absoluteX="95dp"
         tools:layout_editor_absoluteY="318dp" />
 
-    <style name="nome_comple">
-
-        <item name="android:textSize">14sp</item>
-
-        <item name="android:textColor">#80023679</item>
-    </style>
-
-    <!-- strings.xml -->
-    <string name="nome_comple">
-        Nome completo
-    </string>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <!-- drawable/tear_off_ca.xml -->
-
-    <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:aapt="http://schemas.android.com/aapt"
-        android:width="30dp"
-        android:height="30dp"
-        android:viewportWidth="30"
-        android:viewportHeight="30">
-
-        <group>
-
-            <clip-path android:pathData="M0 0H30V30H0V0Z" />
-        </group>
-    </vector>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <!-- drawable/email.xml -->
-
-    <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:aapt="http://schemas.android.com/aapt"
-        android:width="30dp"
-        android:height="30dp"
-        android:viewportWidth="30"
-        android:viewportHeight="30">
-
-        <group>
-
-            <clip-path android:pathData="M0 0H30V30H0V0Z" />
-        </group>
-    </vector>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <!-- drawable/phone_messa.xml -->
-
-    <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:aapt="http://schemas.android.com/aapt"
-        android:width="30dp"
-        android:height="30dp"
-        android:viewportWidth="30"
-        android:viewportHeight="30">
-
-        <group>
-
-            <clip-path android:pathData="M0 0H30V30H0V0Z" />
-        </group>
-    </vector>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <!-- drawable/lock.xml -->
-
-    <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:aapt="http://schemas.android.com/aapt"
-        android:width="30dp"
-        android:height="30dp"
-        android:viewportWidth="30"
-        android:viewportHeight="30">
-
-        <group>
-
-            <clip-path android:pathData="M0 0H30V30H0V0Z" />
-        </group>
-    </vector>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <!-- drawable/home_page.xml -->
-
-    <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:aapt="http://schemas.android.com/aapt"
-        android:width="30dp"
-        android:height="30dp"
-        android:viewportWidth="30"
-        android:viewportHeight="30">
-
-        <group>
-
-            <clip-path android:pathData="M0 0H30V30H0V0Z" />
-        </group>
-    </vector>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
     <Button
         android:id="@+id/button"
         android:layout_width="155dp"
@@ -265,14 +146,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-    <!--
-      Font family: Patua One
-      Line height: 22sp
-      (identical to box height)
-      -->
 
-    <!-- styles.xml -->
+
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
 
     <TextView
         android:id="@+id/login"
@@ -286,21 +162,8 @@
         android:textColor="#FEFEFE"
         android:textSize="16sp"
         tools:layout_editor_absoluteX="167dp"
-        tools:layout_editor_absoluteY="653dp" />
+        tools:layout_editor_absoluteY="814dp" />
 
-    <style name="cadastrar">
-
-        <item name="android:textSize">18sp</item>
-
-        <item name="android:textColor">#FFFFFF</item>
-    </style>
-
-    <!-- strings.xml -->
-    <string name="cadastrar">
-        Cadastrar
-    </string>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
     <View
         android:id="@+id/voltar"
         android:layout_width="19.76dp"
@@ -309,11 +172,7 @@
         android:layout_alignParentTop="true"
         android:background="@drawable/voltar"
         tools:layout_editor_absoluteX="195dp"
-        tools:layout_editor_absoluteY="697dp"
+        tools:layout_editor_absoluteY="857dp"
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

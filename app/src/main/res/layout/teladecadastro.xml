@@ -435,7 +435,7 @@
         android:textColor="#FEFEFE"
         android:textSize="16sp"
         tools:layout_editor_absoluteX="167dp"
-        tools:layout_editor_absoluteY="653dp" />
+        tools:layout_editor_absoluteY="811dp" />
 
     <style name="cadastrar">
         <item name="android:textSize">18sp</item>
@@ -456,7 +456,7 @@
         android:layout_alignParentTop="true"
         android:background="@drawable/voltar"
         tools:layout_editor_absoluteX="195dp"
-        tools:layout_editor_absoluteY="697dp" />
+        tools:layout_editor_absoluteY="857dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

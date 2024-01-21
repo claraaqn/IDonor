@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:minHeight="@android:dimen/system_app_widget_background_radius"
-    android:scrollbarSize="4dp"
     android:background="#F4F6FE"
+    android:scrollbarSize="4dp"
     app:constraint_referenced_tags="@string/app_name">
     <!-- Auto layout, variables, and unit scale are not yet supported -->
     <!--
@@ -114,104 +113,6 @@
         tools:layout_editor_absoluteX="95dp"
         tools:layout_editor_absoluteY="318dp" />
 
-    <style name="nome_comple">
-
-        <item name="android:textSize">14sp</item>
-
-        <item name="android:textColor">#80023679</item>
-    </style>
-
-    <!-- strings.xml -->
-    <string name="nome_comple">
-        Nome completo
-    </string>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <!-- drawable/tear_off_ca.xml -->
-
-    <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:aapt="http://schemas.android.com/aapt"
-        android:width="30dp"
-        android:height="30dp"
-        android:viewportWidth="30"
-        android:viewportHeight="30">
-
-        <group>
-
-            <clip-path android:pathData="M0 0H30V30H0V0Z" />
-        </group>
-    </vector>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <!-- drawable/email.xml -->
-
-    <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:aapt="http://schemas.android.com/aapt"
-        android:width="30dp"
-        android:height="30dp"
-        android:viewportWidth="30"
-        android:viewportHeight="30">
-
-        <group>
-
-            <clip-path android:pathData="M0 0H30V30H0V0Z" />
-        </group>
-    </vector>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <!-- drawable/phone_messa.xml -->
-
-    <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:aapt="http://schemas.android.com/aapt"
-        android:width="30dp"
-        android:height="30dp"
-        android:viewportWidth="30"
-        android:viewportHeight="30">
-
-        <group>
-
-            <clip-path android:pathData="M0 0H30V30H0V0Z" />
-        </group>
-    </vector>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <!-- drawable/lock.xml -->
-
-    <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:aapt="http://schemas.android.com/aapt"
-        android:width="30dp"
-        android:height="30dp"
-        android:viewportWidth="30"
-        android:viewportHeight="30">
-
-        <group>
-
-            <clip-path android:pathData="M0 0H30V30H0V0Z" />
-        </group>
-    </vector>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <!-- drawable/home_page.xml -->
-
-    <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:aapt="http://schemas.android.com/aapt"
-        android:width="30dp"
-        android:height="30dp"
-        android:viewportWidth="30"
-        android:viewportHeight="30">
-
-        <group>
-
-            <clip-path android:pathData="M0 0H30V30H0V0Z" />
-        </group>
-    </vector>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
 
     <Button
         android:id="@+id/button"
@@ -226,14 +127,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-    <!--
-      Font family: Patua One
-      Line height: 22sp
-      (identical to box height)
-      -->
 
-    <!-- styles.xml -->
 
     <TextView
         android:id="@+id/cadastrar"
@@ -247,19 +141,8 @@
         android:textColor="#FEFEFE"
         android:textSize="16sp"
         tools:layout_editor_absoluteX="167dp"
-        tools:layout_editor_absoluteY="653dp" />
+        tools:layout_editor_absoluteY="812dp" />
 
-    <style name="cadastrar">
-        <item name="android:textSize">18sp</item>
-        <item name="android:textColor">#FFFFFF</item>
-    </style>
-
-    <!-- strings.xml -->
-    <string name="cadastrar">
-        Cadastrar
-    </string>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
     <View
         android:id="@+id/voltar"
         android:layout_width="19.76dp"
@@ -267,5 +150,5 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/voltar"
-        tools:layout_editor_absoluteX="195dp"
-        tools:layout_editor_absoluteY="697dp" />
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="857dp" />
