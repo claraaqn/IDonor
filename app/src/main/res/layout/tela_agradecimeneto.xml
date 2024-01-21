@@ -61,18 +61,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- volar à tela inicial-->
     <Button
         android:id="@+id/doarmais"
         style="@style/tela_agradecimento"
         android:layout_width="277dp"
         android:layout_height="48dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="632dp"
         android:background="@android:color/transparent"
         android:text="@string/doarmais"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/doarmaisfundo"
+        app:layout_constraintTop_toTopOf="@+id/doarmaisfundo" />
+
+    <!-- volar à tela inicial-->
 
     <View
         android:id="@+id/voltar_fundo"
@@ -90,12 +89,11 @@
         style="@style/tela_agradecimento"
         android:layout_width="278dp"
         android:layout_height="48dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="708dp"
         android:background="@android:color/transparent"
         android:text="@string/voltar_tela_inicial"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/voltar_fundo"
+        app:layout_constraintTop_toTopOf="@+id/voltar_fundo"
+        android:onClick="irParaTelaInicial"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
