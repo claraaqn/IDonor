@@ -2,5 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="AzulTitulo">#023679</color>
+    <color name="BackBotao">#D1EDF3</color>
+    <color name="BackTela">#F4F6FE</color>
+    <color name="BackChatOnline">#1A212F</color>
     <color name="cor">#1A212F</color>
+
 </resources>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TelaInstituicao"
+    tools:ignore="ExtraText"><![CDATA[
+
+    />
+    ]]>
+
+    <View
+        android:id="@+id/tela_de_inf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/BackTela"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        />
+
+    <ImageView
+        android:layout_width="411dp"
+        android:layout_height="348dp"
+        android:src="@drawable/Imglardosidosos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="47dp"
+        />
+
+
+    <ImageView
+        android:layout_width="424dp"
+        android:layout_height="325dp"
+        android:src="@drawable/ellipse_2"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-9dp"
+        tools:layout_editor_absoluteY="226dp"
+        />
+
+
+    <ImageView
+        android:layout_width="360dp"
+        android:layout_height="310dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="26dp"
+        android:src="@drawable/Informações"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="445dp"
+        />
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="43dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/patua_one"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/idonor"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        />
+
+    <TextView
+        android:layout_width="251dp"
+        android:layout_height="103dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:fontFamily="@font/patua_one"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/titulo_lar_idosos"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="307dp"
+        />
+
+    <View
+        android:id="@+id/line_18"
+        android:layout_width="65dp"
+        android:layout_height="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/linha_azul"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="304dp"
+        tools:layout_editor_absoluteY="428dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="53dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/botao_transparente"
+        android:drawableLeft="@drawable/IconVoltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/botao_transparente"
+        android:drawableLeft="@drawable/iconinformacao"
+        android:paddingLeft="1dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="389dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/botao_transparente"
+        android:drawableLeft="@drawable/iconcontato"
+        android:paddingLeft="1dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="236dp"
+        tools:layout_editor_absoluteY="389dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:background="@drawable/botao_transparente"
+        android:drawableLeft="@drawable/list"
+        android:paddingLeft="1dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="385dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:background="@drawable/botao_transparente"
+        android:drawableLeft="@drawable/star_azul"
+        android:paddingLeft="1dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="319dp"
+        tools:layout_editor_absoluteY="385dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="260dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/backgroundbutton"
+        android:drawableLeft="@drawable/icondoacao"
+        android:fontFamily="@font/patua_one"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="@string/doar"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
