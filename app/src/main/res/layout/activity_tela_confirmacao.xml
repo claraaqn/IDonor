@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TelaConfirmacao">
+
+    <View
+        android:id="@+id/tela_de_inf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/BackTela"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:layout_width="23dp"
+        android:layout_height="25dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/IconVoltar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+
+    <ImageView
+        android:layout_width="398dp"
+        android:layout_height="270dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/Mapa"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="140dp" />
+
+    <ImageView
+        android:layout_width="204dp"
+        android:layout_height="121dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/IconDoar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="94dp"
+        tools:layout_editor_absoluteY="692dp" />
+
+
+    <TextView
+        android:layout_width="161dp"
+        android:layout_height="62dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/patua_one"
+        android:textColor="@color/AzulTitulo"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Check-out"
+        android:textSize="28sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="43dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/patua_one"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="iDonor"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="28sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,5 +24,16 @@
         <activity android:name=".TelaPerfilActivity" />
         <activity android:name=".TelaImpactoActivity" />
         <activity android:name=".TelaAgradecimentoActivity" />
+        <activity
+            android:name=".TelaEspecificacao"
+            android:exported="false" />
+        <activity
+            android:name=".TelaCategoriasDoacoes"
+            android:exported="false" />
+            <activity
+                android:name=".TelaInstituicao"
+                android:exported="false" />
+        <activity android:name="..TelaConfirmacao" />
+
     </application>
 </manifest>

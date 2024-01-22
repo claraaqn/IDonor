@@ -1,0 +1,105 @@
+{
+  "name": "realizar_doa_o",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "btN26kxD9LFUb7V2N7DQZN",
+    "node": "243:8",
+    "version": "4960098165",
+    "component-id": "66cbb4e87b4f983aede0c2a122ac9e3ab892dce0"
+  },
+  "default": "Realizar doação",
+  "documentation": "Botão de realizar doação",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "vector",
+        "id": "Rectangle 118"
+      },
+      {
+        "type": "text",
+        "id": "REALIZAR DOAÇÃO"
+      }
+    ],
+    "modes": {
+      "Realizar doação": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": [
+              "Rectangle 118",
+              "REALIZAR DOAÇÃO"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Rectangle 118",
+            "border-radius": "20.0",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "vector-content": "rectangle_118.svg"
+          },
+          {
+            "id": "REALIZAR DOAÇÃO",
+            "margin": {
+              "left": "58.0",
+              "top": "11.0",
+              "right": "58.0",
+              "bottom": "10.0"
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": "1.0"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "213.781512605042",
+              "saturation": "0.9834710743801653",
+              "value": "0.4745098039215686"
+            },
+            "text-content": "REALIZAR DOAÇÃO",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-align": "left",
+            "text-size": "18.0",
+            "letter-spacing": "0.36",
+            "line-height": "1.2189999686347113",
+            "typeface": "Patua One"
+          }
+        ]
+      }
+    }
+  },
+  "previews": [
+    {
+      "design": "Realizar doação",
+      "size": {
+        "width": 278.0,
+        "height": 43.0
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}
