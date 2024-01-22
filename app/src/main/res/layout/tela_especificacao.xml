@@ -17,16 +17,9 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        />
 
-    <ImageView
-        android:layout_width="23dp"
-        android:layout_height="25dp"
-        android:contentDescription="TODO"
-        android:src="@drawable/IconVoltar"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="16dp" />
 
     <TextView
         android:layout_width="160dp"
@@ -36,10 +29,21 @@
         android:fontFamily="@font/patua_one"
         android:gravity="center_horizontal|center_vertical"
         android:textColor="@color/AzulTitulo"
-        android:text="iDonor"
+        android:text="@string/idonor"
         android:textSize="28sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="7dp" />
+        tools:layout_editor_absoluteY="7dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="26dp"
+        android:layout_height="37dp"
+        android:background="@drawable/botao_transparente"
+        android:drawableLeft="@drawable/IconVoltar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="10dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

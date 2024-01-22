@@ -6,6 +6,6 @@ import android.os.Bundle
 class TelaEspecificacao : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tela_especificacao)
+        setContentView(R.layout.tela_especificacao)
     }
 }
