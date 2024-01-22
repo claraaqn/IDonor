@@ -16,9 +16,6 @@
             android:name=".TelaInicial"
             android:exported="false" />
         <activity
-            android:name=".TelaDeLogin"
-            android:exported="false" />
-        <activity
             android:name=".TelaLogin"
             android:exported="false" />
         <activity
@@ -42,7 +39,7 @@
         <activity
             android:name=".TelaInstituicao"
             android:exported="false" />
-        <activity android:name="..TelaConfirmacao" />
+        <activity android:name=".TelaConfirmacao" />
 
          <meta-data
             android:name="preloaded_fonts"
@@ -50,6 +47,4 @@
 
     </application>
 
-        
-    </application>
 </manifest>
