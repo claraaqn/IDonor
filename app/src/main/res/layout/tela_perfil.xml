@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F0FE">
+
+    <!-- TextView do Título -->
+
+    <!-- Botão de Edição -->
+
+    <View
+        android:id="@+id/fundo_das_informacoes"
+        android:layout_width="408dp"
+        android:layout_height="329dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/fundo_branco_perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/meu_perfil"
+        android:layout_width="115dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="36dp"
+        android:elevation="8dp"
+        android:gravity="top"
+        android:text="@string/meu_perfil"
+        android:textAppearance="@style/meu_perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/edicao_perfil"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="@string/descricao_edicao_perfil"
+        android:drawableTop="@drawable/icon_edicao_perfil"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- imagem perfil -->
+
+    <!-- text view das informações-->
+
+    <Button
+        android:id="@+id/voltar_a_tela_inical"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="344dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="@string/voltar"
+        android:drawableTop="@drawable/icon_voltar"
+        android:elevation="10dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/fundo_perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:onClick="voltarTelaInicial"/>
+
+    <View
+        android:id="@+id/fundo_perfil"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/fundo_cinza_perfil"
+        app:layout_constraintBottom_toBottomOf="@+id/foto_de_perfil"
+        app:layout_constraintEnd_toEndOf="@+id/foto_de_perfil"
+        app:layout_constraintStart_toStartOf="@+id/foto_de_perfil"
+        app:layout_constraintTop_toTopOf="@+id/foto_de_perfil"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/foto_de_perfil"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="116dp"
+        android:elevation="8dp"
+        android:src="@drawable/foto_perfil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/igor_santos"
+        android:layout_width="106dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="48dp"
+        android:elevation="8dp"
+        android:gravity="top"
+        android:text="@string/nome_pessoa"
+        android:textAppearance="@style/nome_pessoa"
+        app:layout_constraintStart_toEndOf="@+id/fundo_perfil"
+        app:layout_constraintTop_toBottomOf="@+id/nome"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/nome"
+        android:layout_width="25dp"
+        android:layout_height="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="56dp"
+        android:elevation="8dp"
+        android:gravity="top"
+        android:text="@string/nome_mostra"
+        android:textAppearance="@style/informacoes"
+        app:layout_constraintStart_toEndOf="@+id/fundo_perfil"
+        app:layout_constraintTop_toBottomOf="@+id/meu_perfil"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/nome2"
+        android:layout_width="76dp"
+        android:layout_height="17dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:elevation="8dp"
+        android:gravity="top"
+        android:text="@string/contato_mostra"
+        android:textAppearance="@style/informacoes"
+        app:layout_constraintStart_toEndOf="@+id/fundo_perfil"
+        app:layout_constraintTop_toBottomOf="@+id/igor_santos"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/nome3"
+        android:layout_width="27dp"
+        android:layout_height="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:elevation="8dp"
+        android:gravity="top"
+        android:text="@string/email_mostra"
+        android:textAppearance="@style/informacoes"
+        app:layout_constraintStart_toEndOf="@+id/fundo_perfil"
+        app:layout_constraintTop_toBottomOf="@+id/telefone"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/igor_silva_"
+        android:layout_width="132dp"
+        android:layout_height="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="48dp"
+        android:elevation="8dp"
+        android:gravity="top"
+        android:text="@string/email"
+        android:textAppearance="@style/contato"
+        app:layout_constraintStart_toEndOf="@+id/fundo_perfil"
+        app:layout_constraintTop_toBottomOf="@+id/nome3"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/telefone"
+        android:layout_width="103dp"
+        android:layout_height="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="48dp"
+        android:elevation="8dp"
+        android:gravity="top"
+        android:text="@string/telefone"
+        android:textAppearance="@style/contato"
+        app:layout_constraintStart_toEndOf="@+id/fundo_perfil"
+        app:layout_constraintTop_toBottomOf="@+id/nome2"
+        tools:ignore="MissingConstraints" />
+
+    <!-- os botões -->
+
+    <!-- dados cadrastais -->
+
+    <View
+        android:id="@+id/fundo_botao_cadrasto"
+        android:layout_width="278dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="404dp"
+        android:background="@drawable/fundo_botao_azul_claro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon_dados"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/localizacao"
+        android:src="@drawable/icon_user"
+        app:layout_constraintBottom_toBottomOf="@+id/fundo_botao_cadrasto"
+        app:layout_constraintEnd_toEndOf="@+id/fundo_botao_cadrasto"
+        app:layout_constraintHorizontal_bias="0.241"
+        app:layout_constraintStart_toStartOf="@+id/fundo_botao_cadrasto"
+        app:layout_constraintTop_toTopOf="@+id/fundo_botao_cadrasto"
+        app:layout_constraintVertical_bias="0.611"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/dados_cadratais"
+        style="@style/botoes_perfil"
+        android:layout_width="278dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="360dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:text="@string/dados_cadrastais"
+        android:gravity="start"
+        android:paddingStart="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fundo_botao_cadrasto"
+        app:layout_constraintEnd_toEndOf="@+id/fundo_botao_cadrasto"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/fundo_botao_cadrasto"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="RtlSymmetry" />
+
+    <!-- meus endereços -->
+
+    <View
+        android:id="@+id/fundo_botao_endereco"
+        android:layout_width="278dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="480dp"
+        android:background="@drawable/fundo_botao_azul_claro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon_endereco"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/localizacao"
+        android:src="@drawable/icon_endereco"
+        app:layout_constraintBottom_toBottomOf="@+id/fundo_botao_endereco"
+        app:layout_constraintEnd_toEndOf="@+id/fundo_botao_endereco"
+        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintStart_toStartOf="@+id/fundo_botao_endereco"
+        app:layout_constraintTop_toTopOf="@+id/fundo_botao_endereco"
+        app:layout_constraintVertical_bias="0.611"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/meus_enderecos"
+        style="@style/botoes_perfil"
+        android:layout_width="278dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="64dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:text="@string/meus_enderecos"
+        android:gravity="start"
+        android:paddingStart="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fundo_botao_endereco"
+        app:layout_constraintEnd_toEndOf="@+id/fundo_botao_endereco"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/fundo_botao_endereco"
+        app:layout_constraintTop_toTopOf="@+id/fundo_botao_endereco"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="RtlSymmetry" />
+
+    <!-- meu impacto -->
+
+    <View
+        android:id="@+id/fundo_botao_impacto"
+        android:layout_width="278dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="556dp"
+        android:background="@drawable/fundo_botao_azul_claro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon_impacto"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/localizacao"
+        android:src="@drawable/icon_impacto"
+        app:layout_constraintBottom_toBottomOf="@+id/fundo_botao_impacto"
+        app:layout_constraintEnd_toEndOf="@+id/fundo_botao_impacto"
+        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintStart_toStartOf="@+id/fundo_botao_impacto"
+        app:layout_constraintTop_toTopOf="@+id/fundo_botao_impacto"
+        app:layout_constraintVertical_bias="0.611"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/impacto_botao"
+        style="@style/botoes_perfil"
+        android:layout_width="278dp"
+        android:layout_height="48dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:text="@string/impacto"
+        android:gravity="start"
+        android:paddingStart="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fundo_botao_impacto"
+        app:layout_constraintEnd_toEndOf="@+id/fundo_botao_impacto"
+        app:layout_constraintStart_toStartOf="@+id/fundo_botao_impacto"
+        app:layout_constraintTop_toTopOf="@+id/fundo_botao_impacto"
+        tools:ignore="RtlSymmetry"
+        android:onClick="irParaTelaImpacto"/>
+
+    <!-- sair -->
+
+    <View
+        android:id="@+id/fundo_botao_sair"
+        android:layout_width="278dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="636dp"
+        android:background="@drawable/fundo_botao_azul_claro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon_sair"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/localizacao"
+        android:src="@drawable/icon_impacto"
+        app:layout_constraintBottom_toBottomOf="@+id/fundo_botao_sair"
+        app:layout_constraintEnd_toEndOf="@+id/fundo_botao_sair"
+        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintStart_toStartOf="@+id/fundo_botao_sair"
+        app:layout_constraintTop_toTopOf="@+id/fundo_botao_sair"
+        app:layout_constraintVertical_bias="0.611"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/sair_botao"
+        style="@style/botoes_perfil"
+        android:layout_width="278dp"
+        android:layout_height="48dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:text="@string/sair"
+        android:gravity="start"
+        android:paddingStart="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fundo_botao_sair"
+        app:layout_constraintEnd_toEndOf="@+id/fundo_botao_sair"
+        app:layout_constraintStart_toStartOf="@+id/fundo_botao_sair"
+        app:layout_constraintTop_toTopOf="@+id/fundo_botao_sair"
+        tools:ignore="MissingConstraints,RtlSymmetry" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
