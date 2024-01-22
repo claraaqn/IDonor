@@ -86,7 +86,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="26dp"
         android:layout_height="37dp"
-        android:background="@drawable/botao_transparente"
+        android:background="@drawable/fundo_transparente_botao"
         android:drawableLeft="@drawable/IconVoltar"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"

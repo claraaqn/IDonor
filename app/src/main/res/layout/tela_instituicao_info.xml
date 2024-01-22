@@ -99,7 +99,7 @@
         android:fontFamily="@font/sairaextracondensedsemibold"
         android:text="@string/info_lar_idosos"
         android:textColor="@color/black"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -113,7 +113,7 @@
         android:fontFamily="@font/sairaextracondensedsemibold"
         android:text="@string/info2_lar_idosos"
         android:textColor="@color/black"
-        android:textSize="14dp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -135,51 +135,60 @@
         android:layout_height="56dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="4dp"
-        android:background="@drawable/botao_transparente"
+        android:background="@drawable/fundo_transparente_botao"
         android:drawableLeft="@drawable/IconVoltar"
+        android:contentDescription="Botão Voltar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:background="@drawable/botao_transparente"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="Botão de Info"
         android:drawableLeft="@drawable/icon_informacao_azul"
-        android:paddingLeft="1dp"
+        android:paddingLeft="12dp"
+        android:paddingBottom="14dp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="389dp" />
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="381dp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:background="@drawable/botao_transparente"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="Botão Contato"
         android:drawableLeft="@drawable/iconcontato"
-        android:paddingLeft="1dp"
+        android:paddingLeft="14dp"
+        android:paddingBottom="9dp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="236dp"
-        tools:layout_editor_absoluteY="389dp" />
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="380dp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="39dp"
-        android:layout_height="39dp"
-        android:background="@drawable/botao_transparente"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="Botão WishList"
         android:drawableLeft="@drawable/list"
-        android:paddingLeft="1dp"
+        android:paddingLeft="19dp"
+        android:paddingBottom="12dp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="385dp" />
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="381dp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="39dp"
-        android:layout_height="39dp"
-        android:background="@drawable/botao_transparente"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="Botão Avaliação"
         android:drawableLeft="@drawable/star"
-        android:paddingLeft="1dp"
+        android:paddingLeft="17dp"
+        android:paddingBottom="12dp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="319dp"
-        tools:layout_editor_absoluteY="385dp" />
+        tools:layout_editor_absoluteX="303dp"
+        tools:layout_editor_absoluteY="381dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="260dp"
