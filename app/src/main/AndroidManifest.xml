@@ -21,5 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".TelaInicialActivity" />
+        <activity android:name=".TelaPerfilActivity" />
+        <activity android:name=".TelaImpactoActivity" />
+        <activity android:name=".TelaAgradecimentoActivity" />
     </application>
 </manifest>
