@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="google_icon" type="id" />
+    <item name="linha" type="id" />
+    <item name="linhaDireita" type="id" />
+    <item name="linhaDireita2" type="id" />
+</resources>
