@@ -12,13 +12,23 @@ class TelaAgradecimentoActivity : AppCompatActivity() {
         setContentView(R.layout.tela_agradecimeneto)
 
         val telaInicialButton: Button = findViewById(R.id.voltar_a_tela_inical)
+        val telaCategoriaDoacao: Button = findViewById(R.id.doarmais)
 
         telaInicialButton.setOnClickListener {
             irParaTelaInicial(it)
         }
+
+        telaCategoriaDoacao.setOnClickListener {
+            irParaTelaCategorias(it)
+        }
     }
 
     fun irParaTelaInicial(view: View) {
+        val intent = Intent(this, TelaInicialActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun irParaTelaCategorias(view: View) {
         val intent = Intent(this, TelaInicialActivity::class.java)
         startActivity(intent)
     }
