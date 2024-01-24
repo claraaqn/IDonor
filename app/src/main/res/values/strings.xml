@@ -81,4 +81,16 @@
     <string name="descricao_estrelas_lar">quantidade de estrelas que o lar dos idosos deu</string>
     <string name="descricao_estrelas_sandra">quantidade de estrelas que a Sandra Rafaela Deus deu</string>
     <string name="mais">mais...</string>
+    <string name="login">Login</string>
+    <string name="junte_se_a_uma_rede_de_apoio_e_amor_ao_pr_ximo">Junte-se a uma rede de apoio \ne amor ao próximo</string>
+    <string name="conhecer_as_institui_es">Conhecer as instituições</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="verificar">Verificar</string>
+    <string name="c_digo_de_verifica_o">Código de verificação</string>
+    <string name="senha">Senha</string>
+    <string name="endere_o">Endereço</string>
+    <string name="e_mail">Email</string>
+    <string name="data_de_nascimento">Data de Nascimento</string>
+    <string name="nome_completo">Nome completo</string>
+    <string name="cadastrar">"Cadastrar "</string>
 </resources>
