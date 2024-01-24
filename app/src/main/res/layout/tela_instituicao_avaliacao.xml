@@ -26,7 +26,7 @@
     <ImageView
         android:layout_width="411dp"
         android:layout_height="348dp"
-        android:src="@drawable/Imglardosidosos"
+        android:src="@drawable/imglardosidosos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
@@ -102,7 +102,7 @@
         android:layout_height="57dp"
         android:contentDescription="Botão Voltar"
         android:background="@drawable/fundo_transparente_botao"
-        android:drawableLeft="@drawable/IconVoltar"
+        android:drawableLeft="@drawable/iconvoltar"
         android:paddingLeft="20dp"
         android:paddingBottom="5dp"
         tools:ignore="MissingConstraints"
