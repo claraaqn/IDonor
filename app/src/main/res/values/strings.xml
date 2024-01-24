@@ -3,9 +3,8 @@
 
     <string name="descricao_logo_do_aplicativo">Logo do aplicativo</string>
 
-    <string name="mensagem_de_agradecimento"
-        tools:ignore="ExtraText,MissingConstraints">
-         Obrigado&#10;Pela&#10;Doação!
+    <string name="mensagem_de_agradecimento">
+         Obrigado\nPela\nDoação!
     </string>
 
     <string name="descricao_texto">Mensagem agradecendo pela doação</string>
