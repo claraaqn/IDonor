@@ -1,3 +1,84 @@
 <resources>
     <string name="app_name">IDonor</string>
+
+    <string name="descricao_logo_do_aplicativo">Logo do aplicativo</string>
+
+    <string name="mensagem_de_agradecimento"
+        tools:ignore="ExtraText,MissingConstraints">
+         Obrigado&#10;Pela&#10;Doação!
+    </string>
+
+    <string name="descricao_texto">Mensagem agradecendo pela doação</string>
+
+    <string name="doarmais">DOAR +</string>
+
+    <string name="voltar_tela_inicial">VOLTAR À TELA INICIAL</string>
+
+    <!-- tela perfil -->
+    <string name="nome_mostra">Nome</string>
+    <string name="contato_mostra">Telefone de contato</string>
+    <string name="email_mostra">E-mail</string>
+    <string name="nome_pessoa">XXXXXXXXXXXX</string>
+    <string name="telefone">(x) 9xxxx-xxxx</string>
+    <string name="email">xxxxxx@xxxxx.com</string>
+    <string name="meus_enderecos">Meus Endereços</string>
+    <string name="dados_cadrastais">Dados Cadrastais</string>
+    <string name="impacto">Impacto</string>
+    <string name="sair">Sair</string>
+    <string name="meu_perfil">Meu Perfil</string>
+    <string name="descricao_edicao_perfil">Editar perfil</string>
+    <string name="voltar">Voltar a tela anterior</string>
+    <string name="semana">Semana</string>
+    <string name="m_s">Mês</string>
+    <string name="ano">Ano</string>
+    <string name="total_de_itens_doados">Total de itens doados</string>
+    <string name="maior_dia_de_doa_o">Maior dia de doação</string>
+    <string name="xx">XX</string>
+    <string name="titulo_comentarios">Comentários sobre você</string>
+
+    <!-- tela inicial -->
+    <string name="pesquisar">Pesquisar insituições</string>
+    <string name="lupa_de_pesquisa">Lupa de pesquisa da insituições</string>
+    <string name="camapanhas">Campanhas Ativas \nPróximas de Você</string>
+    <string name="botao_fechar">botão fehcar as campanhas ativas próximo a você</string>
+    <string name="titulo_campanha">"Natal Solidário "</string>
+    <string name="texto_campanha">A ONG Família Feliz está esperando por você para mais um natal solidário. Estamos arrecadando brinquedos novos ou usados, roupas e cestas básicas, tudo para levar a mágica às famílias carentes da nossa cidade.\nAguardamos a sua contribuição!</string>
+    <string name="lar_dos_idosos">Lar dos Idosos</string>
+    <string name="distancia_idosos">à 1 km</string>
+    <string name="distancia_ifantil">à 3 km</string>
+    <string name="infantil">Lar Intanto Juvenil</string>
+    <string name="descricao_igreja">Foto de uma igreja</string>
+    <string name="localizacao">imagem de indicação de local</string>
+    <string name="igreja">Igreja</string>
+    <string name="distancia_bairro">à 600 m</string>
+    <string name="bairro">Associação de Bairro</string>
+    <string name="descricao_icon_home">Icon da tela inicial</string>
+    <string name="descricao_geoloc">Icon da geolocalização</string>
+    <string name="descricao_user">Icon do user</string>
+    <string name="descricao_comunidade">Icon da cominidade</string>
+    <string name="descricao_fav">Icon das instituições favoritas</string>
+  
+  
+    <string name="titulo_lar_idosos">Lar dos Idosos</string>
+    <string name="idonor">iDonor</string>
+    <string name="titulo_categorias">Escolha o tipo de doação</string>
+    <string name="alimentos">Alimentos</string>
+    <string name="voluntario">Voluntário</string>
+    <string name="dinheiro">Dinheiro</string>
+    <string name="vestimenta">Vestimenta</string>
+    <string name="titulo_checkout">Check-Out</string>
+    <string name="doar">DOAR</string>
+    <string name="info_lar_idosos">Nascemos em Belo Jardim, Pernambuco, com a iniciativa da conterrânea Aliete Maria da Silva, em parceria com o Lar Espírita Bezerra de Menezes. Desde então, acolhemos idosos que foram abandonados, violentados ou que estão em situação de vulnerabilidade, assim como entes queridos que precisam de cuidado diário e supervisionado. Para tornar os seus dias recheados de AMOR e CARINHO, disponibilizamos atividades de socialização, espaço de descanso, acompanhamento médico e serviço de alimentação, tudo com muito afeto para aqueles que um dia tanto cuidaram.</string>
+    <string name="info2_lar_idosos">Gerência:\nElizoneide Da Silva\nLocalização:\nAv. do Bom Conselho, 57 - Bom Conselho, Belo Jardim - PE, 55153-340</string>
+    <string name="wishlist_lar_idosos">Kit básico de higiene (escova de dente, pasta dental, sabonete, desodorante)\nFraldas geriátricas tamanho P, M e G.\nVoluntariado: Técnicos de enfermagem\nAlimentos (Kg)\nRoupas: Feminino (Tam P e M)\nRoupas: Masculino (Tamanho G)</string>
+    <string name="wishlist2_lar_idosos">Centro de arrecadação físico:\nAv. do Bom Conselho, 57 - Bom Conselho, Belo Jardim - PE, 55153-340\nCentro de arrecadação remoto:\nAplicativo IDonor</string>
+    <string name="contato">Telefone para contato:\n+55 (81) 9 3726-2349\nInstagram: \n@lardosidososbelojardimpe\nEmail para contato:\npadua_eduardo@hotmail.com</string>
+    <string name="semana_apresentada">01–07 Novembro, 2023</string>
+    <string name="foto_de_perfil_do_primeiro_coment_rio">foto de perfil do primeiro comentário</string>
+    <string name="cometeario_lar_idosos">Excelente doador. Sempre entrega pontualmente!</string>
+    <string name="sandra_rafaela">Sandra Rafaela</string>
+    <string name="comentario_sandra">Obrigada pelo volutariado! Muito simpático e paciente…</string>
+    <string name="descricao_estrelas_lar">quantidade de estrelas que o lar dos idosos deu</string>
+    <string name="descricao_estrelas_sandra">quantidade de estrelas que a Sandra Rafaela Deus deu</string>
+    <string name="mais">mais...</string>
 </resources>

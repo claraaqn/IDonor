@@ -40,30 +40,47 @@
         app:layout_constraintTop_toTopOf="parent"
         android:onClick="voltarParaTelaPerfil"/>
 
-    <!-- layout da semana do gráfico de impacto  -->
-
     <TextView
         android:id="@+id/impacto"
         android:layout_width="155dp"
         android:layout_height="47dp"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="64dp"
-        android:gravity="top"
+        android:gravity="center"
         android:text="@string/impacto"
         android:textAppearance="@style/impacto"
         app:layout_constraintBottom_toTopOf="@+id/semana_mes_ano"
         app:layout_constraintEnd_toStartOf="@+id/seta_semana_direita"
-        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintStart_toEndOf="@+id/idonor_volta_impacto"
         app:layout_constraintTop_toBottomOf="@+id/voltar_impacto"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
+    <!-- layout da semana do gráfico de impacto  -->
+    <!-- layout da seleção semana mês e ano  -->
+
+    <TextView
+        android:id="@+id/semana_apresentada"
+        android:layout_width="134dp"
+        android:layout_height="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="48dp"
+        android:gravity="top"
+        android:text="@string/semana_apresentada"
+        android:textAppearance="@style/semana_apresentada"
+        app:layout_constraintBottom_toTopOf="@+id/mes"
+        app:layout_constraintEnd_toEndOf="@+id/seta_semana_direita"
+        app:layout_constraintHorizontal_bias="1.12"
+        app:layout_constraintStart_toStartOf="@+id/seta_semana_esquerda"
+        app:layout_constraintTop_toBottomOf="@+id/impacto"
+        app:layout_constraintVertical_bias="0.5" />
+
     <Button
-        android:id="@+id/seta_semana_1"
+        android:id="@+id/seta_semana_esquerda"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="264dp"
+        android:layout_marginEnd="272dp"
         android:background="@drawable/fundo_transparente_botao"
         android:contentDescription="@string/voltar"
         android:drawableTop="@drawable/seta_semana_esquerda"
@@ -76,16 +93,14 @@
         android:id="@+id/seta_semana_direita"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="100dp"
         android:background="@drawable/fundo_transparente_botao"
         android:contentDescription="@string/voltar"
         android:drawableTop="@drawable/seta_semana_direita"
-        android:elevation="10dp"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.73"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/impacto" />
-
-    <!-- layout da seleção semana mês e ano  -->
 
     <View
         android:id="@+id/linha_divisoaria_1"
@@ -93,11 +108,11 @@
         android:layout_height="25dp"
         android:layout_alignParentTop="true"
         android:background="@drawable/linha_semana"
-        app:layout_constraintBottom_toBottomOf="@+id/seta_semana_1"
-        app:layout_constraintEnd_toEndOf="@+id/seta_semana_1"
+        app:layout_constraintBottom_toBottomOf="@+id/seta_semana_esquerda"
+        app:layout_constraintEnd_toEndOf="@+id/seta_semana_esquerda"
         app:layout_constraintHorizontal_bias="0.723"
-        app:layout_constraintStart_toStartOf="@+id/seta_semana_1"
-        app:layout_constraintTop_toTopOf="@+id/seta_semana_1"
+        app:layout_constraintStart_toStartOf="@+id/seta_semana_esquerda"
+        app:layout_constraintTop_toTopOf="@+id/seta_semana_esquerda"
         app:layout_constraintVertical_bias="0.608"
         tools:ignore="MissingConstraints" />
 
@@ -109,14 +124,11 @@
         android:background="@drawable/linha_semana"
         app:layout_constraintBottom_toBottomOf="@+id/seta_semana_direita"
         app:layout_constraintEnd_toEndOf="@+id/seta_semana_direita"
-        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintHorizontal_bias="0.255"
         app:layout_constraintStart_toStartOf="@+id/seta_semana_direita"
         app:layout_constraintTop_toTopOf="@+id/seta_semana_direita"
+        app:layout_constraintVertical_bias="0.565"
         tools:ignore="MissingConstraints" />
-
-    <!-- layout do gráfico  -->
-
-    <!-- retângulo de dados  -->
 
     <View
         android:id="@+id/semana_mes_ano"
@@ -127,9 +139,39 @@
         android:background="@drawable/fundo_semana_mes_ano"
         app:layout_constraintBottom_toTopOf="@+id/fundo_grafico"
         app:layout_constraintEnd_toEndOf="@+id/impacto"
-        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="@+id/impacto"
+        app:layout_constraintTop_toTopOf="@+id/mes"
+        app:layout_constraintVertical_bias="0.87"
         tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/fundo_semana_selecionada"
+        android:layout_width="81dp"
+        android:layout_height="26dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/fundo_selecao_semana_mes_ano"
+        app:layout_constraintBottom_toBottomOf="@+id/semana"
+        app:layout_constraintEnd_toEndOf="@+id/semana"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/semana"
+        app:layout_constraintTop_toTopOf="@+id/semana"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/semana"
+        style="@style/semana_selecionada"
+        android:layout_width="101dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="152dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:elevation="8dp"
+        android:text="@string/semana"
+        app:layout_constraintEnd_toStartOf="@+id/mes"
+        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintStart_toStartOf="@+id/semana_mes_ano"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/mes"
@@ -137,7 +179,7 @@
         android:layout_width="101dp"
         android:layout_height="48dp"
         android:layout_marginStart="156dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="152dp"
         android:background="@drawable/fundo_transparente_botao"
         android:elevation="8dp"
         android:text="@string/m_s"
@@ -152,7 +194,7 @@
         android:layout_width="101dp"
         android:layout_height="48dp"
         android:layout_marginStart="280dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="152dp"
         android:background="@drawable/fundo_transparente_botao"
         android:elevation="8dp"
         android:text="@string/ano"
@@ -161,22 +203,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/semana"
-        style="@style/semana_mes_ano"
-        android:layout_width="101dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="148dp"
-        android:background="@drawable/fundo_transparente_botao"
-        android:elevation="8dp"
-        android:text="@string/semana"
-        app:layout_constraintEnd_toStartOf="@+id/mes"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="@+id/semana_mes_ano"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- comentários -->
-
+    <!-- layout do gráfico  -->
     <View
         android:id="@+id/fundo_grafico"
         android:layout_width="356dp"
@@ -189,6 +216,8 @@
         app:layout_constraintStart_toStartOf="@+id/semana_mes_ano"
         app:layout_constraintTop_toBottomOf="@+id/mes"
         tools:ignore="MissingConstraints" />
+
+    <!-- retângulo de dados  -->
 
     <ImageView
         android:id="@+id/fundo_quantidade_itens"
@@ -248,7 +277,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/some_id"
+        android:id="@+id/quantidade_itens_doados"
         android:layout_width="69dp"
         android:layout_height="38dp"
         android:layout_alignParentTop="true"
@@ -271,11 +300,13 @@
         android:gravity="center_horizontal|top"
         android:text="@string/total_de_itens_doados"
         android:textAppearance="@style/titulo_dados"
-        app:layout_constraintBottom_toTopOf="@+id/some_id"
+        app:layout_constraintBottom_toTopOf="@+id/quantidade_itens_doados"
         app:layout_constraintEnd_toEndOf="@+id/fundo_quantidade_itens"
         app:layout_constraintStart_toStartOf="@+id/fundo_quantidade_itens"
         app:layout_constraintTop_toTopOf="@+id/fundo_quantidade_itens"
         tools:ignore="MissingConstraints" />
+
+    <!-- comentários -->
 
     <View
         android:id="@+id/fundo_comentarios"
@@ -306,5 +337,116 @@
         app:layout_constraintTop_toTopOf="@+id/fundo_comentarios"
         app:layout_constraintVertical_bias="0.043"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/foto_perfil_lar"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/foto_de_perfil_do_primeiro_coment_rio"
+        android:src="@drawable/comentario_1"
+        app:layout_constraintStart_toStartOf="@+id/fundo_comentarios"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_comentarios" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/foto_de_perfil_do_primeiro_coment_rio"
+        android:src="@drawable/comentario_2"
+        app:layout_constraintStart_toStartOf="@+id/fundo_comentarios"
+        app:layout_constraintTop_toBottomOf="@+id/foto_perfil_lar" />
+
+    <TextView
+        android:id="@+id/lar_dos_ido"
+        android:layout_width="56dp"
+        android:layout_height="19dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:gravity="top"
+        android:text="@string/lar_dos_idosos"
+        android:textAppearance="@style/institu_come"
+        app:layout_constraintStart_toEndOf="@+id/foto_perfil_lar"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_comentarios" />
+
+    <TextView
+        android:id="@+id/comentario_lar"
+        android:layout_width="184dp"
+        android:layout_height="21dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:gravity="top"
+        android:text="@string/cometeario_lar_idosos"
+        android:textAppearance="@style/come_institu"
+        app:layout_constraintStart_toEndOf="@+id/foto_perfil_lar"
+        app:layout_constraintTop_toBottomOf="@+id/lar_dos_ido" />
+
+    <TextView
+        android:id="@+id/sandra_rafaela"
+        android:layout_width="60dp"
+        android:layout_height="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top"
+        android:text="@string/sandra_rafaela"
+        android:textAppearance="@style/institu_come"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/comentario_lar" />
+
+    <TextView
+        android:id="@+id/comentario_sandra"
+        android:layout_width="184dp"
+        android:layout_height="21dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:gravity="top"
+        android:text="@string/comentario_sandra"
+        android:textAppearance="@style/come_institu"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/sandra_rafaela" />
+
+    <ImageView
+        android:id="@+id/estrelas_lar"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/descricao_estrelas_lar"
+        android:src="@drawable/estrelas_lar"
+        app:layout_constraintStart_toEndOf="@+id/foto_perfil_lar"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_comentarios" />
+
+    <ImageView
+        android:id="@+id/estrelas_sandra"
+        android:layout_width="20dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/descricao_estrelas_sandra"
+        android:src="@drawable/estrelas_sandra"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/comentario_lar" />
+
+    <TextView
+        android:id="@+id/mais_"
+        android:layout_width="22dp"
+        android:layout_height="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="top"
+        android:text="@string/mais"
+        android:textAppearance="@style/mais"
+        app:layout_constraintBottom_toBottomOf="@+id/fundo_comentarios"
+        app:layout_constraintEnd_toEndOf="@+id/fundo_comentarios"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/fundo_comentarios"
+        app:layout_constraintTop_toTopOf="@+id/fundo_comentarios"
+        app:layout_constraintVertical_bias="0.96" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
