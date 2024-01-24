@@ -24,7 +24,7 @@
         android:layout_width="398dp"
         android:layout_height="270dp"
         android:contentDescription="TODO"
-        android:src="@drawable/Mapa"
+        android:src="@drawable/mapa"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-3dp"
         tools:layout_editor_absoluteY="140dp" />
@@ -84,13 +84,16 @@
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="26dp"
-        android:layout_height="37dp"
+        android:layout_width="47dp"
+        android:layout_height="52dp"
         android:background="@drawable/fundo_transparente_botao"
-        android:drawableLeft="@drawable/IconVoltar"
+        android:contentDescription="Botão Voltar"
+        android:paddingLeft="22dp"
+        android:paddingTop="8dp"
+        android:drawableLeft="@drawable/iconvoltar"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="10dp" />
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="-2dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -37,13 +37,14 @@
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="52dp"
+        android:layout_height="60dp"
+        android:contentDescription="Botão Voltar"
         android:background="@drawable/fundo_transparente_botao"
-        android:drawableLeft="@drawable/IconVoltar"
+        android:drawableLeft="@drawable/icon_voltar"
+        android:paddingLeft="20dp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="10dp"
-        />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
