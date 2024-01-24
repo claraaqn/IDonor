@@ -38,7 +38,7 @@
         android:layout_marginStart="124dp"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="126dp"
-        android:fontFamily="@font/patua_one"
+        android:fontFamily="@font/patuaone"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/titulo_checkout"
         android:textColor="@color/AzulTitulo"
@@ -55,7 +55,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="16dp"
         android:layout_marginTop="7dp"
-        android:fontFamily="@font/patua_one"
+        android:fontFamily="@font/patuaone"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/idonor"
         android:textColor="@color/AzulTitulo"
@@ -72,7 +72,7 @@
         android:layout_marginBottom="53dp"
         android:background="@drawable/backgroundbutton"
         android:drawableLeft="@drawable/icondoacao"
-        android:fontFamily="@font/patua_one"
+        android:fontFamily="@font/patuaone"
         android:paddingLeft="50dp"
         android:paddingRight="50dp"
         android:text="Doar"
@@ -89,8 +89,8 @@
         android:background="@drawable/fundo_transparente_botao"
         android:drawableLeft="@drawable/IconVoltar"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="10dp" />
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="0dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

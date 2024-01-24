@@ -4,157 +4,133 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:minHeight="@android:dimen/system_app_widget_background_radius"
-    android:scrollbarSize="4dp"
     android:background="#F4F6FE"
-    app:constraint_referenced_tags="@string/app_name">
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-    <!--
-      Font family: Patua One
-      Line height: 49sp
-      -->
+    tools:context=".TelaCadastro">
 
-    <!-- styles.xml -->
-
-    <TextView
-        android:id="@+id/nome_comple5"
-        android:layout_width="127dp"
-        android:layout_height="22dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:fontFamily="@font/saira_medium"
-        android:gravity="top"
+    <EditText
+        android:id="@+id/senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
         android:text="Senha"
-        android:textColor="#605F5F"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="536dp" />
+        android:textColor="#979494"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="524dp" />
 
-    <TextView
+    <EditText
         android:id="@+id/nome_comple6"
-        android:layout_width="127dp"
-        android:layout_height="22dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:fontFamily="@font/saira_medium"
-        android:gravity="top"
-        android:text="Localização"
-        android:textColor="#605F5F"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="589dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Endereço"
+        android:textColor="#979494"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="575dp" />
 
-    <TextView
+    <EditText
         android:id="@+id/nome_comple4"
-        android:layout_width="127dp"
-        android:layout_height="22dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:fontFamily="@font/saira_medium"
-        android:gravity="top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
         android:text="Telefone"
-        android:textColor="#605F5F"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="483dp" />
+        android:textColor="#979494"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="471dp" />
 
-    <TextView
+    <EditText
         android:id="@+id/nome_comple3"
-        android:layout_width="127dp"
-        android:layout_height="22dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:fontFamily="@font/saira_medium"
-        android:gravity="top"
-        android:text="E-mail"
-        android:textColor="#605F5F"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="427dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="E_mail"
+        android:textColor="#979494"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="416dp" />
 
-    <TextView
+    <EditText
         android:id="@+id/nome_comple2"
-        android:layout_width="127dp"
-        android:layout_height="22dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:fontFamily="@font/saira_medium"
-        android:gravity="top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
         android:text="Data de nascimento"
-        android:textColor="#605F5F"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="368dp" />
+        android:textColor="#979494"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="358dp" />
 
     <View
         android:id="@+id/linha7"
         android:layout_width="364dp"
         android:layout_height="2dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginStart="26dp"
         android:layout_marginEnd="26dp"
         android:background="@android:drawable/dark_header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="620dp" />
+        tools:layout_editor_absoluteY="620dp"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/linha6"
         android:layout_width="364dp"
         android:layout_height="2dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginStart="26dp"
         android:layout_marginEnd="26dp"
         android:background="@android:drawable/dark_header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="569dp" />
+        tools:layout_editor_absoluteY="569dp"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/linha5"
         android:layout_width="364dp"
         android:layout_height="2dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginStart="26dp"
         android:layout_marginEnd="26dp"
         android:background="@android:drawable/dark_header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="514dp" />
+        tools:layout_editor_absoluteY="514dp"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/linha3"
         android:layout_width="364dp"
         android:layout_height="2dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginStart="26dp"
         android:layout_marginEnd="26dp"
         android:background="@android:drawable/dark_header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="401dp" />
+        tools:layout_editor_absoluteY="401dp"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/linha4"
         android:layout_width="364dp"
         android:layout_height="2dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginStart="26dp"
         android:layout_marginEnd="26dp"
         android:background="@android:drawable/dark_header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="459dp" />
+        tools:layout_editor_absoluteY="459dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imagem"
@@ -164,49 +140,37 @@
         app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/androidparty2_png"
-        tools:layout_editor_absoluteY="-24dp" />
+        tools:layout_editor_absoluteY="-24dp"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/ellipse_1"
         android:layout_width="413dp"
         android:layout_height="102dp"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentTop="true"
         android:background="#F4F6FE"
         tools:layout_constraintCircleRadius="10dp"
         tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="201dp" />
+        tools:layout_editor_absoluteY="201dp"
+        tools:ignore="MissingConstraints" />
 
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
 
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-    <!--
-      Font family: Saira
-      Line height: 22sp
-      (identical to box height)
-      -->
-
-    <!-- styles.xml -->
 
     <View
         android:id="@+id/ellipse_2"
         android:layout_width="421dp"
         android:layout_height="136dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:background="#F4F6FE"
         tools:background="@drawable/ellipse_2"
         tools:layout_constraintCircleRadius="10dp"
         tools:layout_editor_absoluteX="-6dp"
-        tools:layout_editor_absoluteY="143dp" />
+        tools:layout_editor_absoluteY="143dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/cadastro"
         android:layout_width="241dp"
         android:layout_height="117dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:fontFamily="@font/patua_one"
+        android:fontFamily="@font/patuaone"
         android:gravity="center_horizontal|center_vertical"
         android:text="Cadastro"
         android:textColor="#023679"
@@ -219,187 +183,84 @@
         android:id="@+id/linha2"
         android:layout_width="364dp"
         android:layout_height="2dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginStart="26dp"
         android:layout_marginEnd="26dp"
         android:background="@android:drawable/dark_header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="348dp" />
+        tools:layout_editor_absoluteY="348dp"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/user"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:background="@drawable/user"
         tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="310dp" />
+        tools:layout_editor_absoluteY="310dp"
+        tools:ignore="MissingConstraints" />
 
-    <TextView
+    <EditText
         android:id="@+id/nome_comple"
-        android:layout_width="127dp"
-        android:layout_height="22dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:fontFamily="@font/saira_medium"
-        android:gravity="top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
         android:text="Nome completo"
-        android:textAppearance="Nome completo"
-        android:textColor="#605F5F"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="318dp" />
+        android:textColor="#979494"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="305dp" />
 
-    <style name="nome_comple">
-
-        <item name="android:textSize">14sp</item>
-
-        <item name="android:textColor">#80023679</item>
-    </style>
-
-    <!-- strings.xml -->
-    <string name="nome_comple">
-        Nome completo
-    </string>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <!-- drawable/tear_off_ca.xml -->
     <View
         android:id="@+id/tear_off_ca"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:background="@drawable/tear_off_calendar"
         tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="360dp" />
+        tools:layout_editor_absoluteY="360dp"
+        tools:ignore="MissingConstraints" />
 
-    <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:aapt="http://schemas.android.com/aapt"
-        android:width="30dp"
-        android:height="30dp"
-        android:viewportWidth="30"
-        android:viewportHeight="30">
 
-        <group>
-
-            <clip-path android:pathData="M0 0H30V30H0V0Z" />
-        </group>
-    </vector>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <!-- drawable/email.xml -->
 
     <View
         android:id="@+id/email"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:background="@drawable/email"
         tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="412dp" />
+        tools:layout_editor_absoluteY="412dp"
+        tools:ignore="MissingConstraints" />
 
-    <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:aapt="http://schemas.android.com/aapt"
-        android:width="30dp"
-        android:height="30dp"
-        android:viewportWidth="30"
-        android:viewportHeight="30">
-
-        <group>
-
-            <clip-path android:pathData="M0 0H30V30H0V0Z" />
-        </group>
-    </vector>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <!-- drawable/phone_messa.xml -->
 
     <View
         android:id="@+id/phone_messa"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:background="@drawable/phone_message"
         tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="475dp" />
+        tools:layout_editor_absoluteY="475dp"
+        tools:ignore="MissingConstraints" />
 
-    <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:aapt="http://schemas.android.com/aapt"
-        android:width="30dp"
-        android:height="30dp"
-        android:viewportWidth="30"
-        android:viewportHeight="30">
-
-        <group>
-
-            <clip-path android:pathData="M0 0H30V30H0V0Z" />
-        </group>
-    </vector>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <!-- drawable/lock.xml -->
 
     <View
         android:id="@+id/lock"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:background="@drawable/lock"
         tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="528dp" />
+        tools:layout_editor_absoluteY="528dp"
+        tools:ignore="MissingConstraints" />
 
-    <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:aapt="http://schemas.android.com/aapt"
-        android:width="30dp"
-        android:height="30dp"
-        android:viewportWidth="30"
-        android:viewportHeight="30">
-
-        <group>
-
-            <clip-path android:pathData="M0 0H30V30H0V0Z" />
-        </group>
-    </vector>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <!-- drawable/home_page.xml -->
     <View
         android:id="@+id/home_page"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:background="@drawable/home_page"
         tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="581dp" />
-
-    <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:aapt="http://schemas.android.com/aapt"
-        android:width="30dp"
-        android:height="30dp"
-        android:viewportWidth="30"
-        android:viewportHeight="30">
-
-        <group>
-
-            <clip-path android:pathData="M0 0H30V30H0V0Z" />
-        </group>
-    </vector>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
+        tools:layout_editor_absoluteY="581dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button"
@@ -408,55 +269,34 @@
         android:layout_marginStart="56dp"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="48dp"
-        android:style="43px"
         app:layout_constraintBottom_color="#023679"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-    <!--
-      Font family: Patua One
-      Line height: 22sp
-      (identical to box height)
-      -->
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-    <!-- styles.xml -->
 
     <TextView
         android:id="@+id/cadastrar"
         android:layout_width="77dp"
         android:layout_height="22dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:fontFamily="@font/patua_one"
+        android:fontFamily="@font/patuaone"
         android:gravity="center_horizontal|center_vertical"
-        android:text="Cadastrar"
+        android:text="@string/cadastrar"
         android:textColor="#FEFEFE"
         android:textSize="16sp"
         tools:layout_editor_absoluteX="167dp"
-        tools:layout_editor_absoluteY="811dp" />
-
-    <style name="cadastrar">
-        <item name="android:textSize">18sp</item>
-        <item name="android:textColor">#FFFFFF</item>
-    </style>
-
-    <!-- strings.xml -->
-    <string name="cadastrar">
-        Cadastrar
-    </string>
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
+        tools:layout_editor_absoluteY="811dp"
+        tools:ignore="MissingConstraints" />
     <View
         android:id="@+id/voltar"
         android:layout_width="19.76dp"
         android:layout_height="17.86dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:background="@drawable/voltar"
         tools:layout_editor_absoluteX="195dp"
-        tools:layout_editor_absoluteY="857dp" />
+        tools:layout_editor_absoluteY="857dp"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

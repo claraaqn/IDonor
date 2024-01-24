@@ -5,67 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4F6FE"
-    android:scrollbarSize="4dp"
-    app:constraint_referenced_tags="@string/app_name">
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-    <!--
-      Font family: Patua One
-      Line height: 49sp
-      -->
+    tools:context=".TelaVerificacao">
 
-    <!-- styles.xml -->
 
     <ImageView
         android:id="@+id/imagem"
         android:layout_width="975dp"
         android:layout_height="293dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/androidparty2_png"
-        tools:layout_editor_absoluteY="-24dp" />
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintBaseline_toEndOf="parent"
+        app:layout_constraintBaseline_toStartOf="parent"
+        android:contentDescription="TODO" />
 
     <View
         android:id="@+id/ellipse_1"
         android:layout_width="413dp"
         android:layout_height="102dp"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentTop="true"
         android:background="#F4F6FE"
-        tools:layout_constraintCircleRadius="10dp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-1dp"
         tools:layout_editor_absoluteY="201dp" />
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
-    <!--
-      Font family: Saira
-      Line height: 22sp
-      (identical to box height)
-      -->
-
-    <!-- styles.xml -->
 
     <View
         android:id="@+id/ellipse_2"
         android:layout_width="421dp"
         android:layout_height="136dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:background="#F4F6FE"
         tools:background="@drawable/ellipse_2"
         tools:layout_constraintCircleRadius="10dp"
         tools:layout_editor_absoluteX="-6dp"
-        tools:layout_editor_absoluteY="143dp" />
+        tools:layout_editor_absoluteY="143dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/cadastro"
         android:layout_width="241dp"
         android:layout_height="117dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:fontFamily="@font/patua_one"
+        android:fontFamily="@font/patuaone"
         android:gravity="center_horizontal|center_vertical"
         android:text="Cadastro"
         android:textColor="#023679"
@@ -78,77 +57,57 @@
         android:id="@+id/linha2"
         android:layout_width="364dp"
         android:layout_height="2dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginStart="26dp"
         android:layout_marginEnd="26dp"
         android:background="@android:drawable/dark_header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="348dp" />
+        tools:layout_editor_absoluteY="348dp"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/user"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:background="@drawable/phone_message"
         tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="310dp" />
-
-    <TextView
-        android:id="@+id/nome_comple"
-        android:layout_width="127dp"
-        android:layout_height="22dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:fontFamily="@font/saira_medium"
-        android:gravity="top"
-        android:text="Código de verificação"
-        android:textAppearance="Nome completo"
-        android:textColor="#605F5F"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="318dp" />
-
+        tools:layout_editor_absoluteY="310dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonCadastro"
         android:layout_width="155dp"
         android:layout_height="40dp"
         android:layout_marginStart="56dp"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="48dp"
-        android:style="43px"
-        app:layout_constraintBottom_color="#023679"
+        android:text="Verificar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-    <TextView
-        android:id="@+id/cadastrar"
-        android:layout_width="77dp"
-        android:layout_height="22dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:fontFamily="@font/patua_one"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="Verificar"
-        android:textColor="#FEFEFE"
-        android:textSize="16sp"
-        tools:layout_editor_absoluteX="167dp"
-        tools:layout_editor_absoluteY="812dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
 
     <View
-        android:id="@+id/voltar"
+        android:id="@+id/voltarTelaVerificar"
         android:layout_width="19.76dp"
         android:layout_height="17.86dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:background="@drawable/voltar"
         tools:layout_editor_absoluteX="202dp"
-        tools:layout_editor_absoluteY="857dp" />
+        tools:layout_editor_absoluteY="857dp"
+        app:layout_constrainedWidth="true"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/codigo"
+        android:layout_width="319dp"
+        android:layout_height="42dp"
+        android:autofillHints="text"
+        android:text="Código de Verificação"
+        android:textColor="#979494"
+        android:textSize="16sp"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="306dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,4 +4,11 @@
     <item name="linha" type="id" />
     <item name="linhaDireita" type="id" />
     <item name="linhaDireita2" type="id" />
+    <item name="Cadastrar" type="id" />
+    <item name="voltarTelaVerificar" type="id" />
+    <item name="codigo" type="id" />
+    <item name="buttonCadastro" type="id" />
+    <item name="cadastro" type="id" />
+    <item name="user" type="id" />
+
 </resources>

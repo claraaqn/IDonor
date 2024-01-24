@@ -69,7 +69,8 @@
         android:background="@android:color/transparent"
         android:text="@string/doarmais"
         app:layout_constraintStart_toStartOf="@+id/doarmaisfundo"
-        app:layout_constraintTop_toTopOf="@+id/doarmaisfundo" />
+        app:layout_constraintTop_toTopOf="@+id/doarmaisfundo"
+        android:onClick="irParaTelaCategorias"/>
 
     <!-- volar à tela inicial-->
 

@@ -4,46 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4F6FE"
     tools:context=".TelaLogin">
 
-    <TextView
+    <EditText
         android:id="@+id/senha"
-        android:layout_width="127dp"
-        android:layout_height="22dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:fontFamily="@font/saira_medium"
-        android:gravity="top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
         android:text="Senha"
-        android:textAppearance="Nome completo"
-        android:textColor="#605F5F"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="372dp" />
+        android:textColor="#979494"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="357dp" />
 
     <View
         android:id="@+id/user2"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:background="@drawable/lock"
         tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="364dp" />
+        tools:layout_editor_absoluteY="364dp"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/linha8"
         android:layout_width="364dp"
         android:layout_height="2dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginStart="26dp"
         android:layout_marginEnd="26dp"
         android:background="@android:drawable/dark_header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="402dp" />
+        tools:layout_editor_absoluteY="402dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imagem"
@@ -53,31 +49,30 @@
         app:layout_constraintHorizontal_bias="0.419"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/oip_2"
-        tools:layout_editor_absoluteY="-7dp" />
+        tools:layout_editor_absoluteY="-7dp"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/ellipse_1"
         android:layout_width="413dp"
         android:layout_height="102dp"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentTop="true"
         android:background="#F4F6FE"
         tools:layout_constraintCircleRadius="10dp"
         tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="201dp" />
+        tools:layout_editor_absoluteY="201dp"
+        tools:ignore="MissingConstraints" />
 
 
     <View
         android:id="@+id/ellipse_2"
         android:layout_width="421dp"
         android:layout_height="136dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:background="#F4F6FE"
         tools:background="@drawable/ellipse_2"
         tools:layout_constraintCircleRadius="10dp"
         tools:layout_editor_absoluteX="-6dp"
-        tools:layout_editor_absoluteY="143dp" />
+        tools:layout_editor_absoluteY="143dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/Login"
@@ -85,9 +80,9 @@
         android:layout_height="117dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:fontFamily="@font/patua_one"
+        android:fontFamily="@font/patuaone"
         android:gravity="center_horizontal|center_vertical"
-        android:text="Login"
+        android:text="login"
         android:textColor="#023679"
         android:textSize="44sp"
         tools:ignore="MissingConstraints"
@@ -98,40 +93,35 @@
         android:id="@+id/linha2"
         android:layout_width="364dp"
         android:layout_height="2dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginStart="26dp"
         android:layout_marginEnd="26dp"
         android:background="@android:drawable/dark_header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="348dp" />
+        tools:layout_editor_absoluteY="348dp"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/user"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:background="@drawable/user"
         tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="310dp" />
+        tools:layout_editor_absoluteY="310dp"
+        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="127dp"
-        android:layout_height="22dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:fontFamily="@font/saira_medium"
-        android:gravity="top"
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="195dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:inputType="text"
         android:text="E-mail"
-        android:textAppearance="Nome completo"
-        android:textColor="#605F5F"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="318dp" />
+        android:textColor="#979494"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="310dp" />
 
     <Button
         android:id="@+id/button"
@@ -140,39 +130,34 @@
         android:layout_marginStart="56dp"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="48dp"
-        android:style="43px"
         app:layout_constraintBottom_color="#023679"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="PxUsage,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/login"
         android:layout_width="77dp"
         android:layout_height="22dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:fontFamily="@font/patua_one"
+        android:fontFamily="@font/patuaone"
         android:gravity="center_horizontal|center_vertical"
         android:text="Login"
         android:textColor="#FEFEFE"
         android:textSize="16sp"
         tools:layout_editor_absoluteX="167dp"
-        tools:layout_editor_absoluteY="814dp" />
+        tools:layout_editor_absoluteY="814dp"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/voltar"
         android:layout_width="19.76dp"
         android:layout_height="17.86dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:background="@drawable/voltar"
         tools:layout_editor_absoluteX="195dp"
         tools:layout_editor_absoluteY="857dp"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

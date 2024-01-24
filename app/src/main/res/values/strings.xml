@@ -1,12 +1,10 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-
+<resources>
     <string name="app_name">IDonor</string>
 
     <string name="descricao_logo_do_aplicativo">Logo do aplicativo</string>
 
-    <string name="mensagem_de_agradecimento"
-        tools:ignore="ExtraText,MissingConstraints">
-         Obrigado&#10;Pela&#10;Doação!
+    <string name="mensagem_de_agradecimento">
+         Obrigado\nPela\nDoação!
     </string>
 
     <string name="descricao_texto">Mensagem agradecendo pela doação</string>
@@ -74,5 +72,24 @@
     <string name="wishlist_lar_idosos">Kit básico de higiene (escova de dente, pasta dental, sabonete, desodorante)\nFraldas geriátricas tamanho P, M e G.\nVoluntariado: Técnicos de enfermagem\nAlimentos (Kg)\nRoupas: Feminino (Tam P e M)\nRoupas: Masculino (Tamanho G)</string>
     <string name="wishlist2_lar_idosos">Centro de arrecadação físico:\nAv. do Bom Conselho, 57 - Bom Conselho, Belo Jardim - PE, 55153-340\nCentro de arrecadação remoto:\nAplicativo IDonor</string>
     <string name="contato">Telefone para contato:\n+55 (81) 9 3726-2349\nInstagram: \n@lardosidososbelojardimpe\nEmail para contato:\npadua_eduardo@hotmail.com</string>
-
+    <string name="semana_apresentada">01–07 Novembro, 2023</string>
+    <string name="foto_de_perfil_do_primeiro_coment_rio">foto de perfil do primeiro comentário</string>
+    <string name="cometeario_lar_idosos">Excelente doador. Sempre entrega pontualmente!</string>
+    <string name="sandra_rafaela">Sandra Rafaela</string>
+    <string name="comentario_sandra">Obrigada pelo volutariado! Muito simpático e paciente…</string>
+    <string name="descricao_estrelas_lar">quantidade de estrelas que o lar dos idosos deu</string>
+    <string name="descricao_estrelas_sandra">quantidade de estrelas que a Sandra Rafaela Deus deu</string>
+    <string name="mais">mais...</string>
+    <string name="login">Login</string>
+    <string name="junte_se_a_uma_rede_de_apoio_e_amor_ao_pr_ximo">Junte-se a uma rede de apoio \ne amor ao próximo</string>
+    <string name="conhecer_as_institui_es">Conhecer as instituições</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="verificar">Verificar</string>
+    <string name="c_digo_de_verifica_o">Código de verificação</string>
+    <string name="senha">Senha</string>
+    <string name="endere_o">Endereço</string>
+    <string name="e_mail">Email</string>
+    <string name="data_de_nascimento">Data de Nascimento</string>
+    <string name="nome_completo">Nome completo</string>
+    <string name="cadastrar">"Cadastrar "</string>
 </resources>
