@@ -82,7 +82,7 @@
         android:layout_alignParentTop="true"
         android:fontFamily="@font/patuaone"
         android:gravity="center_horizontal|center_vertical"
-        android:text="@string/login"
+        android:text="login"
         android:textColor="#023679"
         android:textSize="44sp"
         tools:ignore="MissingConstraints"

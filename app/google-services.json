@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "705682338333",
+    "project_id": "idonor-d555c",
+    "storage_bucket": "idonor-d555c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:705682338333:android:59ee4cff7192461e04ccf4",
+        "android_client_info": {
+          "package_name": "com.projeto1.idonor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUtgAuZqtlA0uNCHJNu1owS5TP1qY7_F8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
