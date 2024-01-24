@@ -133,7 +133,7 @@
         android:layout_height="149dp"
         android:layout_marginEnd="42dp"
         android:background="@drawable/backgroundbutton"
-        android:drawableLeft="@drawable/dinheiro"
+        android:drawableLeft="@drawable/Dinheiro"
         android:paddingLeft="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints"
