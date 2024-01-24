@@ -44,7 +44,7 @@
         android:id="@+id/cadastro"
         android:layout_width="241dp"
         android:layout_height="117dp"
-        android:fontFamily="@font/patua_one"
+        android:fontFamily="@font/patuaone"
         android:gravity="center_horizontal|center_vertical"
         android:text="Cadastro"
         android:textColor="#023679"
