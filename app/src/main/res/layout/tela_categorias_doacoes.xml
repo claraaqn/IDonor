@@ -111,6 +111,7 @@
         android:layout_height="149dp"
         android:layout_marginEnd="42dp"
         android:background="@drawable/backgroundbutton"
+        android:contentDescription="Botão de categoria Voluntário"
         android:drawableLeft="@drawable/voluntario"
         android:paddingLeft="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -122,6 +123,7 @@
         android:layout_height="149dp"
         android:layout_marginStart="40dp"
         android:background="@drawable/backgroundbutton"
+        android:contentDescription="Botão de categoria Vestimenta"
         android:drawableLeft="@drawable/vestimenta"
         android:paddingLeft="30dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -133,6 +135,7 @@
         android:layout_height="149dp"
         android:layout_marginEnd="42dp"
         android:background="@drawable/backgroundbutton"
+        android:contentDescription="Botão de categoria Dinheiro"
         android:drawableLeft="@drawable/Dinheiro"
         android:paddingLeft="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -144,6 +147,7 @@
         android:layout_height="149dp"
         android:layout_marginStart="40dp"
         android:background="@drawable/backgroundbutton"
+        android:contentDescription="Botão de categoria Alimentos"
         android:drawableLeft="@drawable/soupplate"
         android:paddingLeft="30dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -151,15 +155,16 @@
         tools:layout_editor_absoluteY="157dp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="26dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="55dp"
+        android:layout_height="63dp"
         android:background="@drawable/fundo_transparente_botao"
+        android:paddingLeft="18dp"
+        android:paddingBottom="2dp"
+        android:contentDescription="Botão Voltar"
         android:drawableLeft="@drawable/IconVoltar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
