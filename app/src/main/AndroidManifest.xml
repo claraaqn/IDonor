@@ -16,13 +16,13 @@
             android:name=".TelaInicial"
             android:exported="false" />
         <activity
-            android:name=".TelaCadastro"
+            android:name=".TelaDeLogin"
             android:exported="false" />
         <activity
             android:name=".TelaLogin"
             android:exported="false" />
         <activity
-            android:name=".TelaVerificacao"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

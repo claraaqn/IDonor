@@ -1,20 +1,3 @@
 <resources>
-    <string name="Cadatrar">IDonor</string>
-    <string name="Cadastro">IDonor</string>
-    <string name="Verificar">IDonor</string>
-    <string name="CódigodeVerificação">IDonor</string>
-    <string name="verificar">Verificar</string>
-    <string name="cadastro">Cadastro</string>
-    <string name="c_digo_de_verifica_o">Código de Verificação</string>
-    <string name="login">Login</string>
-    <string name="junte_se_a_uma_rede_de_apoio_e_amor_ao_pr_ximo">Junte-se a uma rede de apoio e amor ao próximo</string>
-    <string name="conhecer_as_institui_es">Conhecer as instituições</string>
-    <string name="endere_o">Endereço</string>
-    <string name="telefone">Telefone</string>
-    <string name="senha">Senha</string>
-    <string name="e_mail">E-mail</string>
-    <string name="data_de_nascimento">Data de Nascimento</string>
-    <string name="nome_completo">Nome completo</string>
-    <string name="cadastrar">Cadastrar</string>
-
+    <string name="app_name">IDonor</string>
 </resources>
