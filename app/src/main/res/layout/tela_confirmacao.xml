@@ -55,7 +55,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="16dp"
         android:layout_marginTop="7dp"
-        android:fontFamily="@font/patua_one"
+        android:fontFamily="@font/patuaone"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/idonor"
         android:textColor="@color/AzulTitulo"
