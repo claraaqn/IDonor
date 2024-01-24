@@ -131,7 +131,7 @@
         android:layout_height="66dp"
         android:contentDescription="Botão Voltar"
         android:background="@drawable/fundo_transparente_botao"
-        android:drawableLeft="@drawable/IconVoltar"
+        android:drawableLeft="@drawable/iconvoltar"
         android:paddingLeft="20dp"
         android:paddingBottom="4dp"
         tools:ignore="MissingConstraints"
