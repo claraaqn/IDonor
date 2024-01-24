@@ -70,6 +70,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <ImageView
+                android:id="@+id/icon_lupa"
                 android:layout_width="32dp"
                 android:layout_height="33dp"
                 android:layout_alignEnd="@+id/fundo_barra_pesquisa"

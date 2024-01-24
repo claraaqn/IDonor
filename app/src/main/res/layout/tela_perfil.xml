@@ -121,7 +121,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/nome2"
+        android:id="@+id/telefone_titulo"
         android:layout_width="76dp"
         android:layout_height="17dp"
         android:layout_alignParentTop="true"
@@ -136,7 +136,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/nome3"
+        android:id="@+id/email_titulo"
         android:layout_width="27dp"
         android:layout_height="16dp"
         android:layout_alignParentTop="true"
@@ -151,7 +151,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/igor_silva_"
+        android:id="@+id/igor_silva_email"
         android:layout_width="132dp"
         android:layout_height="15dp"
         android:layout_alignParentTop="true"
@@ -161,7 +161,7 @@
         android:text="@string/email"
         android:textAppearance="@style/contato"
         app:layout_constraintStart_toEndOf="@+id/fundo_perfil"
-        app:layout_constraintTop_toBottomOf="@+id/nome3"
+        app:layout_constraintTop_toBottomOf="@+id/email_titulo"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -175,7 +175,7 @@
         android:text="@string/telefone"
         android:textAppearance="@style/contato"
         app:layout_constraintStart_toEndOf="@+id/fundo_perfil"
-        app:layout_constraintTop_toBottomOf="@+id/nome2"
+        app:layout_constraintTop_toBottomOf="@+id/telefone_titulo"
         tools:ignore="MissingConstraints" />
 
     <!-- os botões -->
