@@ -136,7 +136,7 @@
         android:layout_marginEnd="42dp"
         android:background="@drawable/backgroundbutton"
         android:contentDescription="Botão de categoria Dinheiro"
-        android:drawableLeft="@drawable/Dinheiro"
+        android:drawableLeft="@drawable/dinheiro"
         android:paddingLeft="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints"
@@ -161,7 +161,7 @@
         android:paddingLeft="18dp"
         android:paddingBottom="2dp"
         android:contentDescription="Botão Voltar"
-        android:drawableLeft="@drawable/IconVoltar"
+        android:drawableLeft="@drawable/iconvoltar"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
