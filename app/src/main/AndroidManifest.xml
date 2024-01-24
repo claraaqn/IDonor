@@ -16,13 +16,10 @@
             android:name=".TelaInicial"
             android:exported="false" />
         <activity
-            android:name=".TelaDeLogin"
-            android:exported="false" />
-        <activity
             android:name=".TelaLogin"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".TelaLogoActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +27,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".TelaInicialActivity" />
+        <activity android:name=".TelaPerfilActivity" />
+        <activity android:name=".TelaImpactoActivity" />
+        <activity android:name=".TelaAgradecimentoActivity" />
+        <activity
+            android:name=".TelaEspecificacao"
+            android:exported="false" />
+        <activity
+            android:name=".TelaCategoriasDoacoes"
+            android:exported="false" />
+        <activity
+            android:name=".TelaInstituicao"
+            android:exported="false" />
+        <activity android:name=".TelaConfirmacao" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
