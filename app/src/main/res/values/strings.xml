@@ -1,5 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-
+<resources>
     <string name="app_name">IDonor</string>
 
     <string name="descricao_logo_do_aplicativo">Logo do aplicativo</string>
@@ -82,5 +81,4 @@
     <string name="descricao_estrelas_lar">quantidade de estrelas que o lar dos idosos deu</string>
     <string name="descricao_estrelas_sandra">quantidade de estrelas que a Sandra Rafaela Deus deu</string>
     <string name="mais">mais...</string>
-
 </resources>
