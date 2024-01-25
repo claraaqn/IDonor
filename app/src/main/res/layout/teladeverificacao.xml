@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4F6FE"
-    tools:context=".TelaVerificacao">
+    tools:context=".TelaVerificacao"
+    tools:ignore="ExtraText">
 
 
     <ImageView
@@ -16,8 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/androidparty2_png"
         app:layout_constraintBaseline_toTopOf="parent"
-        app:layout_constraintBaseline_toEndOf="parent"
-        app:layout_constraintBaseline_toStartOf="parent"
         android:contentDescription="TODO" />
 
     <View
