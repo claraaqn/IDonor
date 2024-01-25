@@ -4,12 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.Firebase
 
 class TelaInicial : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_inicial)
+
 
         val buttonIrParaOutraTelaLogin: Button = findViewById(R.id.button)
 
@@ -17,14 +18,28 @@ class TelaInicial : AppCompatActivity() {
             val intent = Intent(this@TelaInicial, TelaLogin::class.java)
 
             startActivity(intent)
+        }
+        val buttonIrParaTelaCadastro: Button = findViewById(R.id.button2)
 
-            val buttonIrParaOutraTelaCadastro: Button = findViewById(R.id.button2)
+        buttonIrParaTelaCadastro.setOnClickListener {
+            val intent = Intent(this@TelaInicial, TelaCadastro::class.java)
 
-            buttonIrParaOutraTelaCadastro.setOnClickListener {
-                val intent2 = Intent(this@TelaInicial, TelaCadastro::class.java)
+            startActivity(intent)
+        }
+        val buttonIrParaInstituicoes: Button = findViewById(R.id.conhecer_as)
 
-                startActivity(intent2)
-            }
+        buttonIrParaInstituicoes.setOnClickListener {
+            val intent = Intent(this@TelaInicial, TelaInicialActivity::class.java)
+
+            startActivity(intent)
+        }
+        val buttonIrParaGoogle: Button = findViewById(R.id.button3)
+
+        buttonIrParaGoogle.setOnClickListener {
+            val intent = Intent(this@TelaInicial, Firebase::class.java)
+
+            startActivity(intent)
         }
     }
+
 }
