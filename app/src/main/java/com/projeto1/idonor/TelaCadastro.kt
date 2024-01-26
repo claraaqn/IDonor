@@ -3,6 +3,7 @@ package com.projeto1.idonor
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 
 class TelaCadastro : AppCompatActivity() {
@@ -14,6 +15,13 @@ class TelaCadastro : AppCompatActivity() {
 
         buttonIrParaOutraTelaVerificar.setOnClickListener {
             val intent = Intent(this@TelaCadastro, TelaVerificacao::class.java)
+
+            startActivity(intent)
+        }
+        val buttonIrParaVoltar: View = findViewById(R.id.voltar)
+
+        buttonIrParaVoltar.setOnClickListener {
+            val intent = Intent(this@TelaCadastro, TelaInicial::class.java)
 
             startActivity(intent)
         }
