@@ -10,5 +10,6 @@
     <item name="buttonCadastro" type="id" />
     <item name="cadastro" type="id" />
     <item name="user" type="id" />
+    <item name="seta_semana_1" type="id" />
 
 </resources>

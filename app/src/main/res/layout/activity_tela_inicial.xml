@@ -8,15 +8,6 @@
     tools:context=".TelaInicial">
 
 
-    <View
-        android:id="@+id/email3"
-        android:layout_width="23dp"
-        android:layout_height="20dp"
-        android:background="@drawable/email"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="116dp"
-        tools:layout_editor_absoluteY="634dp" />
-
     <TextView
         android:id="@+id/textorededeapoio"
         android:layout_width="297dp"
@@ -42,37 +33,37 @@
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
         android:fontFamily="@font/saira_thin"
-        android:text="OU"
+        android:text="@string/OU"
         android:textAlignment="center"
         android:textColor="#023679"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintHorizontal_weight="400"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.72"
+        app:layout_constraintVertical_bias="0.738"
         app:layout_constraintVertical_weight="400" />
 
     <TextView
         android:id="@+id/OU2"
-        android:layout_width="70dp"
-        android:layout_height="84dp"
+        android:layout_width="75dp"
+        android:layout_height="95dp"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
         android:fontFamily="@font/saira_thin"
-        android:text="OU"
+        android:text="@string/OU"
         android:textAlignment="center"
         android:textColor="#023679"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintHorizontal_bias="0.519"
         app:layout_constraintHorizontal_weight="400"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.924"
+        app:layout_constraintVertical_bias="0.951"
         app:layout_constraintVertical_weight="400" />
 
     <Button
@@ -82,7 +73,7 @@
         android:layout_marginStart="56dp"
         android:layout_marginEnd="56dp"
         android:onClick="LoginComEmail"
-        android:text="Login com e-mail"
+        android:text="@string/Login_com_email"
         android:textColorHighlight="#023679"
         android:textColorLink="#023679"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -95,16 +86,14 @@
 
     <Button
         android:id="@+id/button2"
-
         android:layout_width="227dp"
         android:layout_height="43dp"
         android:onClick="CadastrarComEmail"
-        android:text="Cadastrar com e-mail"
+        android:text="@string/Cadastrar_com_email"
         android:textColorHighlight="#023679"
         android:textColorLink="#023679"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textorededeapoio"
         app:layout_constraintVertical_bias="0.37"
@@ -114,19 +103,31 @@
         android:id="@+id/email1"
         android:layout_width="23dp"
         android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="181dp"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/email"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="634dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toTopOf="@+id/button2"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/email2"
         android:layout_width="23dp"
         android:layout_height="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="182dp"
+        android:layout_marginBottom="14dp"
         android:background="@drawable/email"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="522dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="@+id/button"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button3"
@@ -135,7 +136,7 @@
         android:layout_marginStart="56dp"
         android:layout_marginEnd="56dp"
         android:onClick="EntrarComGoogle"
-        android:text="Entrar com o Google"
+        android:text="@string/Entrar_com_o_google"
         android:textColorHighlight="#023679"
         android:textColorLink="#023679"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -145,41 +146,54 @@
         app:layout_constraintVertical_bias="0.57"
         tools:ignore="TouchTargetSizeCheck" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/conhecer_as"
-        android:layout_width="178dp"
-        android:layout_height="13dp"
+        android:layout_width="217dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center_horizontal|top"
-        android:text="Conhecer as instituições"
+        android:text="@string/Conhecer_as_instituições"
         android:textColor="#023679"
         android:textColorHighlight="#023679"
         android:textColorLink="#023679"
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="817dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toBottomOf="@+id/OU2"
+        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/google_icon"
+        app:layout_constraintTop_toTopOf="@+id/OU2"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="500dp"
-        android:layout_height="263dp"
+        android:layout_width="681dp"
+        android:layout_height="273dp"
+        app:layout_constraintBottom_toTopOf="@+id/r"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012"
         app:srcCompat="@drawable/androidparty_png"
-        tools:layout_editor_absoluteX="-46dp"
-        tools:layout_editor_absoluteY="-25dp"
         tools:ignore="MissingConstraints" />
-
-
 
     <View
         android:id="@+id/ellipse_1"
-        android:layout_width="417dp"
-        android:layout_height="152dp"
+        android:layout_width="412dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginEnd="136dp"
         android:background="#F4F6FE"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textorededeapoio"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textorededeapoio"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.338"
         tools:background="@drawable/ellipse_2"
-        tools:layout_constraintCircleRadius="10dp"
-        tools:layout_editor_absoluteX="-4dp"
-        tools:layout_editor_absoluteY="168dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_constraintCircleRadius="10dp" />
 
     <TextView
         android:id="@+id/r"
@@ -187,16 +201,21 @@
         android:layout_height="120dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_marginStart="289dp"
         android:layout_marginTop="256dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="36dp"
         android:fontFamily="@font/patuaone"
         android:gravity="top"
         android:rotation="13"
         android:text="R"
-        android:textAppearance="R"
         android:textColor="#023679"
         android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textorededeapoio"
+        app:layout_constraintEnd_toEndOf="@+id/ellipse_1"
+        app:layout_constraintStart_toStartOf="@+id/ellipse_1"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="294dp"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -205,16 +224,22 @@
         android:layout_height="71dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_marginStart="116dp"
         android:layout_marginTop="240dp"
+        android:layout_marginEnd="273dp"
+        android:layout_marginBottom="9dp"
         android:fontFamily="@font/patuaone"
         android:gravity="top"
         android:rotation="-8"
         android:text="D"
-        android:textAppearance="D"
         android:textColor="#023679"
         android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ellipse_1"
+        app:layout_constraintEnd_toEndOf="@+id/ellipse_1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/ellipse_1"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="114dp"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -223,128 +248,182 @@
         android:layout_height="120dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_marginStart="169dp"
         android:layout_marginTop="228dp"
+        android:layout_marginEnd="205dp"
+        android:layout_marginBottom="64dp"
         android:fontFamily="@font/patuaone"
         android:gravity="top"
         android:rotation="-4"
         android:text="O"
-        android:textAppearance="O"
         android:textColor="#023679"
         android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textorededeapoio"
+        app:layout_constraintEnd_toEndOf="@+id/ellipse_1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/ellipse_1"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="166dp"
+        app:layout_constraintVertical_bias="0.05"
         tools:ignore="MissingConstraints" />
+
 
     <TextView
         android:id="@+id/n"
-        android:layout_width="44dp"
-        android:layout_height="120dp"
+        android:layout_width="39dp"
+        android:layout_height="86dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_marginStart="41dp"
         android:layout_marginTop="232dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="2dp"
         android:fontFamily="@font/patuaone"
         android:gravity="top"
         android:rotation="4"
         android:text="N"
-        android:textAppearance="N"
         android:textColor="#023679"
         android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ellipse_1"
+        app:layout_constraintEnd_toEndOf="@+id/ellipse_1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/o"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="210dp"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/o2"
         android:layout_width="40dp"
         android:layout_height="117dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
+        android:layout_marginStart="249dp"
         android:layout_marginTop="240dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="55dp"
         android:fontFamily="@font/patuaone"
         android:gravity="top"
         android:rotation="8"
         android:text="O"
-        android:textAppearance="O"
         android:textColor="#023679"
         android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textorededeapoio"
+        app:layout_constraintEnd_toEndOf="@+id/r"
+        app:layout_constraintStart_toStartOf="@+id/ellipse_1"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="254dp"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/i"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
+        android:layout_width="13dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="92dp"
         android:layout_marginTop="256dp"
+        android:layout_marginEnd="314dp"
         android:fontFamily="@font/patuaone"
         android:gravity="top"
         android:rotation="-13"
         android:text="i"
-        android:textAppearance="i"
         android:textColor="#023679"
         android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/textorededeapoio"
+        app:layout_constraintEnd_toEndOf="@+id/ellipse_1"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="@+id/ellipse_1"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="89dp"
-        tools:ignore="MissingConstraints" />
-
-
-    <View
-        android:id="@+id/linha2"
-        android:layout_width="211dp"
-        android:layout_height="2dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="4dp"
-        android:background="@android:drawable/dark_header"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="775dp"
-        tools:ignore="MissingConstraints" />
-
-    <View
-        android:id="@+id/linha"
-        android:layout_width="211dp"
-        android:layout_height="2dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@android:drawable/dark_header"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="600dp"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/linhaDireita"
         android:layout_width="211dp"
         android:layout_height="2dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
+        android:layout_marginStart="78dp"
+        android:layout_marginEnd="-40dp"
         android:background="@android:drawable/dark_header"
-        tools:layout_editor_absoluteX="236dp"
-        tools:layout_editor_absoluteY="600dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/OU1"
+        app:layout_constraintTop_toTopOf="@+id/button"
+        app:layout_constraintVertical_bias="0.585"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/linhaEsquerda"
+        android:layout_width="211dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="-40dp"
+        android:layout_marginTop="89dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="63dp"
+        android:background="@android:drawable/dark_header"
+        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/OU1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/linhaEsquerda2"
+        android:layout_width="182dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="67dp"
+        android:background="@android:drawable/dark_header"
+        app:layout_constraintBottom_toBottomOf="@+id/conhecer_as"
+        app:layout_constraintEnd_toEndOf="@+id/OU2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/conhecer_as"
+        app:layout_constraintTop_toTopOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/linhaDireita2"
-        android:layout_width="211dp"
-        android:layout_height="2dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
+        android:layout_width="161dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginBottom="68dp"
         android:background="@android:drawable/dark_header"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="236dp"
-        tools:layout_editor_absoluteY="773dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/conhecer_as"
+        app:layout_constraintEnd_toEndOf="@+id/conhecer_as"
+        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintStart_toStartOf="@+id/OU2"
+        app:layout_constraintTop_toTopOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateIds,MissingConstraints" />
 
     <View
         android:id="@+id/google_icon"
-        android:layout_width="22dp"
-        android:layout_height="22dp"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="186dp"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/google_icon"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="709dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="@+id/button3"
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toTopOf="@+id/button3"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="ellipse_1" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="ellipse_1,imageView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
