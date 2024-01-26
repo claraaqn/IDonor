@@ -289,6 +289,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaodoarconfirmacao"
         android:layout_width="260dp"
         android:layout_height="59dp"
         android:layout_marginStart="75dp"
@@ -308,6 +309,7 @@
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaovoltarconfirmacao"
         android:layout_width="47dp"
         android:layout_height="52dp"
         android:background="@drawable/fundo_transparente_botao"

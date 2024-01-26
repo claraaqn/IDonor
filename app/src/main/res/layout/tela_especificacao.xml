@@ -113,6 +113,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaovoltarespecificacao"
         android:layout_width="52dp"
         android:layout_height="60dp"
         android:background="@drawable/fundo_transparente_botao"
@@ -248,6 +249,7 @@
     </RadioGroup>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaoadicionardoacao"
         android:layout_width="159dp"
         android:layout_height="43dp"
         android:background="@drawable/backgroundbuttonwhite"
@@ -260,6 +262,7 @@
         tools:layout_editor_absoluteY="750dp" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaoaumentarquantidade"
         android:layout_width="42dp"
         android:layout_height="42dp"
         android:background="@drawable/backgroundbuttonwhite"
@@ -272,6 +275,7 @@
         tools:layout_editor_absoluteY="491dp" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaodiminuirquantidade"
         android:layout_width="42dp"
         android:layout_height="42dp"
         android:background="@drawable/backgroundbuttonwhite"
@@ -284,6 +288,7 @@
         tools:layout_editor_absoluteY="491dp" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaoavancar"
         android:layout_width="260dp"
         android:layout_height="59dp"
         android:layout_marginStart="75dp"
