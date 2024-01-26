@@ -49,9 +49,46 @@
         android:layout_marginEnd="26dp"
         android:src="@drawable/informacoes"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="445dp" />
+
+    <ImageView
+        android:id="@+id/foto_de_perfil"
+        android:layout_width="56dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="456dp"
+        android:elevation="8dp"
+        android:src="@drawable/foto_perfil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+
+        android:layout_width="325dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="515dp"
+        android:fontFamily="@font/sairaextracondensedsemibold"
+        android:text="Muito boa a Instituição, fiz várias doações e tenho a sensação que realmente os ajudo."
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="582dp"
+        android:layout_marginEnd="313dp"
+        android:contentDescription="@string/foto_de_perfil_do_primeiro_coment_rio"
+        android:src="@drawable/comentario_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="160dp"
@@ -97,11 +134,73 @@
         tools:layout_editor_absoluteX="304dp"
         tools:layout_editor_absoluteY="428dp" />
 
+    <TextView
+
+        android:layout_width="106dp"
+        android:layout_height="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="469dp"
+        android:fontFamily="@font/sairaextracondensedsemibold"
+        android:text="Carlos Silva"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+
+        android:layout_width="47dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="468dp"
+        android:contentDescription="@string/descricao_estrelas_lar"
+        android:src="@drawable/estrelas_lar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+
+        android:layout_width="108dp"
+        android:layout_height="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="593dp"
+        android:fontFamily="@font/sairaextracondensedsemibold"
+        android:text="Manu Gomes"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="47dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="603dp"
+        android:layout_marginEnd="180dp"
+        android:contentDescription="@string/descricao_estrelas_sandra"
+        android:src="@drawable/estrelas_sandra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+
+        android:layout_width="325dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="636dp"
+        android:fontFamily="@font/sairaextracondensedsemibold"
+        android:text="Já fui alguma vezes como voluntária e gostei muito do dia que tive lá.\n São muito atenciosos."
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="73dp"
         android:layout_height="57dp"
-        android:contentDescription="Botão Voltar"
         android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="Botão Voltar"
         android:drawableLeft="@drawable/iconvoltar"
         android:paddingLeft="20dp"
         android:paddingBottom="5dp"
@@ -114,7 +213,7 @@
         android:layout_height="65dp"
         android:background="@drawable/fundo_transparente_botao"
         android:contentDescription="Botão de Info"
-        android:drawableLeft="@drawable/icon_informacao_azul"
+        android:drawableLeft="@drawable/iconinformacao"
         android:paddingLeft="12dp"
         android:paddingBottom="14dp"
         tools:ignore="MissingConstraints"
@@ -150,7 +249,7 @@
         android:layout_height="65dp"
         android:background="@drawable/fundo_transparente_botao"
         android:contentDescription="Botão Avaliação"
-        android:drawableLeft="@drawable/star"
+        android:drawableLeft="@drawable/star_azul"
         android:paddingLeft="17dp"
         android:paddingBottom="12dp"
         tools:ignore="MissingConstraints"

@@ -20,29 +20,52 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+    <View
+        android:layout_width="379dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="158dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/backgroundbuttonwhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="379dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="263dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/backgroundbuttonwhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:layout_width="398dp"
-        android:layout_height="270dp"
-        android:contentDescription="TODO"
+        android:layout_width="291dp"
+        android:layout_height="224dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="Mapa"
         android:src="@drawable/mapa"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="140dp" />
-
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="510dp" />
 
     <TextView
-        android:layout_width="161dp"
-        android:layout_height="62dp"
+        android:layout_width="203dp"
+        android:layout_height="59dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="126dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="104dp"
         android:fontFamily="@font/patuaone"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/titulo_checkout"
         android:textColor="@color/AzulTitulo"
-        android:textSize="28sp"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -63,6 +86,207 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="116dp"
+        android:fontFamily="@font/patuaone"
+        android:text="Seus itens:"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="165dp"
+        android:fontFamily="@font/patuaone"
+        android:text="3"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="33sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="270dp"
+        android:fontFamily="@font/patuaone"
+        android:text="2"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="33sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="168dp"
+        android:fontFamily="@font/patuaone"
+        android:text="x"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="273dp"
+        android:fontFamily="@font/patuaone"
+        android:text="x"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="168dp"
+        android:fontFamily="@font/patuaone"
+        android:text="Camisas"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="272dp"
+        android:fontFamily="@font/patuaone"
+        android:text="Shorts"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="172dp"
+        android:fontFamily="@font/patuaone"
+        android:text="Estado:"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="276dp"
+        android:fontFamily="@font/patuaone"
+        android:text="Estado:"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="312dp"
+        android:layout_marginTop="172dp"
+        android:fontFamily="@font/patuaone"
+        android:text="Novo"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="312dp"
+        android:layout_marginTop="276dp"
+        android:fontFamily="@font/patuaone"
+        android:text="Bom"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="380dp"
+        android:fontFamily="@font/patuaone"
+        android:text="Endereço:"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="380dp"
+        android:fontFamily="@font/patuaone"
+        android:text="Horário:"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="604dp"
+        android:fontFamily="@font/patuaone"
+        android:text="Ver no Maps"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="412dp"
+        android:fontFamily="@font/sairaextracondensedsemibold"
+        android:text="Av. do Bom Conselho, 57\n          Bom Conselho"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="412dp"
+        android:fontFamily="@font/sairaextracondensedsemibold"
+        android:text="08hrs às 18hrs"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="260dp"
@@ -88,12 +312,37 @@
         android:layout_height="52dp"
         android:background="@drawable/fundo_transparente_botao"
         android:contentDescription="Botão Voltar"
+        android:drawableLeft="@drawable/iconvoltar"
         android:paddingLeft="22dp"
         android:paddingTop="8dp"
-        android:drawableLeft="@drawable/iconvoltar"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-2dp"
         tools:layout_editor_absoluteY="-2dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="152dp"
+        android:layout_height="48dp"
+        android:background="@drawable/backgroundbuttonwhite"
+        android:fontFamily="@font/patuaone"
+        android:text="remover"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="25dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="206dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton"
+        android:layout_width="154dp"
+        android:layout_height="49dp"
+        android:background="@drawable/backgroundbuttonwhite"
+        android:fontFamily="@font/patuaone"
+        android:text="remover"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="25dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="311dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,9 +17,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        />
-
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:layout_width="160dp"
@@ -28,23 +26,279 @@
         android:layout_alignParentTop="true"
         android:fontFamily="@font/patuaone"
         android:gravity="center_horizontal|center_vertical"
-        android:textColor="@color/AzulTitulo"
         android:text="@string/idonor"
+        android:textColor="@color/AzulTitulo"
         android:textSize="28sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="13dp"
-        tools:layout_editor_absoluteY="7dp"
-        />
+        tools:layout_editor_absoluteY="7dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/patuaone"
+        android:text="Especifique sua doação:"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginEnd="249dp"
+        android:fontFamily="@font/patuaone"
+        android:text="Tipo do item:"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="460dp"
+        android:layout_marginEnd="249dp"
+        android:fontFamily="@font/patuaone"
+        android:text="Quantidade:"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="556dp"
+        android:layout_marginEnd="249dp"
+        android:fontFamily="@font/patuaone"
+        android:text="Estado:"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/bolinhabranca"
+        android:layout_width="63dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="484dp"
+        android:background="@drawable/backgroundbuttonwhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="193dp"
+        android:layout_marginTop="493dp"
+        android:fontFamily="@font/patuaone"
+        android:text="X"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="52dp"
         android:layout_height="60dp"
-        android:contentDescription="Botão Voltar"
         android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="Botão Voltar"
         android:drawableLeft="@drawable/icon_voltar"
         android:paddingLeft="20dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-1dp" />
+        tools:layout_editor_absoluteY="0dp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@drawable/linha_azul"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="105dp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@drawable/linha_azul"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="455dp" />
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@drawable/linha_azul"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="553dp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@drawable/linha_azul"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="740dp" />
+
+    <RadioGroup
+        android:layout_width="408dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="151dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/sairaextracondensedsemibold"
+            android:text="Camisas"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/sairaextracondensedsemibold"
+            android:text="Casacos"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/sairaextracondensedsemibold"
+            android:text="Calças"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/sairaextracondensedsemibold"
+            android:text="Shorts"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/sairaextracondensedsemibold"
+            android:text="Calçados"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/sairaextracondensedsemibold"
+            android:text="Acessórios"
+            android:textSize="30sp" />
+
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="411dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="588dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sairaextracondensedsemibold"
+            android:text="Novo"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sairaextracondensedsemibold"
+            android:text="Bom"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sairaextracondensedsemibold"
+            android:text="Médio"
+            android:textSize="30sp" />
+
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="159dp"
+        android:layout_height="43dp"
+        android:background="@drawable/backgroundbuttonwhite"
+        android:fontFamily="@font/patuaone"
+        android:text="Adicionar"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="25dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="750dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/backgroundbuttonwhite"
+        android:fontFamily="@font/patuaone"
+        android:text="+"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="25dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="243dp"
+        tools:layout_editor_absoluteY="491dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/backgroundbuttonwhite"
+        android:fontFamily="@font/patuaone"
+        android:text="-"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="25dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="491dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="260dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/backgroundbutton"
+        android:fontFamily="@font/patuaone"
+        android:text="Avançar"
+        android:textColor="@color/AzulTitulo"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

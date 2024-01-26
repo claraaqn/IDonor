@@ -92,4 +92,5 @@
     <string name="data_de_nascimento">Data de Nascimento</string>
     <string name="nome_completo">Nome completo</string>
     <string name="cadastrar">"Cadastrar "</string>
+
 </resources>
