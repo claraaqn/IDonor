@@ -1,3 +1,5 @@
+@file:Suppress("UNUSED_EXPRESSION")
+
 import org.jetbrains.kotlin.storage.CacheResetOnProcessCanceled.enabled
 
 plugins {
@@ -35,6 +37,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures{
+        viewBinding ;true
     }
 
 
