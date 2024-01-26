@@ -18,6 +18,10 @@
         <activity
             android:name=".TelaLogin"
             android:exported="false" />
+        <activity android:name=".TelaCadastro"/>
+        <activity android:name=".TelaEspecificacao"/>
+        <activity android:name=".TelaVerificacao"/>
+
         <activity
             android:name=".TelaLogoActivity"
             android:exported="true">
@@ -31,16 +35,21 @@
         <activity android:name=".TelaPerfilActivity" />
         <activity android:name=".TelaImpactoActivity" />
         <activity android:name=".TelaAgradecimentoActivity" />
+
+        <activity
+            android:name=".TelaInstituicaoInfo"
+            android:exported="false" />
+        <activity android:name=".TelaConfirmacao"/>
+        <activity android:name=".TelaInstituicaoAvaliacao" />
+        <activity android:name=".TelaInstituicaoContato" />
+        <activity android:name=".TelaInstituicaoDesejos" />
         <activity
             android:name=".TelaEspecificacao"
             android:exported="false" />
         <activity
             android:name=".TelaCategoriasDoacoes"
             android:exported="false" />
-        <activity
-            android:name=".TelaInstituicao"
-            android:exported="false" />
-        <activity android:name=".TelaConfirmacao" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
