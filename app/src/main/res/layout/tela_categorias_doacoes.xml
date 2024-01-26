@@ -107,6 +107,7 @@
         tools:layout_editor_absoluteY="534dp" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaovoluntario"
         android:layout_width="151dp"
         android:layout_height="149dp"
         android:layout_marginEnd="42dp"
@@ -119,6 +120,7 @@
         tools:layout_editor_absoluteY="385dp" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaovestimentas"
         android:layout_width="151dp"
         android:layout_height="149dp"
         android:layout_marginStart="40dp"
@@ -131,6 +133,7 @@
         tools:layout_editor_absoluteY="385dp" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaodinheiro"
         android:layout_width="151dp"
         android:layout_height="149dp"
         android:layout_marginEnd="42dp"
@@ -143,6 +146,7 @@
         tools:layout_editor_absoluteY="157dp" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaoalimentos"
         android:layout_width="151dp"
         android:layout_height="149dp"
         android:layout_marginStart="40dp"
@@ -155,13 +159,14 @@
         tools:layout_editor_absoluteY="157dp" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaovoltarcategorias"
         android:layout_width="55dp"
         android:layout_height="63dp"
         android:background="@drawable/fundo_transparente_botao"
-        android:paddingLeft="18dp"
-        android:paddingBottom="2dp"
         android:contentDescription="Botão Voltar"
         android:drawableLeft="@drawable/iconvoltar"
+        android:paddingLeft="18dp"
+        android:paddingBottom="2dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />

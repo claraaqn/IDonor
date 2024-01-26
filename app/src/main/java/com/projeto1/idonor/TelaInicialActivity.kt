@@ -33,8 +33,13 @@ class TelaInicialActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btnLarIdosos.setOnClickListener {
+        fun abrirTelaInstituicaoInfo(view: View){
+            val intent = Intent(this, TelaInstituicaoInfo::class.java)
+            startActivity(intent)
+        }
 
+        btnLarIdosos.setOnClickListener {
+        abrirTelaInstituicaoInfo(it)
         }
 
         btnIgreja.setOnClickListener {
