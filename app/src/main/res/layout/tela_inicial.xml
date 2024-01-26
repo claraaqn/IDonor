@@ -182,7 +182,8 @@
                 android:textAppearance="@style/titulo_campanha"
                 app:layout_constraintStart_toStartOf="@+id/fundo_companhas"
                 app:layout_constraintTop_toTopOf="@+id/fundo_companhas"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints"
+                style="@style/titulo_campanha"/>
 
             <TextView
                 android:id="@+id/texto_campanha"
@@ -202,7 +203,8 @@
                 app:layout_constraintStart_toStartOf="@+id/fundo_companhas"
                 app:layout_constraintTop_toBottomOf="@+id/titulo_campanha"
                 app:layout_constraintVertical_bias="0.0"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints"
+                style="@style/texto_campanha"/>
 
             <ImageView
                 android:id="@+id/foto_lar_idosos"
