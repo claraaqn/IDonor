@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".TelaInstituicao"
+    tools:context=".TelaInstituicaoInfo"
     tools:ignore="ExtraText"><![CDATA[
 
     />
@@ -127,6 +127,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaovoltarwishlist"
         android:layout_width="74dp"
         android:layout_height="66dp"
         android:contentDescription="Botão Voltar"
@@ -139,11 +140,12 @@
         tools:layout_editor_absoluteY="-2dp" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaoinfowishlist"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:background="@drawable/fundo_transparente_botao"
         android:contentDescription="Botão de Info"
-        android:drawableLeft="@drawable/icon_informacao_azul"
+        android:drawableLeft="@drawable/iconinformacao"
         android:paddingLeft="12dp"
         android:paddingBottom="14dp"
         tools:ignore="MissingConstraints"
@@ -151,6 +153,7 @@
         tools:layout_editor_absoluteY="381dp" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaocontatowishlist"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:background="@drawable/fundo_transparente_botao"
@@ -167,7 +170,7 @@
         android:layout_height="65dp"
         android:background="@drawable/fundo_transparente_botao"
         android:contentDescription="Botão WishList"
-        android:drawableLeft="@drawable/list"
+        android:drawableLeft="@drawable/list_azul"
         android:paddingLeft="19dp"
         android:paddingBottom="12dp"
         tools:ignore="MissingConstraints"
@@ -175,6 +178,7 @@
         tools:layout_editor_absoluteY="381dp" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaoavaliacaowishlist"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:background="@drawable/fundo_transparente_botao"
@@ -188,6 +192,7 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaodoarwishlist"
         android:layout_width="260dp"
         android:layout_height="59dp"
         android:layout_marginStart="75dp"

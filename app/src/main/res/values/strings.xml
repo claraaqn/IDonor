@@ -64,7 +64,7 @@
     <string name="alimentos">Alimentos</string>
     <string name="voluntario">Voluntário</string>
     <string name="dinheiro">Dinheiro</string>
-    <string name="vestimenta">Vestimenta</string>
+    <string name="vestimenta">Vestimentas</string>
     <string name="titulo_checkout">Check-Out</string>
     <string name="doar">DOAR</string>
     <string name="info_lar_idosos">Nascemos em Belo Jardim, Pernambuco, com a iniciativa da conterrânea Aliete Maria da Silva, em parceria com o Lar Espírita Bezerra de Menezes. Desde então, acolhemos idosos que foram abandonados, violentados ou que estão em situação de vulnerabilidade, assim como entes queridos que precisam de cuidado diário e supervisionado. Para tornar os seus dias recheados de AMOR e CARINHO, disponibilizamos atividades de socialização, espaço de descanso, acompanhamento médico e serviço de alimentação, tudo com muito afeto para aqueles que um dia tanto cuidaram.</string>
@@ -92,4 +92,5 @@
     <string name="data_de_nascimento">Data de Nascimento</string>
     <string name="nome_completo">Nome completo</string>
     <string name="cadastrar">"Cadastrar "</string>
+
 </resources>
