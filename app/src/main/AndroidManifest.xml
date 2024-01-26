@@ -19,7 +19,6 @@
             android:name=".TelaLogin"
             android:exported="false" />
         <activity android:name=".TelaCadastro"/>
-        <activity android:name=".TelaEspecificacao"/>
         <activity android:name=".TelaVerificacao"/>
 
         <activity
