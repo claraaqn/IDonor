@@ -32,7 +32,8 @@
         android:textAppearance="@style/meu_perfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/meu_perfil"/>
 
     <Button
         android:id="@+id/edicao_perfil"
@@ -93,8 +94,8 @@
 
     <TextView
         android:id="@+id/igor_santos"
-        android:layout_width="106dp"
-        android:layout_height="25dp"
+        android:layout_width="143dp"
+        android:layout_height="24dp"
         android:layout_alignParentTop="true"
         android:layout_marginStart="48dp"
         android:elevation="8dp"
@@ -103,7 +104,8 @@
         android:textAppearance="@style/nome_pessoa"
         app:layout_constraintStart_toEndOf="@+id/fundo_perfil"
         app:layout_constraintTop_toBottomOf="@+id/nome"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        style="@style/nome_pessoa"/>
 
     <TextView
         android:id="@+id/nome"
@@ -118,7 +120,8 @@
         android:textAppearance="@style/informacoes"
         app:layout_constraintStart_toEndOf="@+id/fundo_perfil"
         app:layout_constraintTop_toBottomOf="@+id/meu_perfil"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        style="@style/informacoes"/>
 
     <TextView
         android:id="@+id/telefone_titulo"
@@ -133,7 +136,8 @@
         android:textAppearance="@style/informacoes"
         app:layout_constraintStart_toEndOf="@+id/fundo_perfil"
         app:layout_constraintTop_toBottomOf="@+id/igor_santos"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        style="@style/informacoes"/>
 
     <TextView
         android:id="@+id/email_titulo"
@@ -148,7 +152,8 @@
         android:textAppearance="@style/informacoes"
         app:layout_constraintStart_toEndOf="@+id/fundo_perfil"
         app:layout_constraintTop_toBottomOf="@+id/telefone"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        style="@style/informacoes"/>
 
     <TextView
         android:id="@+id/igor_silva_email"
@@ -156,6 +161,7 @@
         android:layout_height="15dp"
         android:layout_alignParentTop="true"
         android:layout_marginStart="48dp"
+        android:layout_marginTop="4dp"
         android:elevation="8dp"
         android:gravity="top"
         android:text="@string/email"
