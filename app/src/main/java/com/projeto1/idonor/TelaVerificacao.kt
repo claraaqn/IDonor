@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import com.projeto1.idonor.R
+
 
 class TelaVerificacao : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
