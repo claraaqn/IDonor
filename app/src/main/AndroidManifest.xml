@@ -32,7 +32,8 @@
         </activity>
         <activity android:name=".TelaInicialActivity" />
         <activity android:name=".TelaPerfilActivity" />
-        <activity android:name=".TelaImpactoActivity" />
+        <activity android:name=".TelaImpactoActivity"
+            android:exported="false"/>
         <activity android:name=".TelaAgradecimentoActivity" />
 
         <activity
