@@ -53,5 +53,9 @@ dependencies {
     implementation("androidx.media3:media3-common:1.2.1")
     implementation(platform("com.google.firebase:firebase-bom:32.7.1"))
     implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth:22.3.1")
+
+    implementation("com.google.firebase:firebase-auth-ktx")
+    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
 
 }

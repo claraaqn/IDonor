@@ -2,11 +2,9 @@ package com.projeto1.idonor
 
 import android.content.Intent
 import android.os.Bundle
-import com.projeto1.idonor.R
 import android.widget.Button
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-
+import com.projeto1.idonor.R
 
 
 class TelaInicial : AppCompatActivity() {
