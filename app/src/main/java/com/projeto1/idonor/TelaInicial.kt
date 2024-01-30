@@ -14,7 +14,6 @@ import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
@@ -30,6 +29,7 @@ class TelaInicial : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_inicial)
+
         auth = Firebase.auth
 
         oneTapClient = Identity.getSignInClient(this)
@@ -43,14 +43,14 @@ class TelaInicial : AppCompatActivity() {
             .build()
 
 
-        val buttonIrParaOutraTelaLogin: Button = findViewById(R.id.button)
-        buttonIrParaOutraTelaLogin.setOnClickListener {
+        val buttonLogin: Button = findViewById(R.id.button)
+        buttonLogin.setOnClickListener {
             val intent = Intent(this@TelaInicial, TelaLogin::class.java)
             startActivity(intent)
         }
 
         val buttonIrParaCadastro: Button = findViewById(R.id.button2)
-        buttonIrParaOutraTelaLogin.setOnClickListener {
+        buttonIrParaCadastro.setOnClickListener {
             val intent = Intent(this@TelaInicial, TelaCadastro::class.java)
             startActivity(intent)
         }
@@ -60,33 +60,6 @@ class TelaInicial : AppCompatActivity() {
             signInWithGoogle(intent)
         }
 
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if (requestCode == REQ_ONE_TAP) {
-            try {
-                val credential = oneTapClient.getSignInCredentialFromIntent(data)
-                val idToken = credential.googleIdToken
-                idToken?.let {
-                    val firebaseCredential = GoogleAuthProvider.getCredential(it, null)
-                    auth.signInWithCredential(firebaseCredential)
-                        .addOnCompleteListener(this) { task ->
-                            if (task.isSuccessful) {
-                                Log.d(TAG, "signInWithCredential:success")
-                                val user = auth.currentUser
-                                updateUI(user)
-                            } else {
-                                Log.w(TAG, "signInWithCredential:failure", task.exception)
-                                updateUI(null)
-                            }
-                        }
-                }
-            } catch (e: ApiException) {
-                Log.e(TAG, "Exception during One Tap sign-in: ${e.localizedMessage}")
-            }
-        }
     }
 
     override fun onStart() {
