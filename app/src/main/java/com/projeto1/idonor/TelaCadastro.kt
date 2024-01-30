@@ -6,20 +6,26 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class TelaCadastro : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.teladecadastro)
 
-            val user = Firebase.auth.currentUser
-             user?.let {
+
+        val user = Firebase.auth.currentUser
+        user?.let {
             // Name, email address, and profile photo Url
             val name = it.displayName
             val email = it.email
             val telefone = it.phoneNumber
+
+                
 
             // Check if user's email is verified
             val emailVerified = it.isEmailVerified
@@ -29,17 +35,26 @@ class TelaCadastro : AppCompatActivity() {
             // FirebaseUser.getIdToken() instead.
             val uid = it.uid
 
-             val user = Firebase.auth.currentUser
-             val newPassword = "SOME-SECURE-PASSWORD"
+            val user = Firebase.auth.currentUser
+            val newPassword = "SOME-SECURE-PASSWORD"
 
-             user!!.updatePassword(newPassword)
-                 .addOnCompleteListener { task ->
-                     if (task.isSuccessful) {
-                         Log.d(TAG, "User password updated.")
-                     }
-                 }
+            user!!.updatePassword(newPassword)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Log.d(TAG, "User password updated.")
+                    }
+                }
+
+            val endereco = Firebase.auth.currentUser
+
+            endereco!!.updateEmail("idonor00@gmail.com")
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Log.d(TAG, "User email address updated.")
+                    }
+                }
+
         }
-
 
 
         val buttonIrParaOutraTelaVerificar: Button = findViewById(R.id.button)
@@ -59,7 +74,10 @@ class TelaCadastro : AppCompatActivity() {
 
 
     }
+
     companion object {
         private const val TAG = "TelaCadastro"
     }
+
+
 }
