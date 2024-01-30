@@ -11,188 +11,211 @@
     />
     ]]>
 
-    <View
-        android:id="@+id/tela_de_inf"
+    <ScrollView
+        android:id="@+id/scrollviewinfo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/BackTela"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.5"
+        android:background="@color/BackTela">
 
-    <ImageView
-        android:layout_width="411dp"
-        android:layout_height="348dp"
-        android:src="@drawable/imglardosidosos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="47dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/botaovoltarcontato"
+                android:layout_width="64dp"
+                android:layout_height="61dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/fundo_transparente_botao"
+                android:contentDescription="Botão Voltar"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:drawableLeft="@drawable/iconvoltar"
+                 />
 
-    <ImageView
-        android:layout_width="424dp"
-        android:layout_height="325dp"
-        android:src="@drawable/ellipse_2"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-9dp"
-        tools:layout_editor_absoluteY="226dp" />
+            <TextView
+                android:id="@+id/idonortitulocontato"
+                android:layout_width="160dp"
+                android:layout_height="43dp"
+                android:layout_alignStart="@+id/botaovoltarcontato"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="233dp"
+                android:fontFamily="@font/patuaone"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/idonor"
+                android:textColor="@color/AzulTitulo"
+                android:textSize="28sp"
+                 />
 
+            <ImageView
+                android:id="@+id/imglardosidososcontato"
+                android:layout_width="411dp"
+                android:layout_height="348dp"
+                android:src="@drawable/imglardosidosos"
+                android:layout_alignTop="@+id/idonortitulocontato"
+                android:layout_alignBottom="@id/titulolardosidososcontato"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="600dp"
+                 />
 
-    <ImageView
-        android:layout_width="360dp"
-        android:layout_height="310dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="26dp"
-        android:src="@drawable/informacoes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="445dp" />
+            <ImageView
+                android:id="@+id/elipsecontato"
+                android:layout_width="424dp"
+                android:layout_height="325dp"
+                android:src="@drawable/ellipse_2"
+                android:layout_alignTop="@+id/imglardosidososcontato"
+                android:layout_marginTop="175dp"
+                />
 
-    <TextView
-        android:layout_width="160dp"
-        android:layout_height="43dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="7dp"
-        android:fontFamily="@font/patuaone"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/idonor"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/titulolardosidososcontato"
+                android:layout_width="251dp"
+                android:layout_height="103dp"
+                android:layout_alignTop="@+id/idonortitulocontato"
+                android:layout_alignStart="@id/botaoinfocontato"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="304dp"
+                android:layout_marginEnd="80dp"
+                android:fontFamily="@font/patuaone"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/titulo_lar_idosos"
+                android:textColor="@color/AzulTitulo"
+                android:textSize="34sp"
+                 />
 
-    <TextView
-        android:layout_width="251dp"
-        android:layout_height="103dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginEnd="80dp"
-        android:fontFamily="@font/patuaone"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/titulo_lar_idosos"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="307dp" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/botaoinfocontato"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_alignTop="@+id/titulolardosidososcontato"
+                android:layout_alignStart="@+id/elipsecontato"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="68dp"
+                android:background="@drawable/fundo_transparente_botao"
+                android:contentDescription="Botão de Info"
+                android:drawableLeft="@drawable/iconinformacao"
+                android:paddingLeft="12dp"
+                android:paddingBottom="14dp"
+                 />
 
-    <View
-        android:id="@+id/line_18"
-        android:layout_width="65dp"
-        android:layout_height="2dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/linha_azul"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="214dp"
-        tools:layout_editor_absoluteY="428dp" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/botaowishlistcontato"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_alignTop="@+id/titulolardosidososcontato"
+                android:layout_alignStart="@+id/elipsecontato"
+                android:layout_marginStart="119dp"
+                android:layout_marginTop="68dp"
+                android:background="@drawable/fundo_transparente_botao"
+                android:contentDescription="Botão WishList"
+                android:drawableLeft="@drawable/list"
+                android:paddingLeft="19dp"
+                android:paddingBottom="12dp"
+                 />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botaovoltarcontato"
-        android:layout_width="64dp"
-        android:layout_height="61dp"
-        android:background="@drawable/fundo_transparente_botao"
-        android:contentDescription="Botão Voltar"
-        android:paddingLeft="20dp"
-        android:paddingTop="5dp"
-        android:drawableLeft="@drawable/iconvoltar"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-5dp" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/botaocontatocontato"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_alignTop="@+id/titulolardosidososcontato"
+                android:layout_alignStart="@+id/elipsecontato"
+                android:layout_marginStart="215dp"
+                android:layout_marginTop="68dp"
+                android:background="@drawable/fundo_transparente_botao"
+                android:contentDescription="Botão Contato"
+                android:drawableLeft="@drawable/iconcontato_azul"
+                android:paddingLeft="14dp"
+                android:paddingBottom="9dp"
+                 />
 
-    <TextView
-        android:layout_width="348dp"
-        android:layout_height="183dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="459dp"
-        android:layout_marginEnd="32dp"
-        android:fontFamily="@font/sairaextracondensedsemibold"
-        android:text="@string/contato"
-        android:textColor="@color/black"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/line_18"
+                android:layout_width="65dp"
+                android:layout_height="2dp"
+                android:layout_alignTop="@id/botaocontatocontato"
+                android:layout_alignStart="@id/botaocontatocontato"
+                android:layout_alignEnd="@id/botaocontatocontato"
+                android:layout_marginStart="-3dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="-1dp"
+                android:background="@drawable/linha_azul"
+                 />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botaoinfocontato"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@drawable/fundo_transparente_botao"
-        android:contentDescription="Botão de Info"
-        android:drawableLeft="@drawable/iconinformacao"
-        android:paddingLeft="12dp"
-        android:paddingBottom="14dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="381dp" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/botaoavaliacaocontato"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_alignTop="@+id/titulolardosidososcontato"
+                android:layout_alignStart="@+id/elipsecontato"
+                android:layout_marginStart="298dp"
+                android:layout_marginTop="68dp"
+                android:background="@drawable/fundo_transparente_botao"
+                android:contentDescription="Botão Avaliação"
+                android:drawableLeft="@drawable/star"
+                android:paddingLeft="17dp"
+                android:paddingBottom="12dp"
+                />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@drawable/fundo_transparente_botao"
-        android:contentDescription="Botão Contato"
-        android:drawableLeft="@drawable/iconcontato_azul"
-        android:paddingLeft="14dp"
-        android:paddingBottom="9dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="380dp" />
+            <ImageView
+                android:id="@+id/backgroundtextoscontato"
+                android:layout_width="360dp"
+                android:layout_height="310dp"
+                android:layout_alignTop="@+id/botaoinfocontato"
+                android:layout_alignStart="@id/botaoinfocontato"
+                android:layout_marginStart="-12dp"
+                android:layout_marginTop="65dp"
+                android:src="@drawable/informacoes"
+                 />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botaowishlistcontato"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@drawable/fundo_transparente_botao"
-        android:contentDescription="Botão WishList"
-        android:drawableLeft="@drawable/list"
-        android:paddingLeft="19dp"
-        android:paddingBottom="12dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="119dp"
-        tools:layout_editor_absoluteY="381dp" />
+            <TextView
+                android:id="@+id/textocontato"
+                android:layout_width="348dp"
+                android:layout_height="183dp"
+                android:layout_alignTop="@+id/backgroundtextoscontato"
+                android:layout_alignStart="@+id/backgroundtextoscontato"
+                android:layout_alignEnd="@+id/backgroundtextoscontato"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="95dp"
+                android:fontFamily="@font/sairaextracondensedsemibold"
+                android:text="@string/contato"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                 />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botaoavaliacaocontato"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@drawable/fundo_transparente_botao"
-        android:contentDescription="Botão Avaliação"
-        android:drawableLeft="@drawable/star"
-        android:paddingLeft="17dp"
-        android:paddingBottom="12dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="303dp"
-        tools:layout_editor_absoluteY="381dp" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/botaodoarcontato"
+                android:layout_width="260dp"
+                android:layout_height="59dp"
+                android:layout_alignTop="@+id/textocontato"
+                android:layout_alignStart="@+id/textocontato"
+                android:layout_alignEnd="@+id/textocontato"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="325dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/backgroundbutton"
+                android:drawableLeft="@drawable/icondoacao"
+                android:fontFamily="@font/patuaone"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="@string/doar"
+                android:textColor="@color/AzulTitulo"
+                android:textSize="25dp"
+                 />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botaodoarcontato"
-        android:layout_width="260dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="48dp"
-        android:background="@drawable/backgroundbutton"
-        android:drawableLeft="@drawable/icondoacao"
-        android:fontFamily="@font/patuaone"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        android:text="@string/doar"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        </RelativeLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
