@@ -29,17 +29,16 @@
         android:id="@+id/nome_comple6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="58dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="116dp"
+        android:layout_marginEnd="104dp"
         android:ems="10"
         android:inputType="textPostalAddress"
         android:text="@string/Endereço_"
         android:textColor="#979494"
         app:layout_constraintBottom_toTopOf="@+id/linha7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/home_page"
+        app:layout_constraintStart_toStartOf="@+id/home_page"
         app:layout_constraintTop_toBottomOf="@+id/linha6"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
@@ -86,14 +85,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginEnd="106dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="62dp"
         android:ems="10"
         android:inputType="text|date"
         android:text="@string/data_de_nascimento"
         android:textColor="#979494"
-        app:layout_constraintBottom_toBottomOf="@+id/nome_comple3"
+        app:layout_constraintBottom_toTopOf="@+id/telefone"
         app:layout_constraintEnd_toEndOf="@+id/ellipse_1"
         app:layout_constraintStart_toStartOf="@+id/tear_off_ca"
+        app:layout_constraintTop_toBottomOf="@+id/nome_comple3"
+        app:layout_constraintVertical_bias="0.792"
         tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
 
     <View
@@ -156,6 +157,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nome_comple2"
+        app:layout_constraintVertical_bias="0.6"
         tools:ignore="MissingConstraints" />
 
     <View
@@ -172,6 +174,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nome_comple3"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -187,6 +190,7 @@
         app:srcCompat="@drawable/androidparty2_png"
         tools:ignore="MissingConstraints" />
 
+
     <View
         android:id="@+id/ellipse_1"
         android:layout_width="413dp"
@@ -198,15 +202,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ellipse_2"
+        app:layout_constraintVertical_bias="0.559"
         tools:ignore="MissingConstraints"
         tools:layout_constraintCircleRadius="10dp" />
 
-
     <View
         android:id="@+id/ellipse_2"
-        android:layout_width="421dp"
-        android:layout_height="136dp"
+        android:layout_width="429dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="1dp"
         android:layout_marginTop="194dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginBottom="12dp"
         android:background="#F4F6FE"
         app:layout_constraintBottom_toBottomOf="@+id/cadastro"
@@ -245,7 +251,7 @@
         android:layout_marginEnd="26dp"
         android:layout_marginBottom="5dp"
         android:background="@android:drawable/dark_header"
-        app:layout_constraintBottom_toTopOf="@+id/nome_comple2"
+        app:layout_constraintBottom_toBottomOf="@+id/nome_comple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
@@ -286,7 +292,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/ellipse_1"
         app:layout_constraintTop_toBottomOf="@+id/ellipse_2"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.818"
         tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
 
     <View
@@ -310,16 +316,16 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/email"
-        app:layout_constraintBottom_toTopOf="@+id/linha4"
+        app:layout_constraintBottom_toBottomOf="@+id/nome_comple3"
         app:layout_constraintEnd_toStartOf="@+id/nome_comple3"
+        app:layout_constraintHorizontal_bias="0.266"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linha3"
+        app:layout_constraintTop_toTopOf="@+id/nome_comple2"
         tools:ignore="MissingConstraints" />
-
 
     <View
         android:id="@+id/phone_messa"
@@ -332,8 +338,10 @@
         android:background="@drawable/phone_message"
         app:layout_constraintBottom_toTopOf="@+id/linha5"
         app:layout_constraintEnd_toStartOf="@+id/senha"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linha4"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <View
