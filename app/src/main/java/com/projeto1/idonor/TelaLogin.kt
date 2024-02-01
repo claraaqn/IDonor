@@ -1,21 +1,24 @@
 package com.projeto1.idonor
 
+import TelaInicial
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import android.widget.Toast
 
 class TelaLogin : AppCompatActivity() {
 
+    private lateinit var emailUser: EditText
+    private lateinit var senhaUser: EditText
     private lateinit var auth: FirebaseAuth;
-
     private var customToken: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -72,8 +75,8 @@ class TelaLogin : AppCompatActivity() {
             val intent = Intent(this@TelaLogin, TelaInicial::class.java)
             startActivity(intent)
         }
-        val email = "usuario@example.com"
-        val password = "senha123"
+        val email = emailUser.text.toString()
+        val password = senhaUser.text.toString()
 
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
