@@ -1,5 +1,6 @@
 package com.projeto1.idonor
 
+import TelaInicial
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -12,7 +13,7 @@ class TelaLogoActivity : AppCompatActivity() {
         setContentView(R.layout.tela_logo)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, TelaInicial::class.java)
+            val intent = Intent(this@TelaLogoActivity, TelaInicial::class.java)
             startActivity(intent)
             finish()
         }, 2000)

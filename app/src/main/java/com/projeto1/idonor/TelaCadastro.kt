@@ -1,8 +1,8 @@
 package com.projeto1.idonor
 
+import TelaInicial
 import android.content.Intent
 import android.graphics.Color
-import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -17,8 +17,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class TelaCadastro : AppCompatActivity() {
 
-    private val PICK_IMAGE_REQUEST = 1
-    private var selectedImageUri: Uri? = null
 
     private lateinit var nomeUser: EditText
     private lateinit var emailUser: EditText
@@ -27,35 +25,8 @@ class TelaCadastro : AppCompatActivity() {
     private lateinit var enderecoUser: EditText
     private lateinit var dataUser: EditText
     private lateinit var button: Button
-    private lateinit var usuarioID: String
     private val mensagens = arrayOf("Preencha todos os campos!", "Cadastro realizado com sucesso")
 
-
-    private fun cadastrarUsuario() {
-        val nome = nomeUser.text.toString()
-        val email = emailUser.text.toString()
-        val senha = senhaUser.text.toString()
-        val telefone = telefoneUser.toString()
-        val endereco = enderecoUser.toString()
-        val data = dataUser.toString()
-
-
-        if (nome.isEmpty() || email.isEmpty() || senha.isEmpty() || telefone.isEmpty() || endereco.isEmpty() || data.isEmpty()) {
-            exibirSnackbar(mensagens[0])
-        } else {
-            FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, senha)
-                .addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
-                        val userId = FirebaseAuth.getInstance().currentUser?.uid
-                        userId?.let {
-                            exibirSnackbar(mensagens[1])
-                        }
-                    } else {
-                        handleFirebaseAuthException(task.exception)
-                    }
-                }
-        }
-    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,13 +35,6 @@ class TelaCadastro : AppCompatActivity() {
         iniciarComponentes()
 
 
-        val buttonIrParaOutraTelaVerificar: Button = findViewById(R.id.button)
-
-        buttonIrParaOutraTelaVerificar.setOnClickListener {
-            val intent = Intent(this@TelaCadastro, TelaVerificacao::class.java)
-
-            startActivity(intent)
-        }
         val buttonIrParaVoltar: View = findViewById(R.id.voltar)
 
         buttonIrParaVoltar.setOnClickListener {
@@ -104,9 +68,25 @@ class TelaCadastro : AppCompatActivity() {
             }
         }
 
+        setContentView(R.layout.teladecadastro)
+        iniciarComponentes()
+
+        button.setOnClickListener {
+            cadastrarUsuario()
+            val buttonIrParaOutraTelaVerificar: Button = findViewById(R.id.button)
+
+            buttonIrParaOutraTelaVerificar.setOnClickListener {
+                val intent = Intent(this@TelaCadastro, TelaVerificacao::class.java)
+
+                startActivity(intent)
+            }
+        }
+
+
+
     }
 
-    private fun salvarUsuarioNoBancoDeDados(userId: String, nome: String) {
+    private fun salvarNoBancoDeDados(userId: String, nome: String) {
         val databaseReference = FirebaseFirestore.getInstance().collection("usuarios").document(userId)
 
         val usuario = mapOf(
@@ -117,7 +97,7 @@ class TelaCadastro : AppCompatActivity() {
         databaseReference.set(usuario)
             .addOnSuccessListener {
             }
-            .addOnFailureListener { e ->
+            .addOnFailureListener {
             }
     }
 private fun iniciarComponentes() {
