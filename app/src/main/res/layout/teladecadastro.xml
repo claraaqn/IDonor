@@ -14,8 +14,9 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="104dp"
+        android:layout_marginBottom="3dp"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:text="@string/login_senha"
         android:textColor="#979494"
         app:layout_constraintBottom_toTopOf="@+id/linha6"
@@ -29,19 +30,18 @@
         android:id="@+id/nome_comple6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="58dp"
         android:layout_marginTop="4dp"
-        android:layout_marginEnd="116dp"
+        android:layout_marginEnd="104dp"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="textPostalAddress"
         android:text="@string/Endereço_"
         android:textColor="#979494"
         app:layout_constraintBottom_toTopOf="@+id/linha7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/home_page"
+        app:layout_constraintStart_toStartOf="@+id/home_page"
         app:layout_constraintTop_toBottomOf="@+id/linha6"
-        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
 
     <EditText
@@ -51,8 +51,9 @@
         android:layout_marginStart="26dp"
         android:layout_marginTop="3dp"
         android:layout_marginEnd="105dp"
+        android:layout_marginBottom="3dp"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="phone"
         android:text="@string/Telefone_"
         android:textColor="#979494"
         app:layout_constraintBottom_toTopOf="@+id/linha5"
@@ -63,14 +64,14 @@
 
     <EditText
         android:id="@+id/nome_comple3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="59dp"
+        android:layout_width="212dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="63dp"
         android:layout_marginTop="9dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="9dp"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="textEmailAddress"
         android:text="E_mail"
         android:textColor="#979494"
         app:layout_constraintBottom_toTopOf="@+id/telefone"
@@ -85,15 +86,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="106dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="1dp"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="text|date"
         android:text="@string/data_de_nascimento"
         android:textColor="#979494"
-        app:layout_constraintBottom_toBottomOf="@+id/nome_comple3"
+        app:layout_constraintBottom_toTopOf="@+id/linha3"
         app:layout_constraintEnd_toEndOf="@+id/ellipse_1"
         app:layout_constraintStart_toStartOf="@+id/tear_off_ca"
+        app:layout_constraintTop_toBottomOf="@+id/ellipse_1"
         tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
 
     <View
@@ -109,6 +112,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nome_comple6"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <View
@@ -156,6 +160,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nome_comple2"
+        app:layout_constraintVertical_bias="0.6"
         tools:ignore="MissingConstraints" />
 
     <View
@@ -172,6 +177,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nome_comple3"
+        app:layout_constraintVertical_bias="0.444"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -187,6 +193,7 @@
         app:srcCompat="@drawable/androidparty2_png"
         tools:ignore="MissingConstraints" />
 
+
     <View
         android:id="@+id/ellipse_1"
         android:layout_width="413dp"
@@ -198,15 +205,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ellipse_2"
+        app:layout_constraintVertical_bias="0.559"
         tools:ignore="MissingConstraints"
         tools:layout_constraintCircleRadius="10dp" />
 
-
     <View
         android:id="@+id/ellipse_2"
-        android:layout_width="421dp"
-        android:layout_height="136dp"
+        android:layout_width="429dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="1dp"
         android:layout_marginTop="194dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginBottom="12dp"
         android:background="#F4F6FE"
         app:layout_constraintBottom_toBottomOf="@+id/cadastro"
@@ -245,7 +254,7 @@
         android:layout_marginEnd="26dp"
         android:layout_marginBottom="5dp"
         android:background="@android:drawable/dark_header"
-        app:layout_constraintBottom_toTopOf="@+id/nome_comple2"
+        app:layout_constraintBottom_toBottomOf="@+id/nome_comple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
@@ -263,11 +272,12 @@
         android:background="@drawable/user"
         app:layout_constraintBottom_toTopOf="@+id/linha2"
         app:layout_constraintEnd_toStartOf="@+id/nome_comple"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ellipse_1"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
+
 
     <EditText
         android:id="@+id/nome_comple"
@@ -283,7 +293,7 @@
         android:textColor="#979494"
         app:layout_constraintBottom_toBottomOf="@+id/nome_comple2"
         app:layout_constraintEnd_toEndOf="@+id/ellipse_1"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/ellipse_1"
         app:layout_constraintTop_toBottomOf="@+id/ellipse_2"
         app:layout_constraintVertical_bias="1.0"
@@ -293,69 +303,71 @@
         android:id="@+id/tear_off_ca"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="11dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="111dp"
+        android:layout_marginEnd="238dp"
+        android:layout_marginBottom="53dp"
         android:background="@drawable/tear_off_calendar"
-        app:layout_constraintBottom_toTopOf="@+id/linha3"
-        app:layout_constraintEnd_toStartOf="@+id/nome_comple2"
+        app:layout_constraintBottom_toBottomOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="@+id/nome_comple"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linha2"
+        app:layout_constraintTop_toTopOf="@+id/ellipse_1"
         tools:ignore="MissingConstraints" />
-
 
     <View
         android:id="@+id/email"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/email"
-        app:layout_constraintBottom_toTopOf="@+id/linha4"
+        app:layout_constraintBottom_toBottomOf="@+id/nome_comple3"
         app:layout_constraintEnd_toStartOf="@+id/nome_comple3"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linha3"
+        app:layout_constraintTop_toTopOf="@+id/nome_comple2"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
-
 
     <View
         android:id="@+id/phone_messa"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="35dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="15dp"
         android:background="@drawable/phone_message"
         app:layout_constraintBottom_toTopOf="@+id/linha5"
         app:layout_constraintEnd_toStartOf="@+id/senha"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linha4"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/lock"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="237dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="52dp"
         android:background="@drawable/lock"
-        app:layout_constraintBottom_toTopOf="@+id/linha6"
-        app:layout_constraintEnd_toEndOf="@+id/senha"
+        app:layout_constraintBottom_toBottomOf="@+id/home_page"
+        app:layout_constraintEnd_toEndOf="@+id/linha6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linha5"
+        app:layout_constraintTop_toTopOf="@+id/phone_messa"
         tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/home_page"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="35dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="238dp"
         android:layout_marginBottom="9dp"
