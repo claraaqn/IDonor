@@ -157,7 +157,7 @@
         android:background="@android:drawable/dark_header"
         app:layout_constraintBottom_toTopOf="@+id/nome_comple3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nome_comple2"
         app:layout_constraintVertical_bias="0.6"
@@ -347,7 +347,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linha4"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <View
@@ -389,12 +389,15 @@
         android:layout_marginTop="228dp"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="48dp"
+        android:backgroundTint="@color/AzulTitulo"
         android:text="@string/Cadastrar_"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/nome_comple6"
+        app:rippleColor="#3F51B5"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
