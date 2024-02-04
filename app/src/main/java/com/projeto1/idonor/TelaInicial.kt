@@ -20,9 +20,11 @@ import com.projeto1.idonor.TelaCadastro
 import com.projeto1.idonor.TelaInicialActivity
 import com.projeto1.idonor.TelaLogin
 
+
 private val Unit.googleIdToken: Unit
     get() = Unit
 
+@Suppress("DEPRECATION")
 class TelaInicial<SignInCredential> : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var oneTapClient: SignInClient
