@@ -74,6 +74,8 @@
         android:layout_marginEnd="56dp"
         android:onClick="LoginComEmail"
         android:text="@string/Login_com_email"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/AzulTitulo"
         android:textColorHighlight="#023679"
         android:textColorLink="#023679"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -88,8 +90,10 @@
         android:id="@+id/button2"
         android:layout_width="227dp"
         android:layout_height="43dp"
+        android:backgroundTint="@color/BackBotao"
         android:onClick="CadastrarComEmail"
         android:text="@string/Cadastrar_com_email"
+        android:textColor="@color/AzulTitulo"
         android:textColorHighlight="#023679"
         android:textColorLink="#023679"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -135,10 +139,13 @@
         android:layout_height="43dp"
         android:layout_marginStart="56dp"
         android:layout_marginEnd="56dp"
+        android:backgroundTint="@color/white"
         android:onClick="EntrarComGoogle"
         android:text="@string/Entrar_com_o_google"
-        android:textColorHighlight="#023679"
+        android:textColor="@color/AzulTitulo"
+        android:textColorHighlight="#02367A"
         android:textColorLink="#023679"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -152,6 +159,7 @@
         android:layout_height="32dp"
         android:layout_marginTop="52dp"
         android:layout_marginBottom="10dp"
+        android:backgroundTint="@android:color/transparent"
         android:gravity="center_horizontal|top"
         android:text="@string/Conhecer_as_instituições"
         android:textColor="#023679"
@@ -193,7 +201,8 @@
         app:layout_constraintVertical_bias="0.338"
         tools:background="@drawable/ellipse_2"
         tools:ignore="MissingConstraints"
-        tools:layout_constraintCircleRadius="10dp" />
+        tools:layout_constraintCircleRadius="10dp"
+        tools:visibility="visible" />
 
     <TextView
         android:id="@+id/r"

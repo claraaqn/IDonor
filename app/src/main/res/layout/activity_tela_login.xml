@@ -29,7 +29,7 @@
         android:layout_marginTop="7dp"
         android:layout_marginEnd="116dp"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:text="@string/login_senha"
         android:textColor="#979494"
         app:layout_constraintBottom_toTopOf="@+id/linha8"
@@ -99,7 +99,8 @@
         app:layout_constraintVertical_bias="0.263"
         tools:background="@drawable/ellipse_2"
         tools:ignore="MissingConstraints"
-        tools:layout_constraintCircleRadius="10dp" />
+        tools:layout_constraintCircleRadius="10dp"
+        tools:visibility="visible" />
 
     <TextView
         android:id="@+id/Login"
@@ -161,7 +162,7 @@
         android:layout_marginTop="2dp"
         android:layout_marginEnd="132dp"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="textWebEmailAddress"
         android:text="@string/login_email"
         android:textColor="#979494"
         app:layout_constraintBottom_toTopOf="@+id/linha2"
@@ -175,16 +176,20 @@
         android:layout_width="155dp"
         android:layout_height="40dp"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="399dp"
+        android:layout_marginTop="228dp"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="48dp"
         android:text="@string/login_"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/AzulTitulo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linha8"
         app:layout_constraintVertical_bias="1.0"
-        tools:ignore="PxUsage,SpeakableTextPresentCheck,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+        app:rippleColor="#3F51B5"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <View
         android:id="@+id/voltar"
