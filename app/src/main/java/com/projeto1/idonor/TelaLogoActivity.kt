@@ -12,7 +12,7 @@ class TelaLogoActivity : AppCompatActivity() {
         setContentView(R.layout.tela_logo)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, TelaInicial::class.java)
+            val intent = Intent(this@TelaLogoActivity, TelaInicial::class.java)
             startActivity(intent)
             finish()
         }, 2000)
