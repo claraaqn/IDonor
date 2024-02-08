@@ -1,5 +1,6 @@
 package com.projeto1.idonor
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -30,12 +31,19 @@ class TelaCadastro : AppCompatActivity() {
 
 
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.teladecadastro)
         iniciarComponentes()
 
+        val buttonPraVerificar: View = findViewById(R.id.button)
 
+        buttonPraVerificar.setOnClickListener {
+            val intent = Intent(this@TelaCadastro, TelaVerificacao::class.java)
+
+            startActivity(intent)
+        }
         val buttonIrParaVoltar: View = findViewById(R.id.voltar)
 
         buttonIrParaVoltar.setOnClickListener {
@@ -43,6 +51,7 @@ class TelaCadastro : AppCompatActivity() {
 
             startActivity(intent)
         }
+
 
         fun cadastrarUsuario() {
             val nome = nomeUser.text.toString()

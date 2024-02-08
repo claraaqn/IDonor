@@ -17,10 +17,6 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.projeto1.idonor.R
-import com.projeto1.idonor.TelaCadastro
-import com.projeto1.idonor.TelaInicialActivity
-import com.projeto1.idonor.TelaLogin
 
 
 private val Unit.googleIdToken: Unit
@@ -39,19 +35,8 @@ class TelaInicial<SignInCredential> : AppCompatActivity() {
 
         auth = Firebase.auth
 
-        oneTapClient = Identity.getSignInClient(this)
-        signInRequest = BeginSignInRequest.builder()
-            .setGoogleIdTokenRequestOptions(
-                BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
-                    .setSupported(true)
-                    .setServerClientId(getString(R.string.idGoogle))
-                    .setFilterByAuthorizedAccounts(true)
-                    .build()
-            )
-            .build()
-
-        val buttonLogin: Button = findViewById(R.id.button)
-        buttonLogin.setOnClickListener {
+        val buttonParaLogin: Button = findViewById(R.id.button)
+        buttonParaLogin.setOnClickListener {
             val intent = Intent(this@TelaInicial, TelaLogin::class.java)
             startActivity(intent)
         }
@@ -66,6 +51,18 @@ class TelaInicial<SignInCredential> : AppCompatActivity() {
         buttonLoginGoogleAuthProvider.setOnClickListener {
             signInWithGoogle()
         }
+
+        oneTapClient = Identity.getSignInClient(this)
+        signInRequest = BeginSignInRequest.builder()
+            .setGoogleIdTokenRequestOptions(
+                BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
+                    .setSupported(true)
+                    .setServerClientId(getString(R.string.idGoogle))
+                    .setFilterByAuthorizedAccounts(true)
+                    .build()
+            )
+            .build()
+
     }
 
     override fun onStart() {
