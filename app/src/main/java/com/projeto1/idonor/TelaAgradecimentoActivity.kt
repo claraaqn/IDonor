@@ -29,7 +29,7 @@ class TelaAgradecimentoActivity : AppCompatActivity() {
     }
 
     fun irParaTelaCategorias(view: View) {
-        val intent = Intent(this, TelaInicialActivity::class.java)
+        val intent = Intent(this, TelaCategoriasDoacoes::class.java)
         startActivity(intent)
     }
 }
