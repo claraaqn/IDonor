@@ -77,7 +77,7 @@
         app:layout_constraintBottom_toTopOf="@+id/telefone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tear_off_ca"
+        app:layout_constraintStart_toStartOf="@+id/calendario"
         app:layout_constraintTop_toBottomOf="@+id/linha3"
         tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
 
@@ -85,7 +85,7 @@
         android:id="@+id/nome_comple2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
+        android:layout_marginStart="61dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="106dp"
         android:layout_marginBottom="1dp"
@@ -95,7 +95,7 @@
         android:textColor="#979494"
         app:layout_constraintBottom_toTopOf="@+id/linha3"
         app:layout_constraintEnd_toEndOf="@+id/ellipse_1"
-        app:layout_constraintStart_toStartOf="@+id/tear_off_ca"
+        app:layout_constraintStart_toStartOf="@+id/calendario"
         app:layout_constraintTop_toBottomOf="@+id/ellipse_1"
         tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
 
@@ -157,7 +157,7 @@
         android:background="@android:drawable/dark_header"
         app:layout_constraintBottom_toTopOf="@+id/nome_comple3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nome_comple2"
         app:layout_constraintVertical_bias="0.6"
@@ -198,7 +198,9 @@
         android:id="@+id/ellipse_1"
         android:layout_width="413dp"
         android:layout_height="102dp"
+        android:layout_marginStart="1dp"
         android:layout_marginTop="3dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginBottom="47dp"
         android:background="#F4F6FE"
         app:layout_constraintBottom_toBottomOf="@+id/nome_comple"
@@ -218,6 +220,7 @@
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="12dp"
         android:background="#F4F6FE"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/cadastro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -225,7 +228,8 @@
         app:layout_constraintVertical_bias="0.0"
         tools:background="@drawable/ellipse_2"
         tools:ignore="MissingConstraints"
-        tools:layout_constraintCircleRadius="10dp" />
+        tools:layout_constraintCircleRadius="10dp"
+        tools:visibility="visible" />
 
     <TextView
         android:id="@+id/cadastro"
@@ -300,7 +304,7 @@
         tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
 
     <View
-        android:id="@+id/tear_off_ca"
+        android:id="@+id/calendario"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="36dp"
@@ -345,7 +349,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linha4"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <View
@@ -379,6 +383,7 @@
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
+
     <Button
         android:id="@+id/button"
         android:layout_width="155dp"
@@ -387,14 +392,16 @@
         android:layout_marginTop="228dp"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="48dp"
+        android:backgroundTint="@color/AzulTitulo"
         android:text="@string/Cadastrar_"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/nome_comple6"
+        app:layout_constraintVertical_bias="0.906"
+        app:rippleColor="#3F51B5"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
 
     <View
         android:id="@+id/voltar"
@@ -408,7 +415,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
         tools:ignore="MissingConstraints" />
 
 

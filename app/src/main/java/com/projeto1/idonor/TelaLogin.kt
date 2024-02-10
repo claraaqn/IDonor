@@ -24,9 +24,37 @@ class TelaLogin : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_login)
 
+        emailUser = findViewById(R.id.editTextText)
+        senhaUser = findViewById(R.id.senha)
 
         auth = Firebase.auth
 
+
+
+        val buttonLogin: Button = findViewById(R.id.button)
+        buttonLogin.setOnClickListener {
+            val email = emailUser.text.toString()
+            val password = senhaUser.text.toString()
+
+            auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        // Sign in success, update UI with the signed-in user's information
+                        Log.d(TelaLogin.TAG, "createUserWithEmail:success")
+                        val user = auth.currentUser
+                        updateUI(user)
+                    } else {
+                        // If sign in fails, display a message to the user.
+                        Log.w(TelaLogin.TAG, "createUserWithEmail:failure", task.exception)
+                        Toast.makeText(
+                            baseContext,
+                            "Authentication failed.",
+                            Toast.LENGTH_SHORT,
+                        ).show()
+                        updateUI(null)
+                    }
+                }
+        }
 
         val editTextText = Firebase.auth.currentUser
         if (editTextText != null) {
@@ -63,14 +91,14 @@ class TelaLogin : AppCompatActivity() {
             // [END sign_in_custom]
         }
 
-        val buttonIrParaInstituicoes: Button = findViewById(R.id.button)
-        buttonIrParaInstituicoes.setOnClickListener {
+        val buttonIrParaTelaInicialdois: Button = findViewById(R.id.button)
+        buttonIrParaTelaInicialdois.setOnClickListener {
             val intent = Intent(this@TelaLogin, TelaInicialActivity::class.java)
             startActivity(intent)
         }
 
-        val voltar: View = findViewById(R.id.voltar)
-        voltar.setOnClickListener {
+        val voltarParaTelaInicialum: View = findViewById(R.id.voltar)
+        voltarParaTelaInicialum.setOnClickListener {
             val intent = Intent(this@TelaLogin, TelaInicial::class.java)
             startActivity(intent)
         }
