@@ -35,13 +35,13 @@ class TelaInicial<SignInCredential> : AppCompatActivity() {
 
         auth = Firebase.auth
 
-        val buttonParaLogin: Button = findViewById(R.id.button)
+        val buttonParaLogin: Button = findViewById(R.id.button_login)
         buttonParaLogin.setOnClickListener {
             val intent = Intent(this@TelaInicial, TelaLogin::class.java)
             startActivity(intent)
         }
 
-        val buttonIrParaCadastro: Button = findViewById(R.id.button2)
+        val buttonIrParaCadastro: Button = findViewById(R.id.button_cadastro)
         buttonIrParaCadastro.setOnClickListener {
             val intent = Intent(this@TelaInicial, TelaCadastro::class.java)
             startActivity(intent)
