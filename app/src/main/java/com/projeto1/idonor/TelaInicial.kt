@@ -1,4 +1,5 @@
-import android.app.PendingIntent
+package com.projeto1.idonor
+
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -9,23 +10,15 @@ import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.identity.Identity
 import com.google.android.gms.auth.api.identity.SignInClient
 import com.google.android.gms.common.api.ApiException
-import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.projeto1.idonor.R
-import com.projeto1.idonor.TelaCadastro
-import com.projeto1.idonor.TelaInicialActivity
 import com.projeto1.idonor.TelaLogin
 
 
-private val Unit.googleIdToken: Unit
-    get() = Unit
-
-@Suppress("DEPRECATION")
-class TelaInicial<SignInCredential> : AppCompatActivity() {
+class  TelaInicial : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var oneTapClient: SignInClient
     private lateinit var signInRequest: BeginSignInRequest
@@ -100,13 +93,10 @@ class TelaInicial<SignInCredential> : AppCompatActivity() {
         }
     }
 
-    private fun startActivityForResult(intent: Any, reqOneTap: Int) {
-        TODO("Not yet implemented")
+    private fun startActivityForResult(intent: Unit, reqOneTap: Int) {
+
     }
 
-    private fun startActivityForResult(intent: Task<PendingIntent>, reqOneTap: Int) {
-        TODO("Not yet implemented")
-    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -165,4 +155,8 @@ class TelaInicial<SignInCredential> : AppCompatActivity() {
     private fun SignInClient.getSignInIntent(signInRequest: BeginSignInRequest) {
 
     }
+
+    private val Unit.googleIdToken: Unit
+        get() = Unit
+
 }
