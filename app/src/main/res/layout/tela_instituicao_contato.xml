@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".TelaInstituicao"
+    tools:context=".TelaInstituicaoInfo"
     tools:ignore="ExtraText"><![CDATA[
 
     />
@@ -94,10 +94,11 @@
         android:layout_alignParentTop="true"
         android:background="@drawable/linha_azul"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteX="214dp"
         tools:layout_editor_absoluteY="428dp" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaovoltarcontato"
         android:layout_width="64dp"
         android:layout_height="61dp"
         android:background="@drawable/fundo_transparente_botao"
@@ -124,11 +125,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaoinfocontato"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:background="@drawable/fundo_transparente_botao"
         android:contentDescription="Botão de Info"
-        android:drawableLeft="@drawable/icon_informacao_azul"
+        android:drawableLeft="@drawable/iconinformacao"
         android:paddingLeft="12dp"
         android:paddingBottom="14dp"
         tools:ignore="MissingConstraints"
@@ -140,7 +142,7 @@
         android:layout_height="65dp"
         android:background="@drawable/fundo_transparente_botao"
         android:contentDescription="Botão Contato"
-        android:drawableLeft="@drawable/iconcontato"
+        android:drawableLeft="@drawable/iconcontato_azul"
         android:paddingLeft="14dp"
         android:paddingBottom="9dp"
         tools:ignore="MissingConstraints"
@@ -148,6 +150,7 @@
         tools:layout_editor_absoluteY="380dp" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaowishlistcontato"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:background="@drawable/fundo_transparente_botao"
@@ -160,6 +163,7 @@
         tools:layout_editor_absoluteY="381dp" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaoavaliacaocontato"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:background="@drawable/fundo_transparente_botao"
@@ -172,6 +176,7 @@
         tools:layout_editor_absoluteY="381dp" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaodoarcontato"
         android:layout_width="260dp"
         android:layout_height="59dp"
         android:layout_marginStart="75dp"

@@ -11,7 +11,34 @@
 
     <string name="doarmais">DOAR +</string>
 
+    <!-- tela inicial-->
     <string name="voltar_tela_inicial">VOLTAR À TELA INICIAL</string>
+    <string name="OU">OU</string>
+    <string name="Login_com_email">Login</string>
+    <string name="Cadastrar_com_email">Cadastro</string>
+    <string name="Entrar_com_o_google">Entrar com o Google</string>
+    <string name="Conhecer_as_instituições">Conhecer as instituições</string>
+    <string name="junte_se_a_uma_rede_de_apoio_e_amor_ao_pr_ximo">Junte-se a uma rede de apoio \ne amor ao próximo</string>
+    <string name="idGoogle">705682338333-t6j3s8e766teqm7jh5v4lqj7k9oj4jhq.apps.googleusercontent.com</string>
+    <!-- tela login-->
+    <string name="login_email">E-mail</string>
+    <string name="login_senha">Senha</string>
+    <string name="login_">Login</string>
+
+    <!-- tela Cadastro-->
+    <string name="Cadastrar_">Cadastrar</string>
+    <string name="Telefone_">Telefone</string>
+    <string name="Endereço_">Endereço</string>
+    <string name="senha">Senha</string>
+    <string name="endere_o">Endereço</string>
+    <string name="e_mail">Email</string>
+    <string name="data_de_nascimento">Data de Nascimento</string>
+    <string name="nome_completo">Nome completo</string>
+    <string name="cadastrar">"Cadastrar "</string>
+
+    <!-- tela verificação-->
+    <string name="Código_de_Verificação">Código de Verificação</string>
+    <string name="Verificar">Verificar</string>
 
     <!-- tela perfil -->
     <string name="nome_mostra">Nome</string>
@@ -64,7 +91,7 @@
     <string name="alimentos">Alimentos</string>
     <string name="voluntario">Voluntário</string>
     <string name="dinheiro">Dinheiro</string>
-    <string name="vestimenta">Vestimenta</string>
+    <string name="vestimenta">Vestimentas</string>
     <string name="titulo_checkout">Check-Out</string>
     <string name="doar">DOAR</string>
     <string name="info_lar_idosos">Nascemos em Belo Jardim, Pernambuco, com a iniciativa da conterrânea Aliete Maria da Silva, em parceria com o Lar Espírita Bezerra de Menezes. Desde então, acolhemos idosos que foram abandonados, violentados ou que estão em situação de vulnerabilidade, assim como entes queridos que precisam de cuidado diário e supervisionado. Para tornar os seus dias recheados de AMOR e CARINHO, disponibilizamos atividades de socialização, espaço de descanso, acompanhamento médico e serviço de alimentação, tudo com muito afeto para aqueles que um dia tanto cuidaram.</string>
@@ -81,15 +108,9 @@
     <string name="descricao_estrelas_sandra">quantidade de estrelas que a Sandra Rafaela Deus deu</string>
     <string name="mais">mais...</string>
     <string name="login">Login</string>
-    <string name="junte_se_a_uma_rede_de_apoio_e_amor_ao_pr_ximo">Junte-se a uma rede de apoio \ne amor ao próximo</string>
-    <string name="conhecer_as_institui_es">Conhecer as instituições</string>
-    <string name="cadastro">Cadastro</string>
-    <string name="verificar">Verificar</string>
-    <string name="c_digo_de_verifica_o">Código de verificação</string>
-    <string name="senha">Senha</string>
-    <string name="endere_o">Endereço</string>
-    <string name="e_mail">Email</string>
-    <string name="data_de_nascimento">Data de Nascimento</string>
-    <string name="nome_completo">Nome completo</string>
-    <string name="cadastrar">"Cadastrar "</string>
+  
+  <string name="c_digo_de_verifica_o">Código de verificação</string>
+  <string name="verificar">Verificar</string>
+   <string name="cadastro">Cadastro</string>
+
 </resources>

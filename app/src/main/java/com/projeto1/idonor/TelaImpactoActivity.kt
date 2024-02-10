@@ -13,7 +13,6 @@ class TelaImpactoActivity : AppCompatActivity() {
 
         // Inicialize os botões
         val btnVoltarImpacto = findViewById<Button>(R.id.voltar_impacto)
-        val btnSetaSemanaEsquerda = findViewById<Button>(R.id.seta_semana_1)
         val btnSetaSemanaDireita = findViewById<Button>(R.id.seta_semana_direita)
         val btnMes = findViewById<Button>(R.id.mes)
         val btnAno = findViewById<Button>(R.id.ano)
@@ -28,9 +27,6 @@ class TelaImpactoActivity : AppCompatActivity() {
             voltarTelaPerfil(it)
         }
 
-        btnSetaSemanaEsquerda.setOnClickListener {
-            // Implemente a lógica desejada quando o botão de seta à esquerda é clicado
-        }
 
         btnSetaSemanaDireita.setOnClickListener {
             // Implemente a lógica desejada quando o botão de seta à direita é clicado

@@ -6,7 +6,6 @@ import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 class TelaInicialActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tela_inicial)
@@ -33,8 +32,13 @@ class TelaInicialActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btnLarIdosos.setOnClickListener {
+        fun abrirTelaInstituicaoInfo(view: View){
+            val intent = Intent(this, TelaInstituicaoInfo::class.java)
+            startActivity(intent)
+        }
 
+        btnLarIdosos.setOnClickListener {
+        abrirTelaInstituicaoInfo(it)
         }
 
         btnIgreja.setOnClickListener {
