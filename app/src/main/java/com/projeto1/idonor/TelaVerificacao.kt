@@ -10,30 +10,31 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 
-
 class TelaVerificacao : AppCompatActivity() {
 
     private lateinit var codigo: EditText
     private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.teladeverificacao)
 
-        val buttonIrParaInstituicoes: Button = findViewById(R.id.buttonCadastro)
+        codigo = findViewById(R.id.codigo)
+        auth = FirebaseAuth.getInstance()
 
-        buttonIrParaInstituicoes.setOnClickListener {
-            val intent = Intent(this@TelaVerificacao, TelaInicialActivity::class.java)
-
-            startActivity(intent)
+        val buttonVerificarCodigo: Button = findViewById(R.id.buttonCadastro)
+        buttonVerificarCodigo.setOnClickListener {
+            verificarCodigo()
         }
+
         val buttonVoltarCadastroVe: View = findViewById(R.id.voltarTelaVerificar)
 
         buttonVoltarCadastroVe.setOnClickListener {
             val intent = Intent(this@TelaVerificacao, TelaCadastro::class.java)
-
             startActivity(intent)
         }
     }
+
     private fun verificarCodigo() {
         val codigoverificar = codigo.text.toString()
 

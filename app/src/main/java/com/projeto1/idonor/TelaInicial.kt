@@ -9,13 +9,13 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.identity.Identity
 import com.google.android.gms.auth.api.identity.SignInClient
+import com.google.android.gms.auth.api.identity.SignInCredential
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.projeto1.idonor.TelaLogin
 
 
 class  TelaInicial : AppCompatActivity() {
@@ -147,7 +147,7 @@ class  TelaInicial : AppCompatActivity() {
     }
 
 
-    private fun <SignInCredential> SignInCredential.getResult(java: Class<ApiException>) {
+    private fun SignInCredential.getResult(java: Class<ApiException>) {
 
     }
 
