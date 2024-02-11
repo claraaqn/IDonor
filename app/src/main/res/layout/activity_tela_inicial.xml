@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F6FE"
-    tools:context=".TelaInicial">
+    android:background="#F4F6FE">
 
 
     <TextView
@@ -68,7 +67,7 @@
         app:layout_constraintVertical_weight="400" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonlogin"
         android:layout_width="227dp"
         android:layout_height="43dp"
         android:layout_marginStart="56dp"
@@ -193,7 +192,7 @@
         android:layout_marginTop="175dp"
         android:layout_marginEnd="136dp"
         android:background="#F4F6FE"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/textorededeapoio"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="1.0"
@@ -203,7 +202,7 @@
         tools:background="@drawable/ellipse_2"
         tools:ignore="MissingConstraints"
         tools:layout_constraintCircleRadius="10dp"
-        tools:visibility="visible" />
+        tools:visibility="gone" />
 
     <TextView
         android:id="@+id/r"
@@ -349,9 +348,11 @@
         android:layout_height="2dp"
         android:layout_marginStart="78dp"
         android:layout_marginEnd="-40dp"
+        android:layout_marginBottom="64dp"
         android:background="@android:drawable/dark_header"
         app:layout_constraintBottom_toBottomOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/OU1"
         app:layout_constraintTop_toTopOf="@+id/button"
         app:layout_constraintVertical_bias="0.585"

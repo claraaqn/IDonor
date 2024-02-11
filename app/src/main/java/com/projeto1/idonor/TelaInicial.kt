@@ -15,10 +15,14 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.projeto1.idonor.TelaLogin
 
+private val googleIdToken: String?
+    get() {
+        TODO("Not yet implemented")
+    }
 
-class  TelaInicial : AppCompatActivity() {
+@Suppress("DEPRECATION")
+class TelaInicial : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var oneTapClient: SignInClient
     private lateinit var signInRequest: BeginSignInRequest
@@ -30,18 +34,13 @@ class  TelaInicial : AppCompatActivity() {
 
         auth = Firebase.auth
 
-        oneTapClient = Identity.getSignInClient(this)
-        signInRequest = BeginSignInRequest.builder()
-            .setGoogleIdTokenRequestOptions(
-                BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
-                    .setSupported(true)
-                    .setServerClientId(getString(R.string.idGoogle))
-                    .setFilterByAuthorizedAccounts(true)
-                    .build()
-            )
-            .build()
+        val buttonIntituicoes: Button = findViewById(R.id.conhecer_as)
+        buttonIntituicoes.setOnClickListener {
+            val intent = Intent(this@TelaInicial, TelaInicialActivity::class.java)
+            startActivity(intent)
+        }
 
-        val buttonLogin: Button = findViewById(R.id.button)
+        val buttonLogin: Button = findViewById(R.id.buttonlogin)
         buttonLogin.setOnClickListener {
             val intent = Intent(this@TelaInicial, TelaLogin::class.java)
             startActivity(intent)
@@ -57,6 +56,17 @@ class  TelaInicial : AppCompatActivity() {
         buttonLoginGoogleAuthProvider.setOnClickListener {
             signInWithGoogle()
         }
+
+        oneTapClient = Identity.getSignInClient(this)
+        signInRequest = BeginSignInRequest.builder()
+            .setGoogleIdTokenRequestOptions(
+                BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
+                    .setSupported(true)
+                    .setServerClientId(getString(R.string.idGoogle))
+                    .setFilterByAuthorizedAccounts(true)
+                    .build()
+            )
+            .build()
     }
 
     override fun onStart() {
@@ -86,34 +96,30 @@ class  TelaInicial : AppCompatActivity() {
 
     private fun signInWithGoogle() {
         try {
-            val intent = oneTapClient.getSignInIntent(signInRequest)
             startActivityForResult(intent, REQ_ONE_TAP)
         } catch (e: ApiException) {
             Log.e(TAG, "Exception during One Tap sign-in: ${e.localizedMessage}")
         }
     }
 
-    private fun startActivityForResult(intent: Unit, reqOneTap: Int) {
-
-    }
-
-
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQ_ONE_TAP) {
             // Handle the result of the sign-in flow
-            val task = oneTapClient.getSignInCredentialFromIntent(data)
-            handleSignInResult(task)
+            oneTapClient.getSignInCredentialFromIntent(data)
+            handleSignInResult()
         }
     }
 
-    private fun handleSignInResult(task: com.google.android.gms.auth.api.identity.SignInCredential) {
+
+    private fun handleSignInResult() {
         try {
-            val signInCredential = task.getResult(ApiException::class.java)
+            getResult()
             // Signed in successfully, show authenticated UI.
-            val idToken = signInCredential.googleIdToken
+            val idToken = googleIdToken
             // Use the ID token to authenticate with Firebase
-            val authCredential = GoogleAuthProvider.getCredential(idToken.toString(), null)
+            val authCredential = GoogleAuthProvider.getCredential(idToken, null)
             auth.signInWithCredential(authCredential)
                 .addOnCompleteListener(this) { authTask ->
                     if (authTask.isSuccessful) {
@@ -143,20 +149,9 @@ class  TelaInicial : AppCompatActivity() {
 
     companion object {
         const val TAG = "TelaInicial"
-
     }
+}
 
-
-    private fun <SignInCredential> SignInCredential.getResult(java: Class<ApiException>) {
-
-    }
-
-
-    private fun SignInClient.getSignInIntent(signInRequest: BeginSignInRequest) {
-
-    }
-
-    private val Unit.googleIdToken: Unit
-        get() = Unit
-
+private fun getResult(): Any {
+    TODO("Not yet implemented")
 }

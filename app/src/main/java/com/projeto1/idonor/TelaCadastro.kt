@@ -14,6 +14,8 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class TelaCadastro : AppCompatActivity() {
 
@@ -35,6 +37,13 @@ class TelaCadastro : AppCompatActivity() {
         setContentView(R.layout.teladecadastro)
         iniciarComponentes()
 
+        auth = Firebase.auth
+
+        button.setOnClickListener {
+            cadastrarUsuario()
+            val intent = Intent(this@TelaCadastro, TelaVerificacao::class.java)
+            startActivity(intent)
+        }
 
         val buttonIrParaVoltar: View = findViewById(R.id.voltar)
 
@@ -44,7 +53,51 @@ class TelaCadastro : AppCompatActivity() {
             startActivity(intent)
         }
 
-        fun cadastrarUsuario() {
+    }
+
+    private fun iniciarComponentes() {
+    nomeUser = findViewById(R.id.nome_comple)
+    emailUser = findViewById(R.id.nome_comple3)
+    senhaUser = findViewById(R.id.senha)
+    dataUser = findViewById(R.id.nome_comple2)
+    enderecoUser = findViewById(R.id.nome_comple6)
+    telefoneUser = findViewById(R.id.telefone)
+    button = findViewById(R.id.button)
+}
+
+    private fun handleFirebaseAuthException(exception: Exception?) {
+        val erro: String = when (exception) {
+            is FirebaseAuthWeakPasswordException -> "Digite uma senha com no mínimo 6 caracteres"
+            is FirebaseAuthUserCollisionException -> "Esta conta já foi cadastrada"
+            is FirebaseAuthInvalidCredentialsException -> "Digite um e-mail válido"
+            else -> "Erro ao cadastrar usuário"
+        }
+
+        val snackbar = Snackbar.make(button, erro, Snackbar.LENGTH_SHORT)
+        snackbar.setBackgroundTint(Color.WHITE)
+        snackbar.setTextColor(Color.BLACK)
+        snackbar.show()
+    }
+    private fun enviarCodigoVerificacao(user: FirebaseUser?) {
+        user?.sendEmailVerification()
+            ?.addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(this, "Um código de verificação foi enviado para o seu email.", Toast.LENGTH_SHORT).show()
+                    // Redirecionar para a próxima tela onde o usuário pode inserir o código
+                    val intent = Intent(this@TelaCadastro, TelaVerificacao::class.java)
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(this, "Erro ao enviar código de verificação: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+    }
+    private fun exibirSnackbar(mensagem: String) {
+        val snackbar = Snackbar.make(button, mensagem, Snackbar.LENGTH_SHORT)
+        snackbar.setBackgroundTint(Color.WHITE)
+        snackbar.setTextColor(Color.BLACK)
+        snackbar.show()
+    }
+        private fun cadastrarUsuario() {
             val nome = nomeUser.text.toString()
             val email = emailUser.text.toString()
             val senha = senhaUser.text.toString()
@@ -84,67 +137,8 @@ class TelaCadastro : AppCompatActivity() {
             }
         }
 
-        setContentView(R.layout.teladecadastro)
-        iniciarComponentes()
-
-        button.setOnClickListener {
-            cadastrarUsuario()
-            val buttonIrParaOutraTelaVerificar: Button = findViewById(R.id.button)
-
-            buttonIrParaOutraTelaVerificar.setOnClickListener {
-                val intent = Intent(this@TelaCadastro, TelaVerificacao::class.java)
-
-                startActivity(intent)
-            }
-        }
-
-
 
     }
 
-private fun iniciarComponentes() {
-    nomeUser = findViewById(R.id.nome_comple)
-    emailUser = findViewById(R.id.nome_comple3)
-    senhaUser = findViewById(R.id.senha)
-    dataUser = findViewById(R.id.nome_comple2)
-    enderecoUser = findViewById(R.id.nome_comple6)
-    telefoneUser = findViewById(R.id.telefone)
-    button = findViewById(R.id.button)
-}
 
-    private fun handleFirebaseAuthException(exception: Exception?) {
-        val erro: String = when (exception) {
-            is FirebaseAuthWeakPasswordException -> "Digite uma senha com no mínimo 6 caracteres"
-            is FirebaseAuthUserCollisionException -> "Esta conta já foi cadastrada"
-            is FirebaseAuthInvalidCredentialsException -> "Digite um e-mail válido"
-            else -> "Erro ao cadastrar usuário"
-        }
-
-        val snackbar = Snackbar.make(button, erro, Snackbar.LENGTH_SHORT)
-        snackbar.setBackgroundTint(Color.WHITE)
-        snackbar.setTextColor(Color.BLACK)
-        snackbar.show()
-    }
-    private fun enviarCodigoVerificacao(user: FirebaseUser?) {
-        user?.sendEmailVerification()
-            ?.addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    Toast.makeText(this, "Um código de verificação foi enviado para o seu email.", Toast.LENGTH_SHORT).show()
-                    // Redirecionar para a próxima tela onde o usuário pode inserir o código
-                    val intent = Intent(this, TelaVerificacao::class.java)
-                    startActivity(intent)
-                } else {
-                    Toast.makeText(this, "Erro ao enviar código de verificação: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
-                }
-            }
-    }
-    private fun exibirSnackbar(mensagem: String) {
-        val snackbar = Snackbar.make(button, mensagem, Snackbar.LENGTH_SHORT)
-        snackbar.setBackgroundTint(Color.WHITE)
-        snackbar.setTextColor(Color.BLACK)
-        snackbar.show()
-    }
-
-
-}
 
