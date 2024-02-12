@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F6FE">
-
+    android:background="#F4F6FE"
+    tools:context=".TelaInicial">
 
     <TextView
         android:id="@+id/textorededeapoio"
@@ -145,7 +145,6 @@
         android:textColor="@color/AzulTitulo"
         android:textColorHighlight="#02367A"
         android:textColorLink="#023679"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

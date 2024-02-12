@@ -16,12 +16,7 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-private val googleIdToken: String?
-    get() {
-        TODO("Not yet implemented")
-    }
-
-@Suppress("DEPRECATION")
+@Suppress("PrivatePropertyName")
 class TelaInicial : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var oneTapClient: SignInClient
@@ -34,11 +29,6 @@ class TelaInicial : AppCompatActivity() {
 
         auth = Firebase.auth
 
-        val buttonIntituicoes: Button = findViewById(R.id.conhecer_as)
-        buttonIntituicoes.setOnClickListener {
-            val intent = Intent(this@TelaInicial, TelaInicialActivity::class.java)
-            startActivity(intent)
-        }
 
         val buttonLogin: Button = findViewById(R.id.buttonlogin)
         buttonLogin.setOnClickListener {
@@ -55,6 +45,12 @@ class TelaInicial : AppCompatActivity() {
         val buttonLoginGoogleAuthProvider: Button = findViewById(R.id.button3)
         buttonLoginGoogleAuthProvider.setOnClickListener {
             signInWithGoogle()
+        }
+
+        val buttonIntituicoes: Button = findViewById(R.id.conhecer_as)
+        buttonIntituicoes.setOnClickListener {
+            val intent = Intent(this@TelaInicial, TelaInicialActivity::class.java)
+            startActivity(intent)
         }
 
         oneTapClient = Identity.getSignInClient(this)
@@ -117,9 +113,9 @@ class TelaInicial : AppCompatActivity() {
         try {
             getResult()
             // Signed in successfully, show authenticated UI.
-            val idToken = googleIdToken
+            val googleIdToken = null
             // Use the ID token to authenticate with Firebase
-            val authCredential = GoogleAuthProvider.getCredential(idToken, null)
+            val authCredential = GoogleAuthProvider.getCredential(googleIdToken, null)
             auth.signInWithCredential(authCredential)
                 .addOnCompleteListener(this) { authTask ->
                     if (authTask.isSuccessful) {
