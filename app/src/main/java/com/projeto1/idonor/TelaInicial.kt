@@ -1,5 +1,6 @@
 package com.projeto1.idonor
 
+import android.app.PendingIntent
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -30,6 +31,23 @@ class  TelaInicial : AppCompatActivity() {
 
         auth = Firebase.auth
 
+        val buttonParaLogin: Button = findViewById(R.id.button_login)
+        buttonParaLogin.setOnClickListener {
+            val intent = Intent(this@TelaInicial, TelaLogin::class.java)
+            startActivity(intent)
+        }
+
+        val buttonIrParaCadastro: Button = findViewById(R.id.button_cadastro)
+        buttonIrParaCadastro.setOnClickListener {
+            val intent = Intent(this@TelaInicial, TelaCadastro::class.java)
+            startActivity(intent)
+        }
+
+        val buttonLoginGoogleAuthProvider: Button = findViewById(R.id.button3)
+        buttonLoginGoogleAuthProvider.setOnClickListener {
+            signInWithGoogle()
+        }
+
         oneTapClient = Identity.getSignInClient(this)
         signInRequest = BeginSignInRequest.builder()
             .setGoogleIdTokenRequestOptions(
@@ -41,22 +59,6 @@ class  TelaInicial : AppCompatActivity() {
             )
             .build()
 
-        val buttonLogin: Button = findViewById(R.id.button)
-        buttonLogin.setOnClickListener {
-            val intent = Intent(this@TelaInicial, TelaLogin::class.java)
-            startActivity(intent)
-        }
-
-        val buttonIrParaCadastro: Button = findViewById(R.id.button2)
-        buttonIrParaCadastro.setOnClickListener {
-            val intent = Intent(this@TelaInicial, TelaCadastro::class.java)
-            startActivity(intent)
-        }
-
-        val buttonLoginGoogleAuthProvider: Button = findViewById(R.id.button3)
-        buttonLoginGoogleAuthProvider.setOnClickListener {
-            signInWithGoogle()
-        }
     }
 
     override fun onStart() {
