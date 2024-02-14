@@ -162,7 +162,7 @@
         android:layout_marginTop="2dp"
         android:layout_marginEnd="132dp"
         android:ems="10"
-        android:inputType="textWebEmailAddress"
+        android:inputType="textEmailAddress"
         android:text="@string/login_email"
         android:textColor="#979494"
         app:layout_constraintBottom_toTopOf="@+id/linha2"
@@ -179,9 +179,9 @@
         android:layout_marginTop="228dp"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="48dp"
+        android:backgroundTint="@color/AzulTitulo"
         android:text="@string/login_"
         android:textColor="@color/white"
-        android:backgroundTint="@color/AzulTitulo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -204,6 +204,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/button"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/layer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="ellipse_2"
         tools:ignore="MissingConstraints" />
 
 

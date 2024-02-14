@@ -7,8 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
+import kotlin.random.Random
 
 class TelaVerificacao : AppCompatActivity() {
 
@@ -28,7 +28,6 @@ class TelaVerificacao : AppCompatActivity() {
         }
 
         val buttonVoltarCadastroVe: View = findViewById(R.id.voltarTelaVerificar)
-
         buttonVoltarCadastroVe.setOnClickListener {
             val intent = Intent(this@TelaVerificacao, TelaCadastro::class.java)
             startActivity(intent)
@@ -36,23 +35,29 @@ class TelaVerificacao : AppCompatActivity() {
     }
 
     private fun verificarCodigo() {
-        val codigoverificar = codigo.text.toString()
+        val codigoVerificacao = gerarCodigoVerificacao()
+        val codigoDigitado = codigo.text.toString()
+        if (codigoVerificacao.isNotEmpty()) {
+            if (codigoVerificacao == codigoDigitado) {
+                Toast.makeText(this, "Código verificado com sucesso.", Toast.LENGTH_SHORT).show()
 
-        if (codigoverificar.isNotEmpty()) {
-            val user = auth.currentUser
-            val credential = EmailAuthProvider.getCredential(user?.email ?: "", codigoverificar)
-
-            user?.reauthenticate(credential)
-                ?.addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        // Código de verificação correto, fazer o que for necessário (ex: redirecionar para a próxima tela)
-                    } else {
-                        // Código de verificação incorreto
-                        Toast.makeText(this, "Código de verificação incorreto.", Toast.LENGTH_SHORT).show()
-                    }
-                }
-        } else {
-            Toast.makeText(this, "Por favor, insira o código de verificação.", Toast.LENGTH_SHORT).show()
+                // Após verificar o código com sucesso, redirecione para a tela inicial
+                val intent = Intent(this, TelaInicialActivity::class.java)
+                startActivity(intent)
+                finish() // Finaliza a atividade atual para que o usuário não possa voltar para a tela de verificação pressionando o botão "Voltar"
+            } else {
+                Toast.makeText(
+                    this,
+                    "Por favor, insira o código de verificação.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
         }
     }
+
+    private fun gerarCodigoVerificacao(): String {
+        // Gera um código de verificação de 6 dígitos
+        return "%06d".format(Random.nextInt(0, 999999))
+    }
 }
+
