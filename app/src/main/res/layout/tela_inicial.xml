@@ -553,14 +553,14 @@
 
             <View
                 android:id="@+id/barra_de_baixo"
-                android:layout_width="410dp"
+                android:layout_width="411dp"
                 android:layout_height="62dp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="148dp"
                 android:background="#FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.111"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button

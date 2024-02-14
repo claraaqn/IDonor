@@ -59,7 +59,7 @@
     <string name="ano">Ano</string>
     <string name="total_de_itens_doados">Total de itens doados</string>
     <string name="maior_dia_de_doa_o">Maior dia de doação</string>
-    <string name="xx">XX</string>
+    <string name="xx">63</string>
     <string name="titulo_comentarios">Comentários sobre você</string>
 
     <!-- tela inicial -->
@@ -116,5 +116,6 @@
     <string name="login_tela_inicial">Se já possui uma conta</string>
     <string name="faca_cadastro">Faça o cadastro</string>
     <string name="cadastro_cadastro">Cadastro</string>
+    <string name="_06">06</string>
 
 </resources>
