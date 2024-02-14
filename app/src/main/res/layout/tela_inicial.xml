@@ -9,16 +9,12 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        android:background="#F4F6FE"
+        app:layout_constraintBottom_toTopOf="@+id/barra_de_baixo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5"
-        tools:ignore="MissingConstraints"
-        android:background="#F4F6FE">
-
+        app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -170,6 +166,7 @@
 
             <TextView
                 android:id="@+id/titulo_campanha"
+                style="@style/titulo_campanha"
                 android:layout_width="94dp"
                 android:layout_height="16dp"
                 android:layout_alignStart="@+id/fundo_companhas"
@@ -183,19 +180,21 @@
                 android:textAppearance="@style/titulo_campanha"
                 app:layout_constraintStart_toStartOf="@+id/fundo_companhas"
                 app:layout_constraintTop_toTopOf="@+id/fundo_companhas"
-                tools:ignore="MissingConstraints"
-                style="@style/titulo_campanha"/>
+                tools:ignore="MissingConstraints" />
 
             <TextView
                 android:id="@+id/texto_campanha"
-                android:layout_width="323dp"
-                android:layout_height="76dp"
+                style="@style/texto_campanha"
+                android:layout_width="321dp"
+                android:layout_height="89dp"
+                android:layout_alignStart="@+id/fundo_companhas"
                 android:layout_alignEnd="@+id/fundo_companhas"
                 android:layout_alignBottom="@+id/fundo_companhas"
                 android:layout_alignParentTop="true"
+                android:layout_marginStart="13dp"
                 android:layout_marginTop="240dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginBottom="14dp"
+                android:layout_marginBottom="1dp"
                 android:gravity="center_horizontal|top"
                 android:text="@string/texto_campanha"
                 android:textAppearance="@style/texto_campanha"
@@ -204,8 +203,7 @@
                 app:layout_constraintStart_toStartOf="@+id/fundo_companhas"
                 app:layout_constraintTop_toBottomOf="@+id/titulo_campanha"
                 app:layout_constraintVertical_bias="0.0"
-                tools:ignore="MissingConstraints"
-                style="@style/texto_campanha"/>
+                tools:ignore="MissingConstraints" />
 
             <ImageView
                 android:id="@+id/foto_lar_idosos"
@@ -295,7 +293,7 @@
                 android:text="@string/lar_dos_idosos"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="RtlSymmetry"/>
+                tools:ignore="RtlSymmetry" />
 
             <ImageView
                 android:id="@+id/foto_lar_acolhimento_infatil"
@@ -551,98 +549,83 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="RtlSymmetry" />
 
-            <View
-                android:id="@+id/barra_de_baixo"
-                android:layout_width="411dp"
-                android:layout_height="62dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="148dp"
-                android:background="#FFFFFF"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent" />
 
-            <Button
-                android:id="@+id/home_page"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="26dp"
-                android:layout_marginTop="836dp"
-                android:layout_marginEnd="25dp"
-                android:layout_toStartOf="@+id/comunidade"
-                android:background="@drawable/fundo_transparente_botao"
-                android:contentDescription="@string/descricao_icon_home"
-                android:drawableTop="@drawable/icon_home"
-                android:elevation="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="@+id/barra_de_baixo"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/comunidade"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="836dp"
-                android:layout_marginEnd="26dp"
-                android:layout_toStartOf="@+id/geolocalizacao"
-                android:background="@drawable/fundo_transparente_botao"
-                android:contentDescription="@string/descricao_comunidade"
-                android:drawableTop="@drawable/icon_comunidade"
-                android:elevation="10dp"
-                app:layout_constraintEnd_toStartOf="@+id/geolocalizacao"
-                app:layout_constraintHorizontal_bias="0.515"
-                app:layout_constraintStart_toEndOf="@+id/home_page"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/geolocalizacao"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="836dp"
-                android:layout_marginEnd="31dp"
-                android:layout_toStartOf="@+id/favoritos"
-                android:background="@drawable/fundo_transparente_botao"
-                android:contentDescription="@string/descricao_geoloc"
-                android:drawableTop="@drawable/icon_geoloc"
-                android:elevation="10dp"
-                app:layout_constraintEnd_toEndOf="@+id/barra_de_baixo"
-                app:layout_constraintStart_toStartOf="@+id/barra_de_baixo"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/favoritos"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="836dp"
-                android:layout_marginEnd="23dp"
-                android:layout_toStartOf="@+id/user"
-                android:background="@drawable/fundo_transparente_botao"
-                android:contentDescription="@string/descricao_fav"
-                android:drawableTop="@drawable/icon_fav"
-                android:elevation="10dp"
-                app:layout_constraintEnd_toStartOf="@+id/user"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/geolocalizacao"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/user"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="836dp"
-                android:layout_marginEnd="21dp"
-                android:background="@drawable/fundo_transparente_botao"
-                android:contentDescription="@string/descricao_user"
-                android:drawableTop="@drawable/icon_user"
-                android:elevation="10dp"
-                app:layout_constraintEnd_toEndOf="@+id/barra_de_baixo"
-                app:layout_constraintTop_toTopOf="parent"
-                android:onClick="abrirTelaPerfil"/>
         </RelativeLayout>
     </ScrollView>
 
+    <View
+        android:id="@+id/barra_de_baixo"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/home_page"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="@string/descricao_icon_home"
+        android:drawableTop="@drawable/icon_home"
+        app:layout_constraintBottom_toBottomOf="@id/barra_de_baixo"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="@+id/scrollView"
+        app:layout_constraintTop_toTopOf="@id/barra_de_baixo" />
+
+    <Button
+        android:id="@+id/comunidade"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="@string/descricao_comunidade"
+        android:drawableTop="@drawable/icon_comunidade"
+        app:layout_constraintBottom_toBottomOf="@id/barra_de_baixo"
+        app:layout_constraintEnd_toStartOf="@+id/geolocalizacao"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/home_page"
+        app:layout_constraintTop_toTopOf="@id/barra_de_baixo" />
+
+    <Button
+        android:id="@+id/geolocalizacao"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="@string/descricao_geoloc"
+        android:drawableTop="@drawable/icon_geoloc"
+        app:layout_constraintBottom_toBottomOf="@id/barra_de_baixo"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/scrollView"
+        app:layout_constraintTop_toTopOf="@id/barra_de_baixo" />
+
+    <Button
+        android:id="@+id/favoritos"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toStartOf="@+id/user"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="@string/descricao_fav"
+        android:drawableTop="@drawable/icon_fav"
+        app:layout_constraintBottom_toBottomOf="@id/barra_de_baixo"
+        app:layout_constraintEnd_toStartOf="@+id/user"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/geolocalizacao"
+        app:layout_constraintTop_toTopOf="@id/barra_de_baixo" />
+
+    <Button
+        android:id="@+id/user"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="@string/descricao_user"
+        android:drawableTop="@drawable/icon_user"
+        app:layout_constraintBottom_toBottomOf="@id/barra_de_baixo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintStart_toEndOf="@+id/home_page"
+        app:layout_constraintTop_toTopOf="@id/barra_de_baixo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
