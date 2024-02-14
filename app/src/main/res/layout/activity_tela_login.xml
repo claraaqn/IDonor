@@ -7,66 +7,6 @@
     android:background="#F4F6FE"
     tools:context=".TelaLogin">
 
-    <View
-        android:id="@+id/ellipse_1"
-        android:layout_width="413dp"
-        android:layout_height="102dp"
-        android:layout_marginBottom="8dp"
-        android:background="#F4F6FE"
-        app:layout_constraintBottom_toTopOf="@+id/senha"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ellipse_2"
-        tools:ignore="MissingConstraints"
-        tools:layout_constraintCircleRadius="10dp" />
-
-    <EditText
-        android:id="@+id/senha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="116dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:text="@string/login_senha"
-        android:textColor="#979494"
-        app:layout_constraintBottom_toTopOf="@+id/linha8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/ellipse_1"
-        app:layout_constraintTop_toBottomOf="@+id/linha2"
-        tools:ignore="Autofill,MissingConstraints,TouchTargetSizeCheck" />
-
-    <View
-        android:id="@+id/user2"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/lock"
-        app:layout_constraintBottom_toTopOf="@+id/linha8"
-        app:layout_constraintEnd_toStartOf="@+id/senha"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linha2"
-        tools:ignore="MissingConstraints" />
-
-    <View
-        android:id="@+id/linha8"
-        android:layout_width="364dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="26dp"
-        android:background="@android:drawable/dark_header"
-        app:layout_constraintBottom_toBottomOf="@+id/ellipse_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/senha"
-        tools:ignore="MissingConstraints" />
-
 
     <ImageView
         android:id="@+id/imagem"
@@ -76,107 +16,132 @@
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toTopOf="@+id/editTextText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/oip_2"
         tools:ignore="ContentDescription,MissingConstraints" />
 
-    <View
+    <ImageView
         android:id="@+id/ellipse_2"
-        android:layout_width="427dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="192dp"
-        android:layout_marginBottom="4dp"
-        android:background="#F4F6FE"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/user"
+        android:layout_width="412dp"
+        android:layout_height="160dp"
+        android:src="@drawable/fundo_elipse"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imagem"
-        app:layout_constraintVertical_bias="0.263"
-        tools:background="@drawable/ellipse_2"
-        tools:ignore="MissingConstraints"
-        tools:layout_constraintCircleRadius="10dp"
-        tools:visibility="visible" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.242" />
 
     <TextView
         android:id="@+id/Login"
         android:layout_width="241dp"
         android:layout_height="117dp"
-        android:layout_marginStart="93dp"
-        android:layout_marginTop="168dp"
-        android:layout_marginEnd="97dp"
         android:fontFamily="@font/patuaone"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/login_"
         android:textColor="#023679"
         android:textSize="44sp"
-        app:layout_constraintBottom_toTopOf="@+id/ellipse_1"
-        app:layout_constraintEnd_toEndOf="@+id/imagem"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imagem"
-        app:layout_constraintTop_toTopOf="@+id/imagem"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintBottom_toBottomOf="@+id/ellipse_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ellipse_2"
+        app:layout_constraintVertical_bias="0.72"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/login_email"
+        android:inputType="textEmailAddress"
+        android:textColor="#979494"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/Login"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Login"
+        app:layout_constraintTop_toBottomOf="@+id/ellipse_2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/senha"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="@string/login_senha"
+        android:inputType="textPassword"
+        android:textColor="#979494"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextText"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <View
+        android:id="@+id/linha8"
+        android:layout_width="364dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:background="@android:drawable/dark_header"
+        app:layout_constraintBottom_toBottomOf="@+id/senha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/senha"
+        app:layout_constraintVertical_bias="0.847"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/user2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/lock"
+        app:layout_constraintBottom_toBottomOf="@+id/senha"
+        app:layout_constraintEnd_toEndOf="@+id/user"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/user"
+        app:layout_constraintTop_toBottomOf="@+id/user"
+        app:layout_constraintVertical_bias="0.812"
         tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/linha2"
         android:layout_width="364dp"
         android:layout_height="2dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="7dp"
         android:background="@android:drawable/dark_header"
-        app:layout_constraintBottom_toTopOf="@+id/senha"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="@+id/editTextText"
+        app:layout_constraintVertical_bias="0.847" />
 
     <View
         android:id="@+id/user"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/user"
-        app:layout_constraintBottom_toTopOf="@+id/linha2"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextText"
         app:layout_constraintEnd_toStartOf="@+id/editTextText"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ellipse_1"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toTopOf="@+id/editTextText"
         tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="194dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="132dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="@string/login_email"
-        android:textColor="#979494"
-        app:layout_constraintBottom_toTopOf="@+id/linha2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/ellipse_1"
-        app:layout_constraintTop_toBottomOf="@+id/ellipse_1"
-        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="155dp"
         android:layout_height="40dp"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="228dp"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="48dp"
         android:backgroundTint="@color/AzulTitulo"
@@ -184,10 +149,9 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linha8"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/Login"
+        app:layout_constraintVertical_bias="0.952"
         app:rippleColor="#3F51B5"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
@@ -195,23 +159,12 @@
         android:id="@+id/voltar"
         android:layout_width="27dp"
         android:layout_height="26dp"
-        android:layout_marginStart="197dp"
-        android:layout_marginTop="54dp"
-        android:layout_marginEnd="197dp"
-        android:layout_marginBottom="16dp"
         android:background="@drawable/voltar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.355"
         tools:ignore="MissingConstraints" />
-
-    <androidx.constraintlayout.helper.widget.Layer
-        android:id="@+id/layer2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="ellipse_2"
-        tools:ignore="MissingConstraints" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
