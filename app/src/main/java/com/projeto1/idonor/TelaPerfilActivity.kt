@@ -3,8 +3,9 @@ package com.projeto1.idonor
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class TelaPerfilActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +19,18 @@ class TelaPerfilActivity : AppCompatActivity(){
         val impactoBotaoButton: Button = findViewById(R.id.impacto_botao)
         val sairBotaoButton: Button = findViewById(R.id.sair_botao)
 
+        val sharedPreferences = getSharedPreferences("USER_PREFS", MODE_PRIVATE)
+        val nomeUsuario = sharedPreferences.getString("NOME", "")
+        val emailUsuario = sharedPreferences.getString("EMAIL", "")
+        val telefoneUsuario = sharedPreferences.getString("TELEFONE", "")
+
+        val textViewNome: TextView = findViewById(R.id.nome_edit)
+        val textViewEmail: TextView = findViewById(R.id.email_edit)
+        val textViewTelefone: TextView = findViewById(R.id.telefone)
+
+        textViewNome.text = nomeUsuario
+        textViewEmail.text = emailUsuario
+        textViewTelefone.text = telefoneUsuario
 
         edicaoPerfilButton.setOnClickListener {
             // Lógica quando o botão de edição é clicado

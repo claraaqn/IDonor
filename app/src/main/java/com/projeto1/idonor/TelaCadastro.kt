@@ -17,7 +17,6 @@ import com.google.firebase.ktx.Firebase
 
 class TelaCadastro : AppCompatActivity() {
 
-
     private lateinit var nomeUser: EditText
     private lateinit var emailUser: EditText
     private lateinit var senhaUser: EditText
@@ -27,8 +26,6 @@ class TelaCadastro : AppCompatActivity() {
     private lateinit var button: Button
     private val mensagens = arrayOf("Preencha todos os campos!", "Cadastro realizado com sucesso")
     private lateinit var auth: FirebaseAuth
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -92,6 +89,8 @@ class TelaCadastro : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             // Usuário criado com sucesso
+                            // Salvar detalhes do usuário em SharedPreferences
+                            salvarDetalhesUsuario(nome, email, telefone)
                             // Envie o email de verificação
                             enviarCodigoVerificacaoPorEmail(email)
                         } else {
@@ -116,5 +115,13 @@ class TelaCadastro : AppCompatActivity() {
                 }
             }
         }
+    }
+    private fun salvarDetalhesUsuario(nome: String, email: String, telefone: String) {
+        val sharedPreferences = getSharedPreferences("USER_PREFS", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("NOME", nome)
+        editor.putString("EMAIL", email)
+        editor.putString("TELEFONE", telefone)
+        editor.apply()
     }
 }
