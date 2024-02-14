@@ -59,7 +59,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/d"
-        app:layout_constraintVertical_bias="0.566" />
+        app:layout_constraintVertical_bias="0.8" />
+
+    <View
+        android:id="@+id/linhaEsquerda"
+        android:layout_width="177dp"
+        android:layout_height="3dp"
+        android:layout_marginEnd="4dp"
+        android:background="@android:drawable/dark_header"
+        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintEnd_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toTopOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textView7"
@@ -68,17 +78,69 @@
         android:fontFamily="@font/saira_semibold"
         android:gravity="center"
         android:text="@string/login_tela_inicial"
+        android:textColor="#023679"
         app:layout_constraintBottom_toTopOf="@+id/buttonlogin"
         app:layout_constraintEnd_toEndOf="@+id/textorededeapoio"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="@+id/textorededeapoio"
         app:layout_constraintTop_toBottomOf="@+id/ellipse_1"
-        app:layout_constraintVertical_bias="0.808" />
+        app:layout_constraintVertical_bias="0.7" />
+
+    <View
+        android:id="@+id/linhaDireita"
+        android:layout_width="177dp"
+        android:layout_height="3dp"
+        android:background="@android:drawable/dark_header"
+        app:layout_constraintBottom_toBottomOf="@+id/textView7"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="121dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/saira_semibold"
+        android:gravity="center"
+        android:text="@string/faca_cadastro"
+        android:textColor="#023679"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonlogin"
+        app:layout_constraintStart_toStartOf="@+id/buttonlogin"
+        app:layout_constraintTop_toBottomOf="@+id/buttonlogin"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="227dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/BackBotao"
+        android:onClick="CadastrarComEmail"
+        android:text="@string/Cadastrar_com_email"
+        android:textColor="@color/AzulTitulo"
+        android:textColorHighlight="#023679"
+        android:textColorLink="#023679"
+        app:layout_constraintEnd_toEndOf="@+id/buttonlogin"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonlogin"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <View
+        android:id="@+id/linhaEsquerda2"
+        android:layout_width="177dp"
+        android:layout_height="3dp"
+        android:background="@android:drawable/dark_header"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintEnd_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toTopOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.5" />
 
     <Button
         android:id="@+id/buttonlogin"
         android:layout_width="227dp"
         android:layout_height="48dp"
-        android:layout_marginTop="172dp"
         android:backgroundTint="@color/AzulTitulo"
         android:onClick="LoginComEmail"
         android:text="@string/Login_com_email"
@@ -89,7 +151,7 @@
         app:layout_constraintEnd_toEndOf="@+id/textorededeapoio"
         app:layout_constraintStart_toStartOf="@+id/textorededeapoio"
         app:layout_constraintTop_toBottomOf="@+id/ellipse_1"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.294" />
 
     <View
         android:id="@+id/email2"
@@ -101,7 +163,6 @@
         app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="@+id/buttonlogin"
         app:layout_constraintTop_toTopOf="@+id/buttonlogin"
-        app:layout_constraintVertical_bias="0.571"
         tools:ignore="MissingConstraints" />
 
     <View
@@ -112,15 +173,24 @@
         android:layout_marginTop="11dp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/email"
+        android:elevation="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="@+id/button2"
         app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toStartOf="@+id/button2"
         app:layout_constraintTop_toTopOf="@+id/button2"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints"
-        android:elevation="8dp"/>
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
 
+    <View
+        android:id="@+id/linhaDireita2"
+        android:layout_width="177dp"
+        android:layout_height="3dp"
+        android:background="@android:drawable/dark_header"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toTopOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.5" />
 
     <TextView
         android:id="@+id/OU1"
@@ -134,41 +204,17 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonlogin"
-        app:layout_constraintVertical_bias="0.851" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="227dp"
-        android:layout_height="43dp"
-        android:backgroundTint="@color/BackBotao"
-        android:onClick="CadastrarComEmail"
-        android:text="@string/Cadastrar_com_email"
-        android:textColor="@color/AzulTitulo"
-        android:textColorHighlight="#023679"
-        android:textColorLink="#023679"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/buttonlogin"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/buttonlogin"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:layout_constraintVertical_bias="0.147"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="121dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/saira_semibold"
-        android:gravity="center"
-        android:text="@string/faca_cadastro"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/buttonlogin"
-        app:layout_constraintStart_toStartOf="@+id/buttonlogin"
-        app:layout_constraintTop_toBottomOf="@+id/buttonlogin"
-        app:layout_constraintVertical_bias="0.0" />
+    <View
+        android:id="@+id/linhaEsquerda3"
+        android:layout_width="177dp"
+        android:layout_height="3dp"
+        android:background="@android:drawable/dark_header"
+        app:layout_constraintBottom_toBottomOf="@+id/OU1"
+        app:layout_constraintEnd_toStartOf="@+id/OU1"
+        app:layout_constraintTop_toTopOf="@+id/OU1"
+        app:layout_constraintVertical_bias="0.333" />
 
     <Button
         android:id="@+id/conhecer_as"
@@ -186,7 +232,17 @@
         app:layout_constraintEnd_toEndOf="@+id/button2"
         app:layout_constraintStart_toStartOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.723" />
+        app:layout_constraintVertical_bias="0.83" />
+
+    <View
+        android:id="@+id/linhaDireita3"
+        android:layout_width="177dp"
+        android:layout_height="3dp"
+        android:background="@android:drawable/dark_header"
+        app:layout_constraintBottom_toBottomOf="@+id/OU1"
+        app:layout_constraintStart_toEndOf="@+id/OU1"
+        app:layout_constraintTop_toTopOf="@+id/OU1"
+        app:layout_constraintVertical_bias="0.333" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
