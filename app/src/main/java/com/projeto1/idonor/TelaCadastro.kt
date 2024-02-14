@@ -1,20 +1,19 @@
 package com.projeto1.idonor
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
-import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class TelaCadastro : AppCompatActivity() {
 
@@ -31,95 +30,33 @@ class TelaCadastro : AppCompatActivity() {
 
 
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.teladecadastro)
         iniciarComponentes()
 
-        val buttonPraVerificar: View = findViewById(R.id.button)
-
-        buttonPraVerificar.setOnClickListener {
-            val intent = Intent(this@TelaCadastro, TelaVerificacao::class.java)
-
-            startActivity(intent)
-        }
-        val buttonIrParaVoltar: View = findViewById(R.id.voltar)
-
-        buttonIrParaVoltar.setOnClickListener {
-            val intent = Intent(this@TelaCadastro, TelaInicial::class.java)
-
-            startActivity(intent)
-        }
-
-
-        fun cadastrarUsuario() {
-            val nome = nomeUser.text.toString()
-            val email = emailUser.text.toString()
-            val senha = senhaUser.text.toString()
-            val data = dataUser.text.toString()
-            val telefone = telefoneUser.text.toString()
-            val enedereco = enderecoUser.text.toString()
-
-            if (email.isNotEmpty() && senha.isNotEmpty()) {
-                auth.createUserWithEmailAndPassword(email, senha)
-                    .addOnCompleteListener(this) { task ->
-                        if (task.isSuccessful) {
-                            // Usuário criado com sucesso
-                            enviarCodigoVerificacao(auth.currentUser)
-                        } else {
-                            // Erro ao criar usuário
-                            Toast.makeText(this, "Erro ao criar usuário: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
-                        }
-                    }
-            } else {
-                Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show()
-            }
-
-            if (nome.isEmpty() || email.isEmpty() || senha.isEmpty() || telefone.isEmpty() || enedereco.isEmpty() || data.isEmpty()) {
-                exibirSnackbar(mensagens[0])
-            } else {
-                FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, senha)
-                    .addOnCompleteListener(this) { task ->
-                        if (task.isSuccessful) {
-                            val userId = FirebaseAuth.getInstance().currentUser?.uid
-                            userId?.let {
-                                exibirSnackbar(mensagens[1])
-                            }
-                        } else {
-                            handleFirebaseAuthException(task.exception)
-                        }
-                    }
-            }
-        }
-
-        setContentView(R.layout.teladecadastro)
-        iniciarComponentes()
+        auth = Firebase.auth
 
         button.setOnClickListener {
             cadastrarUsuario()
-            val buttonIrParaOutraTelaVerificar: Button = findViewById(R.id.button)
-
-            buttonIrParaOutraTelaVerificar.setOnClickListener {
-                val intent = Intent(this@TelaCadastro, TelaVerificacao::class.java)
-
-                startActivity(intent)
-            }
         }
 
-
-
+        val buttonIrParaVoltar: View = findViewById(R.id.voltar)
+        buttonIrParaVoltar.setOnClickListener {
+            val intent = Intent(this@TelaCadastro, TelaInicial::class.java)
+            startActivity(intent)
+        }
     }
 
-private fun iniciarComponentes() {
-    nomeUser = findViewById(R.id.nome_comple)
-    emailUser = findViewById(R.id.nome_comple3)
-    senhaUser = findViewById(R.id.senha)
-    dataUser = findViewById(R.id.nome_comple2)
-    enderecoUser = findViewById(R.id.nome_comple6)
-    telefoneUser = findViewById(R.id.telefone)
-    button = findViewById(R.id.button)
-}
+    private fun iniciarComponentes() {
+        nomeUser = findViewById(R.id.nome_comple)
+        emailUser = findViewById(R.id.nome_comple3)
+        senhaUser = findViewById(R.id.senha)
+        dataUser = findViewById(R.id.nome_comple2)
+        enderecoUser = findViewById(R.id.nome_comple6)
+        telefoneUser = findViewById(R.id.telefone)
+        button = findViewById(R.id.button)
+    }
 
     private fun handleFirebaseAuthException(exception: Exception?) {
         val erro: String = when (exception) {
@@ -134,26 +71,50 @@ private fun iniciarComponentes() {
         snackbar.setTextColor(Color.BLACK)
         snackbar.show()
     }
-    private fun enviarCodigoVerificacao(user: FirebaseUser?) {
-        user?.sendEmailVerification()
-            ?.addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    Toast.makeText(this, "Um código de verificação foi enviado para o seu email.", Toast.LENGTH_SHORT).show()
-                    // Redirecionar para a próxima tela onde o usuário pode inserir o código
-                    val intent = Intent(this, TelaVerificacao::class.java)
-                    startActivity(intent)
-                } else {
-                    Toast.makeText(this, "Erro ao enviar código de verificação: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
-                }
-            }
-    }
     private fun exibirSnackbar(mensagem: String) {
         val snackbar = Snackbar.make(button, mensagem, Snackbar.LENGTH_SHORT)
         snackbar.setBackgroundTint(Color.WHITE)
         snackbar.setTextColor(Color.BLACK)
         snackbar.show()
     }
+        private fun cadastrarUsuario() {
+            val nome = nomeUser.text.toString()
+            val email = emailUser.text.toString()
+            val senha = senhaUser.text.toString()
+            val data = dataUser.text.toString()
+            val telefone = telefoneUser.text.toString()
+            val enedereco = enderecoUser.text.toString()
 
-
+            if (nome.isEmpty() || email.isEmpty() || senha.isEmpty() || telefone.isEmpty() || enedereco.isEmpty() || data.isEmpty()) {
+                exibirSnackbar(mensagens[0])
+            } else {
+                auth.createUserWithEmailAndPassword(email, senha)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            // Usuário criado com sucesso
+                            // Envie o email de verificação
+                            enviarCodigoVerificacaoPorEmail(email)
+                        } else {
+                            // Erro ao criar usuário
+                            handleFirebaseAuthException(task.exception)
+                        }
+                    }
+            }
+        }
+    private fun enviarCodigoVerificacaoPorEmail(email: String) {
+        Firebase.auth.currentUser?.let { user ->
+            user.sendEmailVerification().addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    // Email de verificação enviado com sucesso
+                    // Redireciona para a tela de verificação
+                    val intent = Intent(this@TelaCadastro, TelaInicial::class.java)
+                    intent.putExtra("email", email)
+                    startActivity(intent)
+                } else {
+                    // Ocorreu um erro ao enviar o email de verificação
+                    // Você pode lidar com o erro de acordo com os requisitos do seu aplicativo
+                }
+            }
+        }
+    }
 }
-

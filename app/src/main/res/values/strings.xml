@@ -112,5 +112,9 @@
   <string name="c_digo_de_verifica_o">Código de verificação</string>
   <string name="verificar">Verificar</string>
    <string name="cadastro">Cadastro</string>
+    <string name="texto_tela_inicial">Junte-se a uma rede de amor próprio</string>
+    <string name="login_tela_inicial">Se já possui uma conta</string>
+    <string name="faca_cadastro">Faça o cadastro</string>
+    <string name="cadastro_cadastro">Cadastro</string>
 
 </resources>

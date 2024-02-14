@@ -11,6 +11,6 @@
     <item name="button" type="id" />
     <item name="cadastro" type="id" />
     <item name="user" type="id" />
+    <item name="buttonlogin" type="id" />
     <item name="calendario" type="id" />
-
 </resources>

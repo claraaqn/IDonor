@@ -65,5 +65,7 @@ dependencies {
     implementation("com.google.android.gms:play-services-auth:20.7.0")
     implementation("com.google.firebase:firebase-storage-ktx:20.3.0")
     implementation("com.google.firebase:firebase-firestore-ktx:24.10.1")
+    implementation("androidx.test:monitor:1.6.1")
+    implementation("androidx.test.ext:junit-ktx:1.1.5")
 
 }
