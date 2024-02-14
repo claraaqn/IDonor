@@ -1,6 +1,5 @@
 package com.projeto1.idonor
 
-import TelaVerificacao
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -14,7 +13,6 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
@@ -79,19 +77,6 @@ class TelaCadastro : AppCompatActivity() {
         snackbar.setTextColor(Color.BLACK)
         snackbar.show()
     }
-    private fun enviarCodigoVerificacao(user: FirebaseUser?) {
-        user?.sendEmailVerification()
-            ?.addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    Toast.makeText(this, "Um código de verificação foi enviado para o seu email.", Toast.LENGTH_SHORT).show()
-                    // Redirecionar para a próxima tela onde o usuário pode inserir o código
-                    val intent = Intent(this@TelaCadastro, TelaVerificacao::class.java)
-                    startActivity(intent)
-                } else {
-                    Toast.makeText(this, "Erro ao enviar código de verificação: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
-                }
-            }
-    }
     private fun exibirSnackbar(mensagem: String) {
         val snackbar = Snackbar.make(button, mensagem, Snackbar.LENGTH_SHORT)
         snackbar.setBackgroundTint(Color.WHITE)
@@ -111,7 +96,7 @@ class TelaCadastro : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             // Usuário criado com sucesso
-                            enviarCodigoVerificacao(auth.currentUser)
+                            enviarCodigoVerificacaoPorEmail(email)
                         } else {
                             // Erro ao criar usuário
                             Toast.makeText(this, "Erro ao criar usuário: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
@@ -137,7 +122,24 @@ class TelaCadastro : AppCompatActivity() {
                     }
             }
         }
+    private fun enviarCodigoVerificacaoPorEmail(email: String) {
+        FirebaseAuth.getInstance().currentUser?.let { user ->
+            user.sendEmailVerification().addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    // Email de verificação enviado com sucesso
+                    // Você pode exibir uma mensagem ou fazer alguma outra ação aqui
 
+                    // Redireciona para a tela de verificação
+                    val intent = Intent(this@TelaCadastro, TelaVerificacao::class.java)
+                    intent.putExtra("email", email)
+                    startActivity(intent)
+                } else {
+                    // Ocorreu um erro ao enviar o email de verificação
+                    // Você pode lidar com o erro de acordo com os requisitos do seu aplicativo
+                }
+            }
+        }
+    }
 
     }
 
