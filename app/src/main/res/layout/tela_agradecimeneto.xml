@@ -7,7 +7,12 @@
     android:background="#023679"
     tools:ignore="ExtraText">
 
+    <!-- botões-->
+
+    <!-- doar +-->
+
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="181dp"
         android:layout_height="181dp"
         android:background="@android:color/transparent"
@@ -17,39 +22,34 @@
         app:layout_constraintDimensionRatio="H,1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.216" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.059" />
 
-    <!-- botões-->
-
-    <!-- doar +-->
     <TextView
         android:id="@+id/obrigado"
         style="@style/mensagem_de_agradecimento"
-        android:layout_width="252dp"
-        android:layout_height="220dp"
+        android:layout_width="348dp"
+        android:layout_height="246dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="79dp"
-        android:layout_marginTop="350dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginTop="20dp"
         android:contentDescription="@string/descricao_texto"
-        android:gravity="center_horizontal|center_vertical"
+        android:gravity="center"
         android:text="@string/mensagem_de_agradecimento"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
         tools:ignore="MissingConstraints" />
 
     <TextView
+        android:id="@+id/textView13"
         style="@style/idonor_agradecimento"
         android:layout_width="203dp"
         android:layout_height="82dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="104dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="@string/app_name"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,44 +57,45 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingClass,MissingConstraints" />
 
+    <!-- volar à tela inicial-->
+
     <View
         android:id="@+id/doarmaisfundo"
         android:layout_width="278dp"
         android:layout_height="48dp"
-        android:layout_marginTop="632dp"
+        android:layout_marginBottom="0dp"
         android:background="@drawable/fundo_botao_branco"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/doarmais"
+        app:layout_constraintEnd_toEndOf="@+id/doarmais"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/doarmais" />
 
     <Button
         android:id="@+id/doarmais"
         style="@style/tela_agradecimento"
         android:layout_width="277dp"
         android:layout_height="48dp"
-        android:layout_marginStart="66dp"
-        android:layout_marginTop="632dp"
-        android:layout_marginEnd="68dp"
+        android:layout_marginTop="36dp"
         android:background="@android:color/transparent"
         android:onClick="irParaTelaCategorias"
         android:text="@string/doarmais"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- volar à tela inicial-->
+        app:layout_constraintTop_toBottomOf="@+id/obrigado" />
 
     <View
         android:id="@+id/voltar_fundo"
         android:layout_width="278dp"
         android:layout_height="48dp"
-        android:layout_marginTop="708dp"
+        android:layout_marginTop="720dp"
         android:background="@drawable/fundo_botao_branco"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/voltar_a_tela_inical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/voltar_a_tela_inical"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
     <Button
         android:id="@+id/voltar_a_tela_inical"
@@ -102,13 +103,13 @@
         android:layout_width="278dp"
         android:layout_height="48dp"
         android:layout_marginStart="66dp"
-        android:layout_marginTop="708dp"
-        android:layout_marginEnd="67dp"
+        android:layout_marginTop="720dp"
         android:background="@android:color/transparent"
         android:onClick="irParaTelaInicial"
         android:text="@string/voltar_tela_inicial"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/doarmaisfundo"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/doarmaisfundo"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

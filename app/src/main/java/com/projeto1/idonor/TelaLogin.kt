@@ -72,8 +72,11 @@ class TelaLogin : AppCompatActivity() {
 
     private fun updateUI(user: FirebaseUser?) {
         if (user != null) {
+            val sharedPreferences = getSharedPreferences("USER_PREFS", MODE_PRIVATE)
+            val nomeUsuario = sharedPreferences.getString("NOME", "")
+
             Toast.makeText(
-                this, "Bem-vindo(a), ${user.displayName}!", Toast.LENGTH_SHORT).show()
+                this, "Bem-vindo(a), $nomeUsuario!", Toast.LENGTH_SHORT).show()
 
             val intent = Intent(this@TelaLogin, TelaInicialActivity::class.java)
             startActivity(intent)

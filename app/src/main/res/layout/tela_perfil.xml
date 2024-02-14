@@ -10,14 +10,14 @@
 
     <!-- Botão de Edição -->
 
-    <View
+    <ImageView
         android:id="@+id/fundo_das_informacoes"
-        android:layout_width="408dp"
+        android:layout_width="411dp"
         android:layout_height="329dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/fundo_branco_perfil"
+        android:layout_marginTop="-5dp"
+        android:src="@drawable/fundo_perfil_branco"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -93,7 +93,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/igor_santos"
+        android:id="@+id/nome_edit"
+        style="@style/nome_pessoa"
         android:layout_width="143dp"
         android:layout_height="24dp"
         android:layout_alignParentTop="true"
@@ -104,8 +105,7 @@
         android:textAppearance="@style/nome_pessoa"
         app:layout_constraintStart_toEndOf="@+id/fundo_perfil"
         app:layout_constraintTop_toBottomOf="@+id/nome"
-        tools:ignore="MissingConstraints"
-        style="@style/nome_pessoa"/>
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/nome"
@@ -125,8 +125,9 @@
 
     <TextView
         android:id="@+id/telefone_titulo"
-        android:layout_width="76dp"
-        android:layout_height="17dp"
+        style="@style/informacoes"
+        android:layout_width="89dp"
+        android:layout_height="16dp"
         android:layout_alignParentTop="true"
         android:layout_marginStart="48dp"
         android:layout_marginTop="8dp"
@@ -135,9 +136,8 @@
         android:text="@string/contato_mostra"
         android:textAppearance="@style/informacoes"
         app:layout_constraintStart_toEndOf="@+id/fundo_perfil"
-        app:layout_constraintTop_toBottomOf="@+id/igor_santos"
-        tools:ignore="MissingConstraints"
-        style="@style/informacoes"/>
+        app:layout_constraintTop_toBottomOf="@+id/nome_edit"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/email_titulo"
@@ -156,12 +156,12 @@
         style="@style/informacoes"/>
 
     <TextView
-        android:id="@+id/igor_silva_email"
-        android:layout_width="132dp"
+        android:id="@+id/email_edit"
+        android:layout_width="wrap_content"
         android:layout_height="15dp"
         android:layout_alignParentTop="true"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="0dp"
         android:elevation="8dp"
         android:gravity="top"
         android:text="@string/email"
