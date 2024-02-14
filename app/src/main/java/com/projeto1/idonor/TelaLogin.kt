@@ -83,7 +83,5 @@ class TelaLogin : AppCompatActivity() {
                 this, "Adicione o seu e-mail e a sua senha.", Toast.LENGTH_SHORT).show()
         }
     }
-
-
 }
 

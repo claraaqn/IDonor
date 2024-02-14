@@ -46,12 +46,16 @@
     <ImageView
         android:layout_width="291dp"
         android:layout_height="224dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="510dp"
+        android:layout_marginEnd="60dp"
         android:background="@drawable/fundo_transparente_botao"
         android:contentDescription="Mapa"
         android:src="@drawable/mapa"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="510dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:layout_width="203dp"
@@ -78,11 +82,13 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="16dp"
         android:layout_marginTop="7dp"
+        android:layout_marginEnd="235dp"
         android:fontFamily="@font/patuaone"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/idonor"
         android:textColor="@color/AzulTitulo"
         android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
@@ -93,10 +99,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="116dp"
+        android:layout_marginEnd="275dp"
         android:fontFamily="@font/patuaone"
         android:text="Seus itens:"
         android:textColor="@color/AzulTitulo"
         android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -105,10 +113,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:layout_marginTop="165dp"
+        android:layout_marginEnd="356dp"
         android:fontFamily="@font/patuaone"
         android:text="3"
         android:textColor="@color/AzulTitulo"
         android:textSize="33sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -130,9 +140,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginTop="168dp"
+        android:layout_marginEnd="339dp"
         android:fontFamily="@font/patuaone"
         android:text="x"
         android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -153,10 +165,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
         android:layout_marginTop="168dp"
+        android:layout_marginEnd="224dp"
         android:fontFamily="@font/patuaone"
         android:text="Camisas"
         android:textColor="@color/AzulTitulo"
         android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -179,9 +193,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="212dp"
         android:layout_marginTop="172dp"
+        android:layout_marginEnd="117dp"
         android:fontFamily="@font/patuaone"
         android:text="Estado:"
         android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -203,10 +219,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="312dp"
         android:layout_marginTop="172dp"
+        android:layout_marginEnd="41dp"
         android:fontFamily="@font/patuaone"
         android:text="Novo"
         android:textColor="@color/AzulTitulo"
         android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -229,10 +247,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="380dp"
+        android:layout_marginEnd="251dp"
         android:fontFamily="@font/patuaone"
         android:text="Endereço:"
         android:textColor="@color/AzulTitulo"
         android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -242,10 +262,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="260dp"
         android:layout_marginTop="380dp"
+        android:layout_marginEnd="61dp"
         android:fontFamily="@font/patuaone"
         android:text="Horário:"
         android:textColor="@color/AzulTitulo"
         android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -268,10 +290,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="412dp"
+        android:layout_marginEnd="209dp"
         android:fontFamily="@font/sairaextracondensedsemibold"
         android:text="Av. do Bom Conselho, 57\n          Bom Conselho"
         android:textColor="@color/black"
         android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -281,10 +305,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="252dp"
         android:layout_marginTop="412dp"
+        android:layout_marginEnd="49dp"
         android:fontFamily="@font/sairaextracondensedsemibold"
         android:text="08hrs às 18hrs"
         android:textColor="@color/black"
         android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -312,39 +338,49 @@
         android:id="@+id/botaovoltarconfirmacao"
         android:layout_width="47dp"
         android:layout_height="52dp"
+        android:layout_marginEnd="364dp"
         android:background="@drawable/fundo_transparente_botao"
         android:contentDescription="Botão Voltar"
         android:drawableLeft="@drawable/iconvoltar"
         android:paddingLeft="22dp"
         android:paddingTop="8dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="-2dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="152dp"
         android:layout_height="48dp"
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="206dp"
+        android:layout_marginEnd="130dp"
         android:background="@drawable/backgroundbuttonwhite"
         android:fontFamily="@font/patuaone"
         android:text="remover"
         android:textColor="@color/AzulTitulo"
         android:textSize="25dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="206dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/appCompatButton"
         android:layout_width="154dp"
         android:layout_height="49dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="311dp"
+        android:layout_marginEnd="129dp"
         android:background="@drawable/backgroundbuttonwhite"
         android:fontFamily="@font/patuaone"
         android:text="remover"
         android:textColor="@color/AzulTitulo"
         android:textSize="25dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="311dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

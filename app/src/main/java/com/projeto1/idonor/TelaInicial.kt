@@ -29,6 +29,6 @@ import androidx.appcompat.app.AppCompatActivity
             startActivity(intent)
         }
 
-        }
+    }
 
 }
