@@ -11,6 +11,9 @@
 
     <string name="doarmais">DOAR +</string>
 
+    <!-- API KEY -->
+    <string name="google_map_api_key">AIzaSyBCoM-N6Qa6tQGYYI3MeNRCL7GMKxfsx-g</string>
+
     <!-- tela inicial-->
     <string name="voltar_tela_inicial">VOLTAR À TELA INICIAL</string>
     <string name="OU">OU</string>

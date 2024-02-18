@@ -98,11 +98,11 @@
                 android:layout_width="408dp"
                 android:layout_height="300dp"
                 android:layout_alignTop="@+id/tipodoitem"
-                android:layout_marginTop="27dp"
+                android:layout_marginTop="40dp"
                 >
 
                 <RadioButton
-                    android:id="@+id/radioButton1"
+                    android:id="@+id/radioButtonCamisa"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:fontFamily="@font/sairaextracondensedsemibold"
@@ -110,7 +110,7 @@
                     android:textSize="30sp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/radioButtonCasacos"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:fontFamily="@font/sairaextracondensedsemibold"
@@ -118,7 +118,7 @@
                     android:textSize="30sp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/radioButtonCalcas"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:fontFamily="@font/sairaextracondensedsemibold"
@@ -126,7 +126,7 @@
                     android:textSize="30sp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton4"
+                    android:id="@+id/radioButtonShorts"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:fontFamily="@font/sairaextracondensedsemibold"
@@ -134,7 +134,7 @@
                     android:textSize="30sp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton5"
+                    android:id="@+id/radioButtonCalcados"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:fontFamily="@font/sairaextracondensedsemibold"
@@ -142,7 +142,7 @@
                     android:textSize="30sp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton6"
+                    android:id="@+id/radioButtonAcessorios"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:fontFamily="@font/sairaextracondensedsemibold"
@@ -208,7 +208,7 @@
                 android:layout_marginStart="21dp"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/patuaone"
-                android:text="X"
+                android:text="1"
                 android:textColor="@color/AzulTitulo"
                 android:textSize="35sp"
                 />
@@ -260,7 +260,7 @@
                 >
 
                 <RadioButton
-                    android:id="@+id/radioButton7"
+                    android:id="@+id/radioButtonNovo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/sairaextracondensedsemibold"
@@ -268,7 +268,7 @@
                     android:textSize="30sp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton8"
+                    android:id="@+id/radioButtonBom"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/sairaextracondensedsemibold"
@@ -276,7 +276,7 @@
                     android:textSize="30sp" />
 
                 <RadioButton
-                    android:id="@+id/radioButton9"
+                    android:id="@+id/radioButtonMedio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/sairaextracondensedsemibold"
