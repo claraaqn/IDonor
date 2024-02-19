@@ -14,12 +14,17 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class TelaEspecificacao : AppCompatActivity() {
 
     private var quantidadeItens = 1
     private lateinit var quantidadeTextView: TextView
+    private var tipoDoItem = ""
+    private var estadoDoItem = ""
 
+    private var dataBase = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +33,8 @@ class TelaEspecificacao : AppCompatActivity() {
 
         var btnVoltar = findViewById<Button>(R.id.botaovoltarespecificacao)
         var btnAvancar = findViewById<Button>(R.id.botaoavancar)
+
+
 
         fun irCategorias(view: View){
             var intent = Intent(this, TelaCategoriasDoacoes::class.java)
@@ -51,6 +58,10 @@ class TelaEspecificacao : AppCompatActivity() {
 
         btnAdicionar.setOnClickListener{
             if(radioGroup1.checkedRadioButtonId != -1 && radioGroup2.checkedRadioButtonId != -1){
+                val radioButtonSelecionado1 = obterRadioSelecionado(radioGroup1)
+                val radioButtonSelecionado2 = obterRadioSelecionado(radioGroup2)
+                tipoDoItem = radioButtonSelecionado1.toString()
+                estadoDoItem = radioButtonSelecionado2.toString()
                 radioGroup1.clearCheck()
                 radioGroup2.clearCheck()
                 quantidadeItens = 1
@@ -76,14 +87,39 @@ class TelaEspecificacao : AppCompatActivity() {
             atualizarQuantidade()
         }
 
+        val user = FirebaseAuth.getInstance().uid.toString()
+
+        val map: Map<String,String> = mapOf(
+            "user" to user,
+            "tipoDoItem" to tipoDoItem,
+            "quantidade" to quantidadeItens.toString(),
+            "estadoDoItem" to estadoDoItem)
+
+        dataBase.collection("doacao").document(user).set(map)
+
+
 
 
     }
+
+
+
+    fun obterRadioSelecionado (radioGroup: RadioGroup): RadioButton? {
+        val radioButtonId = radioGroup.checkedRadioButtonId
+
+        return if (radioButtonId != -1) {
+            radioGroup.findViewById(radioButtonId) }
+        else{
+            null }
+        }
 
     private fun atualizarQuantidade(){
         quantidadeTextView.text = quantidadeItens.toString()
     }
+
 }
+
+
 
 
 
