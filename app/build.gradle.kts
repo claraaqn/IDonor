@@ -69,5 +69,7 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore-ktx:24.10.1")
     implementation("androidx.test:monitor:1.6.1")
     implementation("androidx.test.ext:junit-ktx:1.1.5")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 
 }

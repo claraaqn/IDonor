@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="400dp"
+    android:layout_height="600dp"
+    tools:context=".fragmentDesejo">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaoinfowishlist"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="Botão de Info"
+        android:drawableLeft="@drawable/iconinformacao"
+        android:paddingLeft="12dp"
+        android:paddingBottom="14dp"
+        />
+
+    <View
+        android:id="@+id/line_18"
+        android:layout_width="65dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/linha_azul"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaowishlistwishlist"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="Botão WishList"
+        android:drawableLeft="@drawable/list_azul"
+        android:paddingLeft="19dp"
+        android:paddingBottom="12dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaocontatowishlist"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="215dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="Botão Contato"
+        android:drawableLeft="@drawable/iconcontato"
+        android:paddingLeft="14dp"
+        android:paddingBottom="9dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaoavaliacaowishlist"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="298dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/fundo_transparente_botao"
+        android:contentDescription="Botão Avaliação"
+        android:drawableLeft="@drawable/star"
+        android:paddingLeft="17dp"
+        android:paddingBottom="12dp"
+        />
+
+    <ImageView
+        android:id="@+id/backgroundtextosinfo"
+        android:layout_width="360dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/informacoes"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:id="@+id/texto1wishlist"
+        android:layout_width="348dp"
+        android:layout_height="183dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="95dp"
+        android:fontFamily="@font/sairaextracondensedsemibold"
+        android:text="@string/wishlist_lar_idosos"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:id="@+id/texto2fraginfo"
+        android:layout_width="348dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="95dp"
+        android:fontFamily="@font/sairaextracondensedsemibold"
+        android:text="@string/wishlist2_lar_idosos"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+</FrameLayout>

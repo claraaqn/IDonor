@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentInfo">
+
+    <fragment
+        android:id="@+id/fragmentInfo"
+        android:name="com.projeto1.idonor.fragmentInfo"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_fragmentInfo_to_fragmentDesejo"
+            app:destination="@id/fragmentDesejo" />
+        <action
+            android:id="@+id/action_fragmentInfo_to_fragmentContato"
+            app:destination="@id/fragmentContato" />
+        <action
+            android:id="@+id/action_fragmentInfo_to_fragmentAvaliacao"
+            app:destination="@id/fragmentAvaliacao" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDesejo"
+        android:name="com.projeto1.idonor.fragmentDesejo"
+        android:label="fragment_desejo"
+        tools:layout="@layout/fragment_desejo" >
+        <action
+            android:id="@+id/action_fragmentDesejo_to_fragmentContato"
+            app:destination="@id/fragmentContato" />
+        <action
+            android:id="@+id/action_fragmentDesejo_to_fragmentInfo"
+            app:destination="@id/fragmentInfo" />
+        <action
+            android:id="@+id/action_fragmentDesejo_to_fragmentAvaliacao"
+            app:destination="@id/fragmentAvaliacao" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentContato"
+        android:name="com.projeto1.idonor.fragmentContato"
+        android:label="fragment_contato"
+        tools:layout="@layout/fragment_contato" >
+        <action
+            android:id="@+id/action_fragmentContato_to_fragmentAvaliacao"
+            app:destination="@id/fragmentAvaliacao" />
+        <action
+            android:id="@+id/action_fragmentContato_to_fragmentInfo"
+            app:destination="@id/fragmentInfo" />
+        <action
+            android:id="@+id/action_fragmentContato_to_fragmentDesejo"
+            app:destination="@id/fragmentDesejo" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAvaliacao"
+        android:name="com.projeto1.idonor.fragmentAvaliacao"
+        android:label="fragment_avaliacao"
+        tools:layout="@layout/fragment_avaliacao" >
+        <action
+            android:id="@+id/action_fragmentAvaliacao_to_fragmentContato"
+            app:destination="@id/fragmentContato" />
+        <action
+            android:id="@+id/action_fragmentAvaliacao_to_fragmentInfo"
+            app:destination="@id/fragmentInfo" />
+        <action
+            android:id="@+id/action_fragmentAvaliacao_to_fragmentDesejo"
+            app:destination="@id/fragmentDesejo" />
+    </fragment>
+</navigation>

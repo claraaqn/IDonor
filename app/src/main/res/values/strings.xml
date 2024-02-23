@@ -86,8 +86,8 @@
     <string name="descricao_user">Icon do user</string>
     <string name="descricao_comunidade">Icon da cominidade</string>
     <string name="descricao_fav">Icon das instituições favoritas</string>
-  
-  
+
+
     <string name="titulo_lar_idosos">Lar dos Idosos</string>
     <string name="idonor">iDonor</string>
     <string name="titulo_categorias">Escolha o tipo de doação</string>
@@ -101,7 +101,7 @@
     <string name="info2_lar_idosos">Gerência:\nElizoneide Da Silva\nLocalização:\nAv. do Bom Conselho, 57 - Bom Conselho, Belo Jardim - PE, 55153-340</string>
     <string name="wishlist_lar_idosos">Kit básico de higiene (escova de dente, pasta dental, sabonete, desodorante)\nFraldas geriátricas tamanho P, M e G.\nVoluntariado: Técnicos de enfermagem\nAlimentos (Kg)\nRoupas: Feminino (Tam P e M)\nRoupas: Masculino (Tamanho G)</string>
     <string name="wishlist2_lar_idosos">Centro de arrecadação físico:\nAv. do Bom Conselho, 57 - Bom Conselho, Belo Jardim - PE, 55153-340\nCentro de arrecadação remoto:\nAplicativo IDonor</string>
-    <string name="contato">Telefone para contato:\n+55 (81) 9 3726-2349\nInstagram: \n@lardosidososbelojardimpe\nEmail para contato:\npadua_eduardo@hotmail.com</string>
+    <string name="contato">Telefone para contato:\n+55 (81) 9 3726-2349\n\nInstagram: \n@lardosidososbelojardimpe\n\nEmail para contato:\npadua_eduardo@hotmail.com</string>
     <string name="semana_apresentada">01–07 Novembro, 2023</string>
     <string name="foto_de_perfil_do_primeiro_coment_rio">foto de perfil do primeiro comentário</string>
     <string name="cometeario_lar_idosos">Excelente doador. Sempre entrega pontualmente!</string>
@@ -111,14 +111,15 @@
     <string name="descricao_estrelas_sandra">quantidade de estrelas que a Sandra Rafaela Deus deu</string>
     <string name="mais">mais...</string>
     <string name="login">Login</string>
-  
-  <string name="c_digo_de_verifica_o">Código de verificação</string>
-  <string name="verificar">Verificar</string>
-   <string name="cadastro">Cadastro</string>
+
+    <string name="c_digo_de_verifica_o">Código de verificação</string>
+    <string name="verificar">Verificar</string>
+    <string name="cadastro">Cadastro</string>
     <string name="texto_tela_inicial">Junte-se a uma rede de amor próprio</string>
     <string name="login_tela_inicial">Se já possui uma conta</string>
     <string name="faca_cadastro">Faça o cadastro</string>
     <string name="cadastro_cadastro">Cadastro</string>
     <string name="_06">06</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

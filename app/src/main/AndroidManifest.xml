@@ -45,9 +45,6 @@
             android:name=".TelaInstituicaoInfo"
             android:exported="false" />
         <activity android:name=".TelaConfirmacao"/>
-        <activity android:name=".TelaInstituicaoAvaliacao" />
-        <activity android:name=".TelaInstituicaoContato" />
-        <activity android:name=".TelaInstituicaoDesejos" />
         <activity
             android:name=".TelaEspecificacao"
             android:exported="false" />

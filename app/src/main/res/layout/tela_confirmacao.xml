@@ -91,6 +91,13 @@
                 android:background="@drawable/backgroundbuttonwhite"
                 />
 
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@id/telabrancaitens"
+                android:layout_alignStart="@id/telabrancaitens"
+                />
+
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="152dp"
                 android:layout_height="48dp"
