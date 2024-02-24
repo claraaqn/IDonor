@@ -105,7 +105,7 @@
                 android:layout_alignStart="@id/titulolardosidosos"
                 android:layout_alignTop="@+id/titulolardosidosos"
                 android:layout_marginStart="-80dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginEnd="5dp"
                 android:layout_marginTop="65dp"
                 app:navGraph="@navigation/navigation"
                 />
