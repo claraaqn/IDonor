@@ -93,6 +93,7 @@
         android:layout_marginTop="105dp"
         android:layout_marginStart="95dp"
         android:fontFamily="@font/sairaextracondensedsemibold"
+        android:textColor="@color/black"
         android:text="Carlos Silva"
         android:textSize="20sp"
         />
@@ -112,6 +113,7 @@
         android:layout_marginTop="150dp"
         android:layout_marginStart="25dp"
         android:fontFamily="@font/sairaextracondensedsemibold"
+        android:textColor="@color/black"
         android:text="Muito boa a Instituição, fiz várias doações e tenho a sensação que realmente os ajudo."
         android:textSize="15sp"
         />
@@ -133,6 +135,7 @@
         android:layout_marginTop="220dp"
         android:layout_marginStart="95dp"
         android:fontFamily="@font/sairaextracondensedsemibold"
+        android:textColor="@color/black"
         android:text="Manu Gomes"
         android:textSize="20sp"
         />
@@ -152,6 +155,7 @@
         android:layout_marginTop="265dp"
         android:layout_marginStart="25dp"
         android:fontFamily="@font/sairaextracondensedsemibold"
+        android:textColor="@color/black"
         android:text="Já fui alguma vezes como voluntária e gostei muito do dia que tive lá.\n São muito atenciosos."
         android:textSize="15sp"
         />

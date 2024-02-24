@@ -24,12 +24,11 @@ class TelaEspecificacao : AppCompatActivity() {
     private lateinit var quantidadeTextView: TextView
     private var tipoDoItem = ""
     private var estadoDoItem = ""
-    private var contadordedoacao = 1
     private var dataBase = FirebaseFirestore.getInstance()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tela_especificacao)
+
 
 
         var btnVoltar = findViewById<Button>(R.id.botaovoltarespecificacao)
@@ -94,7 +93,7 @@ class TelaEspecificacao : AppCompatActivity() {
             estadoDoItem = "Medio"
         }
 
-        val contadordoacoes = 1
+        var contadordoacoes = 1
 
         btnAdicionar.setOnClickListener{
             if(radioGroup1.checkedRadioButtonId != -1 && radioGroup2.checkedRadioButtonId != -1){
@@ -107,12 +106,14 @@ class TelaEspecificacao : AppCompatActivity() {
                     "quantidade" to quantidadeItens,
                     "estadoDoItem" to estadoDoItem)
 
-                dataBase.collection("doacoes").document("vestimenta")
+
+                dataBase.collection("doacoes").document("vestimenta" + contadordoacoes.toString())
                     .set(mapdoacoes).addOnCompleteListener{
                     Log.d("db","Sucesso ao salvar os dados")
                 }.addOnFailureListener {
 
                     }
+                contadordoacoes = contadordoacoes+1
                 radioGroup1.clearCheck()
                 radioGroup2.clearCheck()
                 quantidadeItens = 1
@@ -144,7 +145,6 @@ class TelaEspecificacao : AppCompatActivity() {
 
 
     private fun atualizarQuantidade(){
-        contadordedoacao++
         quantidadeTextView.text = quantidadeItens.toString()
     }
 

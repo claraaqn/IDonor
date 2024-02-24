@@ -17,7 +17,7 @@ class TelaConfirmacao : AppCompatActivity(),  OnMapReadyCallback{
 
     private var dataBase = FirebaseFirestore.getInstance()
 
-    private lateinit var doacoesTxtView: TextView
+    private lateinit var doacoesTxtView1: TextView
     private lateinit var doacoesTxtView2: TextView
     private lateinit var doacoesTxtView3: TextView
 
@@ -25,7 +25,7 @@ class TelaConfirmacao : AppCompatActivity(),  OnMapReadyCallback{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tela_confirmacao)
-        val contadordoacoes = 1
+
 
         var btnVoltar = findViewById<Button>(R.id.botaovoltarconfirmacao)
         var btnDoar = findViewById<Button>(R.id.botaodoarconfirmacao)
@@ -49,10 +49,14 @@ class TelaConfirmacao : AppCompatActivity(),  OnMapReadyCallback{
             irAgradecimento(it)
         }
 
-        val doacoesView = findViewById<TextView>(R.id.doacoestxt)
+        val doacoesView1 = findViewById<TextView>(R.id.doacoestxt1)
         val doacoesView2 = findViewById<TextView>(R.id.doacoestxt2)
         val doacoesView3 = findViewById<TextView>(R.id.doacoestxt3)
 
+        val doacao1 = ""
+        val doacao2 = ""
+        val doacao3 = ""
+        var contadordoacoes = 1
 
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.mapFragment) as SupportMapFragment
@@ -60,26 +64,54 @@ class TelaConfirmacao : AppCompatActivity(),  OnMapReadyCallback{
 
         botaover.setOnClickListener {
 
-            dataBase.collection("doacoes").document("doacao")
+            dataBase.collection("doacoes").document("vestimenta"+contadordoacoes.toString())
                 .addSnapshotListener { documento, error ->
                     if (documento != null) {
 
                         val quantidade = documento.getLong("quantidade")
+                        val tipo = documento.getString("tipoDoItem")
+                        val estado = documento.getString("estadoDoItem")
+                        val quantidadeString = quantidade.toString()
 
-                        doacoesView.text = documento.getString("tipoDoItem")
-                        doacoesView2.text = quantidade.toString()
-                        doacoesView3.text = documento.getString("estadoDoItem")
+                        val texto = "Tipo do Item: " + tipo + "\n"+
+                                "Quantidade: " + quantidadeString + "\n" +
+                                "Estado do Item: " + estado
+
+                        if (contadordoacoes==1){
+                            doacoesView1.text = texto
+                        }
+                        else if (contadordoacoes==2){
+                            doacoesView2.text = texto
+                        }
+                        else if (contadordoacoes==3){
+                            doacoesView3.text = texto
+                        }
+                        else{}
+
+                        contadordoacoes++
                     }
                     else{}
+
             }
         }
 
         botaoremover.setOnClickListener {
-            doacoesView.clearComposingText()
-            doacoesView2.clearComposingText()
-            doacoesView3.clearComposingText()
-        }
+            if(contadordoacoes == 4){
+                doacoesView3.text = doacao3
+                contadordoacoes--
+            }
+            else if (contadordoacoes == 3){
+                doacoesView2.text = doacao2
+                contadordoacoes--
+            }
+            else if (contadordoacoes == 2){
+                doacoesView1.text = doacao1
+            }
+            else{contadordoacoes--}
 
+
+
+        }
 
 
 
