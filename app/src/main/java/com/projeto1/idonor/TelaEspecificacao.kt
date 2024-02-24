@@ -1,6 +1,7 @@
 package com.projeto1.idonor
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -24,12 +25,11 @@ class TelaEspecificacao : AppCompatActivity() {
     private lateinit var quantidadeTextView: TextView
     private var tipoDoItem = ""
     private var estadoDoItem = ""
-    private var contadordedoacao = 1
     private var dataBase = FirebaseFirestore.getInstance()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tela_especificacao)
+
 
 
         var btnVoltar = findViewById<Button>(R.id.botaovoltarespecificacao)
@@ -94,12 +94,15 @@ class TelaEspecificacao : AppCompatActivity() {
             estadoDoItem = "Medio"
         }
 
-        val contadordoacoes = 1
+        var contadordoacoes = 1
+
+        var doacao1 = ""
+        var doacao2 = ""
+        var doacao3 = ""
 
         btnAdicionar.setOnClickListener{
             if(radioGroup1.checkedRadioButtonId != -1 && radioGroup2.checkedRadioButtonId != -1){
                 val user = FirebaseAuth.getInstance().uid.toString()
-
 
                 val mapdoacoes = hashMapOf(
                     "user" to user,
@@ -107,17 +110,35 @@ class TelaEspecificacao : AppCompatActivity() {
                     "quantidade" to quantidadeItens,
                     "estadoDoItem" to estadoDoItem)
 
-                dataBase.collection("doacoes").document("vestimenta")
+                val texto = "Tipo do Item: " + tipoDoItem + "\n"+
+                        "Quantidade: " + quantidadeItens.toString() + "\n" +
+                        "Estado do Item: " + estadoDoItem +"\n" +
+                        "------------------"
+
+                if (contadordoacoes == 1){
+                    doacao1 = texto
+                }
+                else if (contadordoacoes == 2){
+                    doacao2 = texto
+                }
+                if (contadordoacoes == 3){
+                    doacao3 = texto
+                }
+
+                dataBase.collection("doacoes").document("vestimenta" + contadordoacoes.toString())
                     .set(mapdoacoes).addOnCompleteListener{
                     Log.d("db","Sucesso ao salvar os dados")
                 }.addOnFailureListener {
 
                     }
+                salvarDoacao(doacao1, doacao2, doacao3)
+                contadordoacoes = contadordoacoes+1
                 radioGroup1.clearCheck()
                 radioGroup2.clearCheck()
                 quantidadeItens = 1
                 atualizarQuantidade()
             }
+
             else{
                 Toast.makeText(this, "Por favor, selecione o estado e o tipo do item.", Toast.LENGTH_SHORT).show()
             }
@@ -141,10 +162,19 @@ class TelaEspecificacao : AppCompatActivity() {
 
     }
 
+    private fun salvarDoacao (doacao1: String, doacao2: String, doacao3: String){
+        val sharedPreferences = getSharedPreferences("DOACAO", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("DOACAO1", doacao1)
+        editor.putString("DOACAO2", doacao2)
+        editor.putString("DOACAO3", doacao3)
+        editor.apply()
+
+    }
+
 
 
     private fun atualizarQuantidade(){
-        contadordedoacao++
         quantidadeTextView.text = quantidadeItens.toString()
     }
 

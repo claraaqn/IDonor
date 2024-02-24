@@ -17,7 +17,7 @@ class TelaConfirmacao : AppCompatActivity(),  OnMapReadyCallback{
 
     private var dataBase = FirebaseFirestore.getInstance()
 
-    private lateinit var doacoesTxtView: TextView
+    private lateinit var doacoesTxtView1: TextView
     private lateinit var doacoesTxtView2: TextView
     private lateinit var doacoesTxtView3: TextView
 
@@ -25,12 +25,12 @@ class TelaConfirmacao : AppCompatActivity(),  OnMapReadyCallback{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tela_confirmacao)
-        val contadordoacoes = 1
+
 
         var btnVoltar = findViewById<Button>(R.id.botaovoltarconfirmacao)
         var btnDoar = findViewById<Button>(R.id.botaodoarconfirmacao)
 
-        val botaover = findViewById<Button>(R.id.ver)
+
         val botaoremover = findViewById<Button>(R.id.remover)
 
         fun irEspecificacao(view: View){
@@ -49,37 +49,47 @@ class TelaConfirmacao : AppCompatActivity(),  OnMapReadyCallback{
             irAgradecimento(it)
         }
 
-        val doacoesView = findViewById<TextView>(R.id.doacoestxt)
+        val doacoesView1 = findViewById<TextView>(R.id.doacoestxt1)
         val doacoesView2 = findViewById<TextView>(R.id.doacoestxt2)
         val doacoesView3 = findViewById<TextView>(R.id.doacoestxt3)
 
+
+        val doacaovazia = ""
+
+        var contadordoacoes = 4
+
+        val sharedPreferences = getSharedPreferences("DOACAO", MODE_PRIVATE)
+        val doacao1 = sharedPreferences.getString("DOACAO1","")
+        val doacao2 = sharedPreferences.getString("DOACAO2", "")
+        val doacao3 = sharedPreferences.getString("DOACAO3", "")
+        doacoesView1.text = doacao1
+        doacoesView2.text = doacao2
+        doacoesView3.text = doacao3
 
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.mapFragment) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
-        botaover.setOnClickListener {
 
-            dataBase.collection("doacoes").document("doacao")
-                .addSnapshotListener { documento, error ->
-                    if (documento != null) {
 
-                        val quantidade = documento.getLong("quantidade")
-
-                        doacoesView.text = documento.getString("tipoDoItem")
-                        doacoesView2.text = quantidade.toString()
-                        doacoesView3.text = documento.getString("estadoDoItem")
-                    }
-                    else{}
-            }
-        }
 
         botaoremover.setOnClickListener {
-            doacoesView.clearComposingText()
-            doacoesView2.clearComposingText()
-            doacoesView3.clearComposingText()
-        }
+            if(contadordoacoes == 4){
+                doacoesView3.text = doacaovazia
+                contadordoacoes--
+            }
+            else if (contadordoacoes == 3){
+                doacoesView2.text = doacaovazia
+                contadordoacoes--
+            }
+            else if (contadordoacoes == 2){
+                doacoesView1.text = doacaovazia
+            }
+            else{contadordoacoes--}
 
+
+
+        }
 
 
 
@@ -92,7 +102,10 @@ class TelaConfirmacao : AppCompatActivity(),  OnMapReadyCallback{
             .position(LatLng(-8.3338946,-36.4264714))
             .title("Lar Dos Idosos")
         )
-
-
     }
+
+
+
+
+
 }
