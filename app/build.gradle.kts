@@ -63,6 +63,9 @@ dependencies {
     //google maps
     implementation("com.google.android.gms:play-services-maps:18.2.0")
 
+    //firestore
+    implementation("com.google.firebase:firebase-firestore-ktx")
+
     // Also add the dependency for the Google Play services library and specify its version
     implementation("com.google.android.gms:play-services-auth:20.7.0")
     implementation("com.google.firebase:firebase-storage-ktx:20.3.0")

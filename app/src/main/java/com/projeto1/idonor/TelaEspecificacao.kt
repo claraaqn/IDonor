@@ -3,6 +3,7 @@ package com.projeto1.idonor
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -23,7 +24,7 @@ class TelaEspecificacao : AppCompatActivity() {
     private lateinit var quantidadeTextView: TextView
     private var tipoDoItem = ""
     private var estadoDoItem = ""
-
+    private var contadordedoacao = 1
     private var dataBase = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,13 +56,63 @@ class TelaEspecificacao : AppCompatActivity() {
         val radioGroup1 = findViewById<RadioGroup>(R.id.radiogroup1espec)
         val radioGroup2 = findViewById<RadioGroup>(R.id.radiogroup2espec)
         val btnAdicionar = findViewById<Button>(R.id.botaoadicionardoacao)
+        val radioButtonCamisa = findViewById<RadioButton>(R.id.radioButtonCamisa)
+        val radioButtonCasaco = findViewById<RadioButton>(R.id.radioButtonCasacos)
+        val radioButtonCalca = findViewById<RadioButton>(R.id.radioButtonCalcas)
+        val radioButtonShorts = findViewById<RadioButton>(R.id.radioButtonShorts)
+        val radioButtonCalcados = findViewById<RadioButton>(R.id.radioButtonCalcados)
+        val radioButtonAcessorios = findViewById<RadioButton>(R.id.radioButtonAcessorios)
+        val radioButtonNovo = findViewById<RadioButton>(R.id.radioButtonNovo)
+        val radioButtonBom = findViewById<RadioButton>(R.id.radioButtonBom)
+        val radioButtonMedio = findViewById<RadioButton>(R.id.radioButtonMedio)
+
+        radioButtonCamisa.setOnClickListener {
+            tipoDoItem = "Camisas"
+        }
+        radioButtonAcessorios.setOnClickListener {
+            tipoDoItem = "Acessorios"
+        }
+        radioButtonCalca.setOnClickListener {
+            tipoDoItem = "Calças"
+        }
+        radioButtonCasaco.setOnClickListener {
+            tipoDoItem = "Casacos"
+        }
+        radioButtonCalcados.setOnClickListener {
+            tipoDoItem = "Calçados"
+        }
+        radioButtonShorts.setOnClickListener {
+            tipoDoItem = "Shorts"
+        }
+        radioButtonNovo.setOnClickListener {
+            estadoDoItem = "Novo"
+        }
+        radioButtonBom.setOnClickListener {
+            estadoDoItem = "Bom"
+        }
+        radioButtonMedio.setOnClickListener {
+            estadoDoItem = "Medio"
+        }
+
+        val contadordoacoes = 1
 
         btnAdicionar.setOnClickListener{
             if(radioGroup1.checkedRadioButtonId != -1 && radioGroup2.checkedRadioButtonId != -1){
-                val radioButtonSelecionado1 = obterRadioSelecionado(radioGroup1)
-                val radioButtonSelecionado2 = obterRadioSelecionado(radioGroup2)
-                tipoDoItem = radioButtonSelecionado1.toString()
-                estadoDoItem = radioButtonSelecionado2.toString()
+                val user = FirebaseAuth.getInstance().uid.toString()
+
+
+                val mapdoacoes = hashMapOf(
+                    "user" to user,
+                    "tipoDoItem" to tipoDoItem,
+                    "quantidade" to quantidadeItens,
+                    "estadoDoItem" to estadoDoItem)
+
+                dataBase.collection("doacoes").document("vestimenta")
+                    .set(mapdoacoes).addOnCompleteListener{
+                    Log.d("db","Sucesso ao salvar os dados")
+                }.addOnFailureListener {
+
+                    }
                 radioGroup1.clearCheck()
                 radioGroup2.clearCheck()
                 quantidadeItens = 1
@@ -87,33 +138,13 @@ class TelaEspecificacao : AppCompatActivity() {
             atualizarQuantidade()
         }
 
-        val user = FirebaseAuth.getInstance().uid.toString()
-
-        val map: Map<String,String> = mapOf(
-            "user" to user,
-            "tipoDoItem" to tipoDoItem,
-            "quantidade" to quantidadeItens.toString(),
-            "estadoDoItem" to estadoDoItem)
-
-        dataBase.collection("doacao").document(user).set(map)
-
-
-
 
     }
 
 
 
-    fun obterRadioSelecionado (radioGroup: RadioGroup): RadioButton? {
-        val radioButtonId = radioGroup.checkedRadioButtonId
-
-        return if (radioButtonId != -1) {
-            radioGroup.findViewById(radioButtonId) }
-        else{
-            null }
-        }
-
     private fun atualizarQuantidade(){
+        contadordedoacao++
         quantidadeTextView.text = quantidadeItens.toString()
     }
 
