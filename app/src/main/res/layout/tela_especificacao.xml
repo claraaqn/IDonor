@@ -62,7 +62,7 @@
                 android:fontFamily="@font/patuaone"
                 android:text="Especifique sua doação:"
                 android:textColor="@color/AzulTitulo"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -295,35 +295,36 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/botaoadicionardoacao"
-                android:layout_width="wrap_content"
+                android:layout_width="169dp"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/barra4espec"
                 android:layout_alignTop="@+id/barra4espec"
                 android:layout_alignEnd="@+id/barra4espec"
-                android:layout_marginStart="130dp"
+                android:layout_marginStart="120dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginEnd="130dp"
+                android:layout_marginEnd="120dp"
                 android:background="@drawable/backgroundbuttonwhite"
                 android:fontFamily="@font/patuaone"
                 android:text="Adicionar"
                 android:textColor="@color/AzulTitulo"
-                android:textSize="25dp" />
+                android:textSize="23dp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/botaoavancar"
                 android:layout_width="260dp"
                 android:layout_height="59dp"
                 android:layout_alignTop="@+id/botaoadicionardoacao"
-                android:layout_alignStart="@id/botaoadicionardoacao"
-                android:layout_marginTop="70dp"
-                android:layout_marginStart="-57dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="69dp"
+                android:layout_marginEnd="75dp"
                 android:layout_marginBottom="50dp"
                 android:background="@drawable/backgroundbutton"
                 android:fontFamily="@font/patuaone"
                 android:text="Avançar"
                 android:textColor="@color/AzulTitulo"
-                android:textSize="25dp"
-                />
+                android:textSize="25dp" />
 
         </RelativeLayout>
 </ScrollView>
