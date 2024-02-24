@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import com.google.android.gms.maps.CameraUpdate
+import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
@@ -97,6 +99,9 @@ class TelaConfirmacao : AppCompatActivity(),  OnMapReadyCallback{
 
     override fun onMapReady(googleMap: GoogleMap) {
         mGoogleMap = googleMap
+        val latLong : LatLng = LatLng(-8.3338946,-36.4264714)
+        val newLatLngZoom = CameraUpdateFactory.newLatLngZoom(latLong,15f)
+        mGoogleMap?.animateCamera(newLatLngZoom)
 
         mGoogleMap?.addMarker(MarkerOptions()
             .position(LatLng(-8.3338946,-36.4264714))
