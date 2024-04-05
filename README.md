@@ -36,7 +36,7 @@
 
 **Junte-se a nós!**
 
-* **Acesse o código no GitHub:** [https://github.com/](https://github.com/)
+* **Acesse o código no GitHub:** [https://github.com/claraaqn/IDonor](https://github.com/claraaqn/IDonor)
 
 **Obrigado por usar o IDonor!**
 
