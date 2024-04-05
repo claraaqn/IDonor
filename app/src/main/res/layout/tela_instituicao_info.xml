@@ -10,208 +10,128 @@
 
     />
     ]]>
-
-    <View
-        android:id="@+id/tela_de_inf"
+    <ScrollView
+        android:id="@+id/scrollviewinfo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/BackTela"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.5"
+        android:background="@color/BackTela">
 
-    <ImageView
-        android:layout_width="411dp"
-        android:layout_height="348dp"
-        android:layout_marginTop="47dp"
-        android:src="@drawable/imglardosidosos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/botaovoltarinfo"
+                android:layout_width="72dp"
+                android:layout_height="64dp"
+                android:background="@drawable/fundo_transparente_botao"
+                android:contentDescription="Botão Voltar Info"
+                android:drawableLeft="@drawable/iconvoltar"
+                android:paddingLeft="20dp"
+                android:paddingBottom="5dp"
+                android:layout_alignStart="@+id/imglardosidosos"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <TextView
+                android:id="@+id/idonortituloinfo"
+                android:layout_width="160dp"
+                android:layout_height="43dp"
+                android:layout_alignStart="@+id/botaovoltarinfo"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="233dp"
+                android:fontFamily="@font/patuaone"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/idonor"
+                android:textColor="@color/AzulTitulo"
+                android:textSize="28sp"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/imglardosidosos"
+                android:layout_width="411dp"
+                android:layout_height="348dp"
+                android:src="@drawable/imglardosidosos"
+                android:layout_alignTop="@+id/idonortituloinfo"
+                android:layout_alignBottom="@id/titulolardosidosos"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="600dp"
+                />
 
 
-    <ImageView
-        android:layout_width="424dp"
-        android:layout_height="325dp"
-        android:src="@drawable/ellipse_2"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-9dp"
-        tools:layout_editor_absoluteY="226dp" />
+            <ImageView
+                android:id="@+id/elipseinfo"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/ellipse_2"
+                android:layout_alignTop="@+id/imglardosidosos"
+                android:layout_marginTop="260dp"
+                android:layout_marginStart="-20dp"
+                android:layout_marginEnd="-20dp"
+                android:scaleType="fitXY"
+                />
+
+            <TextView
+                android:id="@+id/titulolardosidosos"
+                android:layout_width="251dp"
+                android:layout_height="103dp"
+                android:layout_alignTop="@+id/idonortituloinfo"
+                android:layout_alignStart="@id/idonortituloinfo"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="300dp"
+                android:layout_marginEnd="80dp"
+                android:fontFamily="@font/patuaone"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/titulo_lar_idosos"
+                android:textColor="@color/AzulTitulo"
+                android:textSize="28sp"
+                 />
 
 
-    <ImageView
-        android:layout_width="360dp"
-        android:layout_height="310dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="26dp"
-        android:src="@drawable/informacoes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="445dp" />
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerInfo"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="364dp"
+                android:layout_height="600dp"
+                android:layout_alignStart="@id/titulolardosidosos"
+                android:layout_alignTop="@+id/titulolardosidosos"
+                android:layout_marginStart="-82dp"
+                android:layout_marginTop="65dp"
+                app:navGraph="@navigation/navigation"
+                />
 
-    <TextView
-        android:layout_width="160dp"
-        android:layout_height="43dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="7dp"
-        android:fontFamily="@font/patuaone"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/idonor"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/botaodoarinfo"
+                android:layout_width="260dp"
+                android:layout_height="59dp"
+                android:layout_alignTop="@+id/fragmentContainerInfo"
+                android:layout_alignStart="@id/fragmentContainerInfo"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="510dp"
+                android:layout_marginEnd="55dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/backgroundbutton"
+                android:drawableLeft="@drawable/icondoacao"
+                android:fontFamily="@font/patuaone"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="@string/doar"
+                android:textColor="@color/AzulTitulo"
+                android:textSize="25dp" />
 
 
-    <TextView
-        android:layout_width="251dp"
-        android:layout_height="103dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="304dp"
-        android:layout_marginEnd="80dp"
-        android:fontFamily="@font/patuaone"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/titulo_lar_idosos"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:layout_width="348dp"
-        android:layout_height="183dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="459dp"
-        android:layout_marginEnd="32dp"
-        android:fontFamily="@font/sairaextracondensedsemibold"
-        android:text="@string/info_lar_idosos"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_width="345dp"
-        android:layout_height="88dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="652dp"
-        android:layout_marginEnd="32dp"
-        android:fontFamily="@font/sairaextracondensedsemibold"
-        android:text="@string/info2_lar_idosos"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/line_18"
-        android:layout_width="65dp"
-        android:layout_height="2dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/linha_azul"
-
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="428dp" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botaovoltarinfo"
-        android:layout_width="72dp"
-        android:layout_height="64dp"
-        android:contentDescription="Botão Voltar Info"
-        android:background="@drawable/fundo_transparente_botao"
-        android:drawableLeft="@drawable/iconvoltar"
-        android:paddingLeft="20dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@drawable/fundo_transparente_botao"
-        android:contentDescription="Botão de Info"
-        android:drawableLeft="@drawable/icon_informacao_azul"
-        android:paddingLeft="12dp"
-        android:paddingBottom="14dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="381dp" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botaocontatoinfo"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@drawable/fundo_transparente_botao"
-        android:contentDescription="Botão Contato"
-        android:drawableLeft="@drawable/iconcontato"
-        android:paddingLeft="14dp"
-        android:paddingBottom="9dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="380dp" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botaowishlistinfo"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@drawable/fundo_transparente_botao"
-        android:contentDescription="Botão WishList"
-        android:drawableLeft="@drawable/list"
-        android:paddingLeft="19dp"
-        android:paddingBottom="12dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="119dp"
-        tools:layout_editor_absoluteY="381dp" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botaoavaliacaoinfo"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@drawable/fundo_transparente_botao"
-        android:contentDescription="Botão Avaliação"
-        android:drawableLeft="@drawable/star"
-        android:paddingLeft="17dp"
-        android:paddingBottom="12dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="303dp"
-        tools:layout_editor_absoluteY="381dp" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botaodoarinfo"
-        android:layout_width="260dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="48dp"
-        android:background="@drawable/backgroundbutton"
-        android:drawableLeft="@drawable/icondoacao"
-        android:fontFamily="@font/patuaone"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        android:text="@string/doar"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        </RelativeLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

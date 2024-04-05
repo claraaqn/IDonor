@@ -60,6 +60,11 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
 
+    //google maps
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
+
+    //firestore
+    implementation("com.google.firebase:firebase-firestore-ktx")
 
     // Also add the dependency for the Google Play services library and specify its version
     implementation("com.google.android.gms:play-services-auth:20.7.0")
@@ -67,5 +72,7 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore-ktx:24.10.1")
     implementation("androidx.test:monitor:1.6.1")
     implementation("androidx.test.ext:junit-ktx:1.1.5")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 
 }

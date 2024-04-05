@@ -8,343 +8,240 @@
     tools:context=".TelaConfirmacao">
 
 
-    <View
-        android:id="@+id/tela_de_inf"
+    <ScrollView
+        android:id="@+id/scrollviewinfo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/BackTela"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.5"
+        android:background="@color/BackTela">
 
-    <View
-        android:layout_width="379dp"
-        android:layout_height="98dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="158dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/backgroundbuttonwhite"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="379dp"
-        android:layout_height="98dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="263dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/backgroundbuttonwhite"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/botaovoltarconfirmacao"
+                android:layout_width="72dp"
+                android:layout_height="64dp"
+                android:background="@drawable/fundo_transparente_botao"
+                android:contentDescription="Botão Voltar Info"
+                android:drawableLeft="@drawable/iconvoltar"
+                android:paddingLeft="20dp"
+                android:paddingBottom="5dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
 
-    <ImageView
-        android:layout_width="291dp"
-        android:layout_height="224dp"
-        android:background="@drawable/fundo_transparente_botao"
-        android:contentDescription="Mapa"
-        android:src="@drawable/mapa"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="510dp" />
+            <TextView
+                android:id="@+id/idonortituloconfirmacao"
+                android:layout_width="160dp"
+                android:layout_height="43dp"
+                android:layout_alignStart="@+id/botaovoltarconfirmacao"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="233dp"
+                android:fontFamily="@font/patuaone"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/idonor"
+                android:textColor="@color/AzulTitulo"
+                android:textSize="28sp"
+                />
 
-    <TextView
-        android:layout_width="203dp"
-        android:layout_height="59dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="104dp"
-        android:fontFamily="@font/patuaone"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/titulo_checkout"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/checkout"
+                android:layout_width="203dp"
+                android:layout_height="59dp"
+                android:layout_alignTop="@+id/idonortituloconfirmacao"
+                android:layout_alignStart="@id/idonortituloconfirmacao"
+                android:layout_marginTop="45dp"
+                android:layout_marginStart="67dp"
+                android:layout_marginEnd="67dp"
+                android:fontFamily="@font/patuaone"
+                android:text="@string/titulo_checkout"
+                android:textColor="@color/AzulTitulo"
+                android:textSize="35sp"
+                />
 
-    <TextView
-        android:layout_width="160dp"
-        android:layout_height="43dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="7dp"
-        android:fontFamily="@font/patuaone"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/idonor"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/seusItens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/botaovoltarconfirmacao"
+                android:layout_alignTop="@+id/checkout"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="45dp"
+                android:fontFamily="@font/patuaone"
+                android:text="Seus itens:"
+                android:textColor="@color/AzulTitulo"
+                android:textSize="25sp"
+                />
+            <View
+                android:id="@+id/telabrancaend"
+                android:layout_width="381dp"
+                android:layout_height="120dp"
+                android:layout_alignStart="@id/seusItens"
+                android:layout_alignTop="@id/enderecoconfir"
+                android:layout_marginTop="-5dp"
+                android:background="@drawable/backgroundbuttonwhite"
+                />
 
+            <View
+                android:id="@+id/telabrancaitens"
+                android:layout_width="381dp"
+                android:layout_height="320dp"
+                android:layout_alignStart="@id/seusItens"
+                android:layout_alignTop="@id/seusItens"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/backgroundbuttonwhite"
+                />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="116dp"
-        android:fontFamily="@font/patuaone"
-        android:text="Seus itens:"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="165dp"
-        android:fontFamily="@font/patuaone"
-        android:text="3"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="33sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="270dp"
-        android:fontFamily="@font/patuaone"
-        android:text="2"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="33sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="168dp"
-        android:fontFamily="@font/patuaone"
-        android:text="x"
-        android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="273dp"
-        android:fontFamily="@font/patuaone"
-        android:text="x"
-        android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="168dp"
-        android:fontFamily="@font/patuaone"
-        android:text="Camisas"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/doacoestxt1"
+                android:layout_width="246dp"
+                android:layout_height="100dp"
+                android:fontFamily="@font/sairaextracondensedregular"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:layout_alignStart="@id/telabrancaitens"
+                android:layout_alignTop="@id/telabrancaitens"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="8dp"
+                />
 
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="272dp"
-        android:fontFamily="@font/patuaone"
-        android:text="Shorts"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/doacoestxt2"
+                android:layout_width="246dp"
+                android:layout_height="100dp"
+                android:fontFamily="@font/sairaextracondensedregular"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:layout_alignStart="@id/telabrancaitens"
+                android:layout_alignTop="@id/doacoestxt1"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="100dp"
+                 />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="212dp"
-        android:layout_marginTop="172dp"
-        android:fontFamily="@font/patuaone"
-        android:text="Estado:"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/doacoestxt3"
+                android:layout_width="246dp"
+                android:layout_height="100dp"
+                android:fontFamily="@font/sairaextracondensedregular"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:layout_alignStart="@id/telabrancaitens"
+                android:layout_alignTop="@id/doacoestxt2"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="100dp"
+                 />
 
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="212dp"
-        android:layout_marginTop="276dp"
-        android:fontFamily="@font/patuaone"
-        android:text="Estado:"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/remover"
+                android:layout_width="152dp"
+                android:layout_height="48dp"
+                android:layout_alignTop="@+id/telabrancaitens"
+                android:layout_alignStart="@id/telabrancaitens"
+                android:layout_marginTop="260dp"
+                android:layout_marginStart="220dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/backgroundbuttonwhite"
+                android:fontFamily="@font/patuaone"
+                android:text="remover"
+                android:textColor="@color/AzulTitulo"
+                android:textSize="20dp"
+                />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="312dp"
-        android:layout_marginTop="172dp"
-        android:fontFamily="@font/patuaone"
-        android:text="Novo"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/enderecoconfir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/telabrancaitens"
+                android:layout_alignTop="@+id/telabrancaitens"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="340dp"
+                android:fontFamily="@font/patuaone"
+                android:text="Endereço:"
+                android:textColor="@color/AzulTitulo"
+                android:textSize="25sp"
+                />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="312dp"
-        android:layout_marginTop="276dp"
-        android:fontFamily="@font/patuaone"
-        android:text="Bom"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/horarioconfir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/enderecoconfir"
+                android:layout_alignStart="@id/enderecoconfir"
+                android:layout_marginStart="180dp"
+                android:fontFamily="@font/patuaone"
+                android:text="Horário:"
+                android:textColor="@color/AzulTitulo"
+                android:textSize="25sp"
+                />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="380dp"
-        android:fontFamily="@font/patuaone"
-        android:text="Endereço:"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/enderecolaridosos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/telabrancaitens"
+                android:layout_alignTop="@id/enderecoconfir"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/sairaextracondensedsemibold"
+                android:text="Av. do Bom Conselho, 57\n          Bom Conselho"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="260dp"
-        android:layout_marginTop="380dp"
-        android:fontFamily="@font/patuaone"
-        android:text="Horário:"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/horariolaridosos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/horarioconfir"
+                android:layout_alignStart="@id/horarioconfir"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/sairaextracondensedsemibold"
+                android:text="08hrs às 18hrs"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                />
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="604dp"
-        android:fontFamily="@font/patuaone"
-        android:text="Ver no Maps"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/mapFragment"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="390dp"
+                android:layout_height="261dp"
+                android:layout_alignTop="@+id/enderecolaridosos"
+                android:layout_alignStart="@id/seusItens"
+                android:layout_marginTop="100dp"
+                />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="412dp"
-        android:fontFamily="@font/sairaextracondensedsemibold"
-        android:text="Av. do Bom Conselho, 57\n          Bom Conselho"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/botaodoarconfirmacao"
+                android:layout_width="260dp"
+                android:layout_height="59dp"
+                android:layout_alignTop="@+id/mapFragment"
+                android:layout_marginTop="290dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginEnd="70dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/backgroundbutton"
+                android:drawableLeft="@drawable/icondoacao"
+                android:fontFamily="@font/patuaone"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="Doar"
+                android:textColor="@color/AzulTitulo"
+                android:textSize="25dp"
+                 />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="252dp"
-        android:layout_marginTop="412dp"
-        android:fontFamily="@font/sairaextracondensedsemibold"
-        android:text="08hrs às 18hrs"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botaodoarconfirmacao"
-        android:layout_width="260dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="53dp"
-        android:background="@drawable/backgroundbutton"
-        android:drawableLeft="@drawable/icondoacao"
-        android:fontFamily="@font/patuaone"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        android:text="Doar"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botaovoltarconfirmacao"
-        android:layout_width="47dp"
-        android:layout_height="52dp"
-        android:background="@drawable/fundo_transparente_botao"
-        android:contentDescription="Botão Voltar"
-        android:drawableLeft="@drawable/iconvoltar"
-        android:paddingLeft="22dp"
-        android:paddingTop="8dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="-2dp" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="152dp"
-        android:layout_height="48dp"
-        android:background="@drawable/backgroundbuttonwhite"
-        android:fontFamily="@font/patuaone"
-        android:text="remover"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="25dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="206dp" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/appCompatButton"
-        android:layout_width="154dp"
-        android:layout_height="49dp"
-        android:background="@drawable/backgroundbuttonwhite"
-        android:fontFamily="@font/patuaone"
-        android:text="remover"
-        android:textColor="@color/AzulTitulo"
-        android:textSize="25dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="311dp" />
+        </RelativeLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,11 +24,32 @@ class TelaLogin : AppCompatActivity() {
         setContentView(R.layout.activity_tela_login)
 
         auth = Firebase.auth
+        emailUser = findViewById(R.id.editTextText)
+        senhaUser = findViewById(R.id.senha)
 
         val buttonIrParaInstituicoes: Button = findViewById(R.id.button)
+
         buttonIrParaInstituicoes.setOnClickListener {
-            val intent = Intent(this@TelaLogin, TelaInicialActivity::class.java)
-            startActivity(intent)
+            val email = emailUser.text.toString()
+            val password = senhaUser.text.toString()
+
+            auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        // Sign in success, update UI with the signed-in user's information
+                        Log.d(TAG, "signInWithEmail:success")
+                        val user = auth.currentUser
+                        updateUI(user)
+                    } else {
+                        // If sign in fails, display a message to the user.
+                        Log.w(TAG, "signInWithEmail:failure", task.exception)
+                        Toast.makeText(
+                            baseContext, "Authentication failed.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        updateUI(null)
+                    }
+                }
         }
 
         val voltar: View = findViewById(R.id.voltar)
@@ -36,27 +57,7 @@ class TelaLogin : AppCompatActivity() {
             val intent = Intent(this@TelaLogin, TelaInicial::class.java)
             startActivity(intent)
         }
-        val email = emailUser.text.toString()
-        val password = senhaUser.text.toString()
 
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    Log.d(TAG, "createUserWithEmail:success")
-                    val user = auth.currentUser
-                    updateUI(user)
-                } else {
-                    // If sign in fails, display a message to the user.
-                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                    Toast.makeText(
-                        baseContext,
-                        "Authentication failed.",
-                        Toast.LENGTH_SHORT,
-                    ).show()
-                    updateUI(null)
-                }
-            }
     }
 
     override fun onStart() {
@@ -71,8 +72,11 @@ class TelaLogin : AppCompatActivity() {
 
     private fun updateUI(user: FirebaseUser?) {
         if (user != null) {
+            val sharedPreferences = getSharedPreferences("USER_PREFS", MODE_PRIVATE)
+            val nomeUsuario = sharedPreferences.getString("NOME", "")
+
             Toast.makeText(
-                this, "Bem-vindo(a), ${user.displayName}!", Toast.LENGTH_SHORT).show()
+                this, "Bem-vindo(a), $nomeUsuario!", Toast.LENGTH_SHORT).show()
 
             val intent = Intent(this@TelaLogin, TelaInicialActivity::class.java)
             startActivity(intent)
@@ -83,7 +87,5 @@ class TelaLogin : AppCompatActivity() {
                 this, "Adicione o seu e-mail e a sua senha.", Toast.LENGTH_SHORT).show()
         }
     }
-
-
 }
 
