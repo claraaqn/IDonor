@@ -49,7 +49,7 @@
 * **Android Studio:** [![badge Android Studio](https://shields.io/badge/Android%20Studio-4.2-green.svg)](https://developer.android.com/studio)
 * **Kotlin:** [![badge Kotlin](https://shields.io/badge/Kotlin-1.7.20-blue.svg)](https://kotlinlang.org/)
 * **Firebase:** [![badge Firebase](https://shields.io/badge/Firebase-9.6.1-orange.svg)](https://firebase.google.com/)
-* **Licença:** [!badge MIT License](https://opensource.org/licenses/MIT)
+* **Licença:** [![badge MIT License](https://opensource.org/licenses/MIT)
 
 
 
